@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    ---blackColor: #0000;
+}
+
+.container-fluid {
+    width: 100% !important;
+    /* background-color: lightcyan; */
+    overflow: hidden;
+}
+
+.container {
+    width: 1320px;
+    margin: auto;
+    overflow: hidden;
+}
+
+a {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+li {
+    list-style-type: none !important;
+    font-weight: 550 !important;
+    font-size: small;
+}
+
+.fs-13 {
+    font-size: 13px !important;
+}
+
+.btm-line{
+    width: 200px;
+   /*  height: 30px;
+    background-color: blueviolet; */
+    border-bottom: 2px solid purple;
+}
