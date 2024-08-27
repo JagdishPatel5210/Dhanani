@@ -119,72 +119,75 @@ function MainPage() {
 
 
       {/* --------------------------------card Section  Start ----------------------------------------*/}
-      <div className='container-fluid mt-6'>
+      <div className='container-fluid mt-5'>
         <div className='container'>
-          <div className="Row d-flex">
-            {/* <div className=' d-flex'> */}
-              <div className='col-6 text-center'>
-                <h1>સમાજ ના હોદ્દેદારો</h1>
-                <div id="carouselExample" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active text-center">
-                      <img src={Layer1} class="rounded-circle" alt="Image 1" />
-                      <h5>Person 1</h5>
-                      <p>Role or Title</p>
-                    </div>
-                    <div class="carousel-item text-center">
-                      <img src={Layer2} class="rounded-circle" alt="Image 2" />
+          <div className="row">
+            <div className='col-6 text-center'>
+              <h1>સમાજ ના હોદ્દેદારો</h1>
+              <Carousel indicators={false}>
+                <Carousel.Item>
+                  <div className='card border-0'>
+                    <div className='card-body'>
+                      <img
+                        src={Layer1}
+                        alt="First slide"
+                        className="rounded-circle"
+                        style={{ width: '150px', height: '150px', objectFit: 'cover' }}
+                      />
                       <h5>Person 2</h5>
-                      <p>Role or Title</p>
-                    </div>
-                    <div class="carousel-item text-center">
-                      <img src="image3.jpg" class="rounded-circle" alt="Image 3" />
-                      <h5>Person 3</h5>
-                      <p>Role or Title</p>
+                      <p>Title</p>
                     </div>
                   </div>
-                  <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div>
-              </div>
-              <div className='col-6 text-center'>
-                <h1>એકમોના પ્રમુખ/મંત્રી</h1>
-                <Carousel>
-                  <Carousel.Item>
-                    <img
-                      className="d-block w-50 rounded-circle carousel-item align-content-center"
-                      src={Layer1}
-                      alt="First slide"
-                    />
-                    <Carousel.Caption>
-                      <h3>First Slide Label</h3>
-                      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </Carousel.Caption>
-                  </Carousel.Item>
-
-                  <Carousel.Item>
-                    <img
-                      className="d-block w-50 rounded-circle carousel-item align-content-center"
-                      src={Layer2}
-                      alt="Second slide"
-                    />
-                    <Carousel.Caption>
-                      <h3>Second Slide Label</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </Carousel.Caption>
-                  </Carousel.Item> 
-                </Carousel>
-              </div>
+                  <div className='card border-0'>
+                    <div className='card-body'>
+                      <img
+                        src={Layer1}
+                        alt="First slide"
+                        className="rounded-circle"
+                        style={{ width: '150px', height: '150px', objectFit: 'cover' }}
+                      />
+                      <h5>Person 2</h5>
+                      <p>Title</p>
+                    </div>
+                  </div>
+                </Carousel.Item>
+              </Carousel>
+            </div>
+            <div className='col-6 text-center'>
+              <h1>એકમોના પ્રમુખ/મંત્રી</h1>
+              <Carousel indicators={false}>
+                <Carousel.Item>
+                  <div className='card border-0'>
+                    <div className='card-body'>
+                      <img
+                        src={Layer1}
+                        alt="First slide"
+                        className="rounded-circle"
+                        style={{ width: '150px', height: '150px', objectFit: 'cover' }}
+                      />
+                      <h5>Person 2</h5>
+                      <p>Title</p>
+                    </div>
+                  </div>
+                  <div className='card border-0'>
+                    <div className='card-body'>
+                      <img
+                        src={Layer1}
+                        alt="First slide"
+                        className="rounded-circle"
+                        style={{ width: '150px', height: '150px', objectFit: 'cover' }}
+                      />
+                      <h5>Person 2</h5>
+                      <p>Title</p>
+                    </div>
+                  </div>
+                </Carousel.Item>
+              </Carousel>
             </div>
           </div>
         </div>
-      {/* </div> */}
+      </div>
+
     </>
   )
 }
