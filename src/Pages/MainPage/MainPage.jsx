@@ -14,14 +14,28 @@ import Layer2 from '../../Images/Layer2.png';
 function MainPage() {
 
   const options = {
-    loop: true,
+    loop: false,
     nav: false,
     dots: false,
     items: 1, // Number of items to show in the carousel
     autoplay: true,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
+
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 1,
+      },
+      1000: {
+        items: 1,
+      }
+    }
   };
+
+
 
   useEffect(() => {
     if ($ && $.fn.owlCarousel) {
@@ -30,6 +44,16 @@ function MainPage() {
       console.error('jQuery or Owl Carousel is not properly loaded.');
     }
   }, [options]);
+
+  const CarouselItem = ({ title, name, position, phone, image }) => (
+    <div className="card text-center">
+      <img src={image} alt={name} className="rounded-circle img-fluid" style={{ width: '150px', height: '150px', margin: 'auto' }} />
+      <h3 className="mt-3">{title}</h3>
+      <h5>{name}</h5>
+      <p>{position}</p>
+      <p>{phone}</p>
+    </div>
+  );
 
   return (
     <>
@@ -119,7 +143,7 @@ function MainPage() {
 
 
       {/* --------------------------------card Section  Start ----------------------------------------*/}
-      <div className='container-fluid mt-5'>
+      {/* <div className='container-fluid mt-5'>
         <div className='container'>
           <div className="row">
             <div className='col-6 text-center'>
@@ -134,8 +158,9 @@ function MainPage() {
                         className="rounded-circle"
                         style={{ width: '150px', height: '150px', objectFit: 'cover' }}
                       />
-                      <h5>Person 2</h5>
-                      <p>Title</p>
+                      <h5 className='mt-5'>ઘનજીભાઇ વી. પટેલ</h5>
+                      <h4>ખજાનચી</h4>
+                      <p> ૯૯૨૪૨૫૧૦૧૭</p>
                     </div>
                   </div>
                   <div className='card border-0'>
@@ -146,7 +171,7 @@ function MainPage() {
                         className="rounded-circle"
                         style={{ width: '150px', height: '150px', objectFit: 'cover' }}
                       />
-                      <h5>Person 2</h5>
+                      <h5>ઘનજીભાઇ વી. પટેલ 2</h5>
                       <p>Title</p>
                     </div>
                   </div>
@@ -186,8 +211,60 @@ function MainPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+      <div className="container mt-5 border-0">
+        <div className="row">
+          <div className='col-6 '>
+            <h1 className='text-center'>સામાજ ના હોડેદારો</h1>
+            <div className='row' >
+              <div className='first border-0'>
+                <OwlCarousel className="owl-theme" {...options}>
+                  <CarouselItem
+                    className="border-0"
+                    title="સામાજ ના હોડેદારો"
+                    name="ધનજીભાઈ વી. પટેલ"
+                    position="ખજાંછી"
+                    phone="📞 1234567890"
+                    image={Layer1}
+                  />
+                  <CarouselItem
+                    title="એકમોના પ્રમુખ/મંત્રી"
+                    name="બકલુકુમાર એચ. પટેલ"
+                    position="મંત્રી મેનેજમેન્ એકમ"
+                    phone="📞 0987654321"
+                    image={Layer2}
+                  />
+                </OwlCarousel>
+              </div>
+            </div>
+          </div>
 
+          <div className='col-6 '>
+            <h1 className='text-center'>એકમોના પ્રમુખ/મંત્રી</h1>
+            <div className='row' >
+              <div className='first'>
+                <OwlCarousel className="owl-theme border-0" {...options}>
+                  <CarouselItem 
+                    // title="સામાજ ના હોડેદારો"
+                    name="ધનજીભાઈ વી. પટેલ"
+                    position="ખજાંછી"
+                    phone="📞 1234567890"
+                    image={Layer1}
+                  />
+                  <CarouselItem
+                    title="એકમોના પ્રમુખ/મંત્રી"
+                    name="બકલુકુમાર એચ. પટેલ"
+                    position="મંત્રી મેનેજમેન્ એકમ"
+                    phone="📞 0987654321"
+                    image={Layer2}
+                  />
+                </OwlCarousel>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div >
     </>
   )
 }

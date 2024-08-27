@@ -49,24 +49,69 @@ li {
     padding: 10px 35px;
 }
 
-.Card{
+/* .Card{
     margin-top: 5%;
     color: #041d57   
+} */
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border: 0;
 }
-.carousel-item {
-    position: relative;
-    height: 250px;  /* Set the height for the carousel item */
-    /* width: 100%; */
-    /* background-color: #041d57 */
+
+.card h3 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.card h5 {
+    color: #555;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.card p {
+    color: #777;
+    font-size: 14px;
+}
+
+.cust {
+    font-size: 2rem;
+    color: #000;  
   }
   
-  .carousel-item img {
-    /* object-fit: cover;
-    border-radius: 50%; */
-    /* width: 200px; */
-    /* justify-content: center; */
-    /* height: 200px; */
-    align-content: center
-    
-    ;
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);  
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+  
+  .carousel-control-prev {
+    left: 15px;  
+  }
+  
+  .carousel-control-next {
+    right: 15px;  
+  }
+
+  .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next, .owl-carousel button.owl-dot {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font: inherit;
+    
+}
