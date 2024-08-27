@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react'
 import '../../CSS/MainPage.css'
 import MainLogo from '../../Images/MainLogo.png'
-import Slider1Img from '../../Images/Slider1Img.png';
-import Slider2Img from '../../Images/Slider2Img.png';
 import OwlCarousel from 'react-owl-carousel';
 import $ from 'jquery';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import 'owl.carousel';
+import { Carousel } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+import Layer1 from '../../Images/Layer1.png';
+import Layer2 from '../../Images/Layer2.png';
 
 function MainPage() {
 
@@ -99,15 +101,90 @@ function MainPage() {
                   </p>
                 </div>
               </div>
+              <div className='row'>
+                <div className='col-12'>
+                  <Button variant="outline-info" className='btn btn-secondary bg-bondiBlue mt-3' style={{ 'borderRadius': '30px' }}>
+                    વધુ વાંચો
+                  </Button>
+                </div>
+              </div>
             </div>
             <div className='col-6'>
-              <img src='https://www.15gamkpsmain.com/assets/images/slider/umiya.jpg' className='img-fluid' style={{ width: '70%' }} />
+              <img src='https://www.15gamkpsmain.com/assets/images/slider/umiya.jpg' className='img-fluid  shadow-lg bg-white rounded' style={{ width: '70%' }} />
             </div>
           </div>
         </div>
       </div>
       {/* -------------------------- About US Stop -------------------------- */}
 
+
+      {/* --------------------------------card Section  Start ----------------------------------------*/}
+      <div className='container-fluid mt-6'>
+        <div className='container'>
+          <div className="Row d-flex">
+            {/* <div className=' d-flex'> */}
+              <div className='col-6 text-center'>
+                <h1>સમાજ ના હોદ્દેદારો</h1>
+                <div id="carouselExample" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active text-center">
+                      <img src={Layer1} class="rounded-circle" alt="Image 1" />
+                      <h5>Person 1</h5>
+                      <p>Role or Title</p>
+                    </div>
+                    <div class="carousel-item text-center">
+                      <img src={Layer2} class="rounded-circle" alt="Image 2" />
+                      <h5>Person 2</h5>
+                      <p>Role or Title</p>
+                    </div>
+                    <div class="carousel-item text-center">
+                      <img src="image3.jpg" class="rounded-circle" alt="Image 3" />
+                      <h5>Person 3</h5>
+                      <p>Role or Title</p>
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
+              <div className='col-6 text-center'>
+                <h1>એકમોના પ્રમુખ/મંત્રી</h1>
+                <Carousel>
+                  <Carousel.Item>
+                    <img
+                      className="d-block w-50 rounded-circle carousel-item align-content-center"
+                      src={Layer1}
+                      alt="First slide"
+                    />
+                    <Carousel.Caption>
+                      <h3>First Slide Label</h3>
+                      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </Carousel.Caption>
+                  </Carousel.Item>
+
+                  <Carousel.Item>
+                    <img
+                      className="d-block w-50 rounded-circle carousel-item align-content-center"
+                      src={Layer2}
+                      alt="Second slide"
+                    />
+                    <Carousel.Caption>
+                      <h3>Second Slide Label</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </Carousel.Caption>
+                  </Carousel.Item> 
+                </Carousel>
+              </div>
+            </div>
+          </div>
+        </div>
+      {/* </div> */}
     </>
   )
 }

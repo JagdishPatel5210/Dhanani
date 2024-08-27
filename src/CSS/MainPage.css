@@ -44,3 +44,29 @@ li {
     background-color: blueviolet; */
     border-bottom: 2px solid purple;
 }
+
+.btn{
+    padding: 10px 35px;
+}
+
+.Card{
+    margin-top: 5%;
+    color: #041d57   
+}
+.carousel-item {
+    position: relative;
+    height: 250px;  /* Set the height for the carousel item */
+    /* width: 100%; */
+    /* background-color: #041d57 */
+  }
+  
+  .carousel-item img {
+    /* object-fit: cover;
+    border-radius: 50%; */
+    /* width: 200px; */
+    /* justify-content: center; */
+    /* height: 200px; */
+    align-content: center
+    
+    ;
+  }
