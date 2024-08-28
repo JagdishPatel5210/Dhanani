@@ -8,8 +8,12 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import 'owl.carousel';
 import { Carousel } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 import Layer1 from '../../Images/Layer1.png';
 import Layer2 from '../../Images/Layer2.png';
+import Event1 from '../../Images/Event1.jpg';
+
+
 
 function MainPage() {
 
@@ -35,8 +39,6 @@ function MainPage() {
     }
   };
 
-
-
   useEffect(() => {
     if ($ && $.fn.owlCarousel) {
       $(".owl-carousel").owlCarousel(options);
@@ -47,7 +49,7 @@ function MainPage() {
 
   const CarouselItem = ({ title, name, position, phone, image }) => (
     <div className="card text-center">
-      <img src={image} alt={name} className="rounded-circle img-fluid" style={{ width: '150px', height: '150px', margin: 'auto' }} />
+      <img src={image} alt={name} className="rounded-circle img-fluid" style={{ width: '40%', height: '50%', margin: 'auto' }} />
       <h3 className="mt-3">{title}</h3>
       <h5>{name}</h5>
       <p>{position}</p>
@@ -142,78 +144,10 @@ function MainPage() {
       {/* -------------------------- About US Stop -------------------------- */}
 
 
-      {/* --------------------------------card Section  Start ----------------------------------------*/}
-      {/* <div className='container-fluid mt-5'>
-        <div className='container'>
-          <div className="row">
-            <div className='col-6 text-center'>
-              <h1>સમાજ ના હોદ્દેદારો</h1>
-              <Carousel indicators={false}>
-                <Carousel.Item>
-                  <div className='card border-0'>
-                    <div className='card-body'>
-                      <img
-                        src={Layer1}
-                        alt="First slide"
-                        className="rounded-circle"
-                        style={{ width: '150px', height: '150px', objectFit: 'cover' }}
-                      />
-                      <h5 className='mt-5'>ઘનજીભાઇ વી. પટેલ</h5>
-                      <h4>ખજાનચી</h4>
-                      <p> ૯૯૨૪૨૫૧૦૧૭</p>
-                    </div>
-                  </div>
-                  <div className='card border-0'>
-                    <div className='card-body'>
-                      <img
-                        src={Layer1}
-                        alt="First slide"
-                        className="rounded-circle"
-                        style={{ width: '150px', height: '150px', objectFit: 'cover' }}
-                      />
-                      <h5>ઘનજીભાઇ વી. પટેલ 2</h5>
-                      <p>Title</p>
-                    </div>
-                  </div>
-                </Carousel.Item>
-              </Carousel>
-            </div>
-            <div className='col-6 text-center'>
-              <h1>એકમોના પ્રમુખ/મંત્રી</h1>
-              <Carousel indicators={false}>
-                <Carousel.Item>
-                  <div className='card border-0'>
-                    <div className='card-body'>
-                      <img
-                        src={Layer1}
-                        alt="First slide"
-                        className="rounded-circle"
-                        style={{ width: '150px', height: '150px', objectFit: 'cover' }}
-                      />
-                      <h5>Person 2</h5>
-                      <p>Title</p>
-                    </div>
-                  </div>
-                  <div className='card border-0'>
-                    <div className='card-body'>
-                      <img
-                        src={Layer1}
-                        alt="First slide"
-                        className="rounded-circle"
-                        style={{ width: '150px', height: '150px', objectFit: 'cover' }}
-                      />
-                      <h5>Person 2</h5>
-                      <p>Title</p>
-                    </div>
-                  </div>
-                </Carousel.Item>
-              </Carousel>
-            </div>
-          </div>
-        </div>
-      </div> */}
-      <div className="container mt-5 border-0">
-        <div className="row">
+      {/* --------------------------------card-Carousel Section  Start ----------------------------------------*/}
+
+      <div className="container border-0">
+        <div className="row mt-5">
           <div className='col-6 '>
             <h1 className='text-center'>સામાજ ના હોડેદારો</h1>
             <div className='row' >
@@ -221,14 +155,14 @@ function MainPage() {
                 <OwlCarousel className="owl-theme" {...options}>
                   <CarouselItem
                     className="border-0"
-                    title="સામાજ ના હોડેદારો"
+                    // title="સામાજ ના હોડેદારો"
                     name="ધનજીભાઈ વી. પટેલ"
                     position="ખજાંછી"
                     phone="📞 1234567890"
                     image={Layer1}
                   />
                   <CarouselItem
-                    title="એકમોના પ્રમુખ/મંત્રી"
+                    // title="એકમોના પ્રમુખ/મંત્રી"
                     name="બકલુકુમાર એચ. પટેલ"
                     position="મંત્રી મેનેજમેન્ એકમ"
                     phone="📞 0987654321"
@@ -244,7 +178,7 @@ function MainPage() {
             <div className='row' >
               <div className='first'>
                 <OwlCarousel className="owl-theme border-0" {...options}>
-                  <CarouselItem 
+                  <CarouselItem
                     // title="સામાજ ના હોડેદારો"
                     name="ધનજીભાઈ વી. પટેલ"
                     position="ખજાંછી"
@@ -252,7 +186,14 @@ function MainPage() {
                     image={Layer1}
                   />
                   <CarouselItem
-                    title="એકમોના પ્રમુખ/મંત્રી"
+                    // title="એકમોના પ્રમુખ/મંત્રી"
+                    name="બકલુકુમાર એચ. પટેલ"
+                    position="મંત્રી મેનેજમેન્ એકમ"
+                    phone="📞 0987654321"
+                    image={Layer2}
+                  />
+                  <CarouselItem
+                    // title="એકમોના પ્રમુખ/મંત્રી"
                     name="બકલુકુમાર એચ. પટેલ"
                     position="મંત્રી મેનેજમેન્ એકમ"
                     phone="📞 0987654321"
@@ -263,8 +204,142 @@ function MainPage() {
             </div>
           </div>
 
+          <div className='col-6 '>
+            <h1 className='text-center'>સમાજ ના કારોબારી</h1>
+            <div className='row' >
+              <div className='first'>
+                <OwlCarousel className="owl-theme border-0" {...options}>
+                  <CarouselItem
+                    // title="સામાજ ના હોડેદારો"
+                    name="ધનજીભાઈ વી. પટેલ"
+                    position="ખજાંછી"
+                    phone="📞 1234567890"
+                    image={Layer1}
+                  />
+                  <CarouselItem
+                    // title="એકમોના પ્રમુખ/મંત્રી"
+                    name="બકલુકુમાર એચ. પટેલ"
+                    position="મંત્રી મેનેજમેન્ એકમ"
+                    phone="📞 0987654321"
+                    image={Layer2}
+                  />
+                  <CarouselItem
+                    // title="એકમોના પ્રમુખ/મંત્રી"
+                    name="બકલુકુમાર એચ. પટેલ"
+                    position="મંત્રી મેનેજમેન્ એકમ"
+                    phone="📞 0987654321"
+                    image={Layer2}
+                  />
+                </OwlCarousel>
+              </div>
+            </div>
+          </div>
+
+          <div className='col-6 '>
+            <h1 className='text-center'>વિકાસ ટ્રસ્ટ ના હોદ્દેદારો</h1>
+            <div className='row' >
+              <div className='first'>
+                <OwlCarousel className="owl-theme border-0" {...options}>
+                  <CarouselItem
+                    // title="સામાજ ના હોડેદારો"
+                    name="ધનજીભાઈ વી. પટેલ"
+                    position="ખજાંછી"
+                    phone="📞 1234567890"
+                    image={Layer1}
+                  />
+                  <CarouselItem
+                    // title="એકમોના પ્રમુખ/મંત્રી"
+                    name="બકલુકુમાર એચ. પટેલ"
+                    position="મંત્રી મેનેજમેન્ એકમ"
+                    phone="📞 0987654321"
+                    image={Layer2}
+                  />
+                  <CarouselItem
+                    // title="એકમોના પ્રમુખ/મંત્રી"
+                    name="બકલુકુમાર એચ. પટેલ"
+                    position="મંત્રી મેનેજમેન્ એકમ"
+                    phone="📞 0987654321"
+                    image={Layer2}
+                  />
+                </OwlCarousel>
+              </div>
+            </div>
+          </div>
         </div>
       </div >
+      {/* --------------------------------card-Carousel Section end ----------------------------------------*/}
+
+      {/* --------------------------------card Section Start ----------------------------------------*/}
+      <div className="container-fluid mt-5">
+        <div className="container">
+          <h1 className='text-center fw-bold'>ઇવેન્ટસ</h1>
+          <div className="row">
+            <div className="col-lg-3">
+              <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={Event1} />
+                <Card.Body>
+                  <Card.Title>Card Title</Card.Title>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make up the
+                    bulk of the card's content.
+                  </Card.Text>
+                  <Button variant="outline-info" className='btn btn-secondary bg-bondiBlue mt-3' style={{ 'borderRadius': '30px' }}>
+                    વધુ વાંચો
+                  </Button>
+                </Card.Body>
+              </Card>
+            </div>
+
+            <div className="col-lg-3">
+              <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={Event1} />
+                <Card.Body>
+                  <Card.Title>Card Title</Card.Title>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make up the
+                    bulk of the card's content.
+                  </Card.Text>
+                  <Button variant="outline-info" className='btn btn-secondary bg-bondiBlue mt-3' style={{ 'borderRadius': '30px' }}>
+                    વધુ વાંચો
+                  </Button>
+                </Card.Body>
+              </Card>
+            </div>
+
+            <div className="col-lg-3">
+              <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={Event1} />
+                <Card.Body>
+                  <Card.Title>Card Title</Card.Title>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make up the
+                    bulk of the card's content.
+                  </Card.Text>
+                  <Button variant="outline-info" className='btn btn-secondary bg-bondiBlue mt-3' style={{ 'borderRadius': '30px' }}>
+                    વધુ વાંચો
+                  </Button>
+                </Card.Body>
+              </Card>
+            </div>
+
+            <div className="col-lg-3">
+              <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={Event1} />
+                <Card.Body>
+                  <Card.Title>Card Title</Card.Title>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make up the
+                    bulk of the card's content.
+                  </Card.Text>
+                  <Button variant="outline-info" className='btn btn-secondary bg-bondiBlue mt-3' style={{ 'borderRadius': '30px' }}>
+                    વધુ વાંચો
+                  </Button>
+                </Card.Body>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
