@@ -73,7 +73,7 @@ function MainPage() {
                   <a href="">હોમ</a>
                 </li>
                 <li className='p-3'>
-                  <a href="">અમારા વિશે</a>
+                  <a href='\AmaraVishe'>અમારા વિશે</a>
                 </li>
                 <li className='p-3'>
                   <a href="">કારોબારી સભ્યો</a>
