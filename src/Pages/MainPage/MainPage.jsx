@@ -11,8 +11,26 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Layer1 from '../../Images/Layer1.png';
 import Layer2 from '../../Images/Layer2.png';
+import Layer3 from '../../Images/Layer3.png';
+import Layer4 from '../../Images/Layer4.png';
+import Layer5 from '../../Images/Layer5.png';
+import Layer6 from '../../Images/Layer6.png';
+import Layer_20 from '../../Images/Layer_20.png';
+import President1 from '../../Images/President1.png';
+import Mantri1 from '../../Images/Mantri1.jpeg';
+import Layer15 from '../../Images/Layer15.png';
+import Layer16 from '../../Images/Layer16.png';
+import Layer17 from '../../Images/Layer17.png';
+import Layer18 from '../../Images/Layer18.png';
+import Layer19 from '../../Images/Layer19.png';
+import Layer20 from '../../Images/Layer20.png';
+import Layer10 from '../../Images/Layer10.png';
+import Layer12 from '../../Images/Layer12.png';
 import Event1 from '../../Images/Event1.jpg';
-
+import Event2 from '../../Images/Event2.jpeg';
+import Event3 from '../../Images/Event3.jpeg';
+import Event27 from '../../Images/Event27.jpeg';
+import Footer from '../../Components/Footer';
 
 
 function MainPage() {
@@ -67,7 +85,7 @@ function MainPage() {
             <div className='col-2'>
               <img src={MainLogo} className='img-fluid' width={130} />
             </div>
-            <div className='col-10'>
+            <div className='col-10 header-menu'>
               <ul className='d-flex justify-content-end align-items-center h-100 menu'>
                 <li className='p-3'>
                   <a href="">હોમ</a>
@@ -129,7 +147,7 @@ function MainPage() {
               </div>
               <div className='row'>
                 <div className='col-12'>
-                  <Button variant="outline-info" className='btn btn-secondary bg-bondiBlue mt-3' style={{ 'borderRadius': '30px' }}>
+                  <Button variant="outline-info" className='btn bg-bondiBlue mt-4 button' style={{ 'borderRadius': '30px' }}>
                     વધુ વાંચો
                   </Button>
                 </div>
@@ -154,19 +172,46 @@ function MainPage() {
               <div className='first border-0'>
                 <OwlCarousel className="owl-theme" {...options}>
                   <CarouselItem
-                    className="border-0"
                     // title="સામાજ ના હોડેદારો"
-                    name="ધનજીભાઈ વી. પટેલ"
-                    position="ખજાંછી"
-                    phone="📞 1234567890"
-                    image={Layer1}
+                    name={<span style={{ color: '#4c74e5' }}>રાકેશભાઈ આર.  પટેલ</span>}
+                    position={<span style={{ color: '#f2915f' }}>પ્રમુખ</span>}
+                    phone={<span style={{ color: '#4c74e5' }}>📞 ૯૮૨૫૫૫૬૫૦૫</span>}
+                    image={Layer_20}
                   />
                   <CarouselItem
-                    // title="એકમોના પ્રમુખ/મંત્રી"
-                    name="બકલુકુમાર એચ. પટેલ"
-                    position="મંત્રી મેનેજમેન્ એકમ"
-                    phone="📞 0987654321"
+                    // title="સામાજ ના હોડેદારો"
+                    name={<span style={{ color: '#4c74e5' }}>શાંતિલાલ ટી.  પટેલ</span>}
+                    position={<span style={{ color: '#f2915f' }}>ઉપપ્રમુખ</span>}
+                    phone={<span style={{ color: '#4c74e5' }}>📞 ૯૪૨૬૩૨૪૫૦૪</span>}
                     image={Layer2}
+                  />
+                  <CarouselItem
+                    // title="સામાજ ના હોડેદારો"
+                    name={<span style={{ color: '#4c74e5' }}>સુરેશભાઈ આઈ.  પટેલ</span>}
+                    position={<span style={{ color: '#f2915f' }}>મંંત્રી</span>}
+                    phone={<span style={{ color: '#4c74e5' }}>📞 ૯૯૨૫૦૭૫૮૮૦</span>}
+                    image={Layer3}
+                  />
+                  <CarouselItem
+                    // title="સામાજ ના હોડેદારો"
+                    name={<span style={{ color: '#4c74e5' }}>અરુણભાઇ બી. પટેલ</span>}
+                    position={<span style={{ color: '#f2915f' }}>સહમંત્રી</span>}
+                    phone={<span style={{ color: '#4c74e5' }}>📞 ૯૪૨૮૮૧૩૨૨૫</span>}
+                    image={Layer4}
+                  />
+                  <CarouselItem
+                    // title="સામાજ ના હોડેદારો"
+                    name={<span style={{ color: '#4c74e5' }}>ઘનજીભાઇ વી. પટેલ</span>}
+                    position={<span style={{ color: '#f2915f' }}>ખજાનચી</span>}
+                    phone={<span style={{ color: '#4c74e5' }}>📞 ૯૯૨૪૨૫૧૦૧૭</span>}
+                    image={Layer5}
+                  />
+                  <CarouselItem
+                    // title="સામાજ ના હોડેદારો"
+                    name={<span style={{ color: '#4c74e5' }}>નવીનભાઈ એન. પટેલ</span>}
+                    position={<span style={{ color: '#f2915f' }}>આંતરિક ઓડીટર  </span>}
+                    phone={<span style={{ color: '#4c74e5' }}>📞 ૯૪૨૭૫૪૩૮૯૯</span>}
+                    image={Layer6}
                   />
                 </OwlCarousel>
               </div>
@@ -177,89 +222,138 @@ function MainPage() {
             <h1 className='text-center'>એકમોના પ્રમુખ/મંત્રી</h1>
             <div className='row' >
               <div className='first'>
-                <OwlCarousel className="owl-theme border-0" {...options}>
+                <OwlCarousel className="owl-theme" {...options}>
                   <CarouselItem
                     // title="સામાજ ના હોડેદારો"
-                    name="ધનજીભાઈ વી. પટેલ"
-                    position="ખજાંછી"
-                    phone="📞 1234567890"
-                    image={Layer1}
+                    name={<span style={{ color: '#4c74e5' }}>બળદેવભાઈ પી. પટેલ</span>}
+                    position={<span style={{ color: '#f2915f' }}>પ્રમુખ મહેસાણા એકમ</span>}
+                    phone={<span style={{ color: '#4c74e5' }}>📞 ૭૪૩૪૦ ૬૪૫૧૦</span>}
+                    image={President1}
                   />
                   <CarouselItem
-                    // title="એકમોના પ્રમુખ/મંત્રી"
-                    name="બકલુકુમાર એચ. પટેલ"
-                    position="મંત્રી મેનેજમેન્ એકમ"
-                    phone="📞 0987654321"
-                    image={Layer2}
+                    // title="સામાજ ના હોડેદારો"
+                    name={<span style={{ color: '#4c74e5' }}>બકુલકુમાર એચ. પટેલ</span>}
+                    position={<span style={{ color: '#f2915f' }}>મંત્રી મહેસાણા એકમ</span>}
+                    phone={<span style={{ color: '#4c74e5' }}>📞 ૯૯૭૯૬૯૯૩૦૯</span>}
+                    image={Mantri1}
                   />
                   <CarouselItem
-                    // title="એકમોના પ્રમુખ/મંત્રી"
-                    name="બકલુકુમાર એચ. પટેલ"
-                    position="મંત્રી મેનેજમેન્ એકમ"
-                    phone="📞 0987654321"
-                    image={Layer2}
+                    // title="સામાજ ના હોડેદારો"
+                    name={<span style={{ color: '#4c74e5' }}>અશોકભાઈ જેઠાલાલ પટેલ</span>}
+                    position={<span style={{ color: '#f2915f' }}>પ્રમુખ અમદાવાદ એકમ</span>}
+                    phone={<span style={{ color: '#4c74e5' }}>📞 ૯૮૨૫૦૪૦૮૪૭</span>}
+                    image={Layer15}
+                  />
+                  <CarouselItem
+                    // title="સામાજ ના હોડેદારો"
+                    name={<span style={{ color: '#4c74e5' }}>ગિરીશકુમાર પ્રહલાદભાઈ પટેલ</span>}
+                    position={<span style={{ color: '#f2915f' }}>મંંત્રી અમદાવાદ એકમ</span>}
+                    phone={<span style={{ color: '#4c74e5' }}>📞 ૯૯૦૯3૦૭૦33</span>}
+                    image={Layer16}
+                  />
+                  <CarouselItem
+                    // title="સામાજ ના હોડેદારો"
+                    name={<span style={{ color: '#4c74e5' }}>ઈશ્વરભાઈ બાલચંદદાસ પટેલ</span>}
+                    position={<span style={{ color: '#f2915f' }}>પ્રમુખ વડોદરા એકમ</span>}
+                    phone={<span style={{ color: '#4c74e5' }}>📞 ૯૮૭૯૪૧૦૮૪૦</span>}
+                    image={Layer17}
+                  />
+                  <CarouselItem
+                    // title="સામાજ ના હોડેદારો"
+                    name={<span style={{ color: '#4c74e5' }}>અરવિંદભાઈ જોઈતાભાઈ પટેલ</span>}
+                    position={<span style={{ color: '#f2915f' }}>મંત્રી વડોદરા એકમ</span>}
+                    phone={<span style={{ color: '#4c74e5' }}>📞 ૯૮૨૫૦૧૮૬૧૬</span>}
+                    image={Layer18}
                   />
                 </OwlCarousel>
               </div>
             </div>
           </div>
 
-          <div className='col-6 '>
-            <h1 className='text-center'>સમાજ ના કારોબારી</h1>
-            <div className='row' >
-              <div className='first'>
-                <OwlCarousel className="owl-theme border-0" {...options}>
-                  <CarouselItem
-                    // title="સામાજ ના હોડેદારો"
-                    name="ધનજીભાઈ વી. પટેલ"
-                    position="ખજાંછી"
-                    phone="📞 1234567890"
-                    image={Layer1}
-                  />
-                  <CarouselItem
-                    // title="એકમોના પ્રમુખ/મંત્રી"
-                    name="બકલુકુમાર એચ. પટેલ"
-                    position="મંત્રી મેનેજમેન્ એકમ"
-                    phone="📞 0987654321"
-                    image={Layer2}
-                  />
-                  <CarouselItem
-                    // title="એકમોના પ્રમુખ/મંત્રી"
-                    name="બકલુકુમાર એચ. પટેલ"
-                    position="મંત્રી મેનેજમેન્ એકમ"
-                    phone="📞 0987654321"
-                    image={Layer2}
-                  />
-                </OwlCarousel>
-              </div>
-            </div>
-          </div>
-
-          <div className='col-6 '>
+          <div className='col-6 mt-3'>
             <h1 className='text-center'>વિકાસ ટ્રસ્ટ ના હોદ્દેદારો</h1>
             <div className='row' >
               <div className='first'>
-                <OwlCarousel className="owl-theme border-0" {...options}>
+                <OwlCarousel className="owl-theme" {...options}>
                   <CarouselItem
                     // title="સામાજ ના હોડેદારો"
-                    name="ધનજીભાઈ વી. પટેલ"
-                    position="ખજાંછી"
-                    phone="📞 1234567890"
-                    image={Layer1}
+                    name={<span style={{ color: '#4c74e5' }}>મનોરભાઈ એમ. પટેલ</span>}
+                    position={<span style={{ color: '#f2915f' }}>પ્રમુખ</span>}
+                    phone={<span style={{ color: '#4c74e5' }}>📞 ૯૮૨૫૦૨૬૧૭૫</span>}
+                    image={Layer10}
                   />
                   <CarouselItem
-                    // title="એકમોના પ્રમુખ/મંત્રી"
-                    name="બકલુકુમાર એચ. પટેલ"
-                    position="મંત્રી મેનેજમેન્ એકમ"
-                    phone="📞 0987654321"
+                    // title="સામાજ ના હોડેદારો"
+                    name={<span style={{ color: '#4c74e5' }}>સુરેશભાઈ વી. પટેલ</span>}
+                    position={<span style={{ color: '#f2915f' }}>ઉપપ્રમુખ</span>}
+                    phone={<span style={{ color: '#4c74e5' }}>📞 ૯૮૨૫૩૪૮૫૯૨</span>}
+                    image={Layer12}
+                  />
+                  <CarouselItem
+                    // title="સામાજ ના હોડેદારો"
+                    name={<span style={{ color: '#4c74e5' }}>હરગોવિંદદાસ એમ. પટેલ</span>}
+                    position={<span style={{ color: '#f2915f' }}>મંંત્રી</span>}
+                    phone={<span style={{ color: '#4c74e5' }}>📞 ૯૮૯૮૦૬૩૦૫૯</span>}
+                    image={Layer19}
+                  />
+                  <CarouselItem
+                    // title="સામાજ ના હોડેદારો"
+                    name={<span style={{ color: '#4c74e5' }}>સુરેશભાઈ આઈ. પટેલ</span>}
+                    position={<span style={{ color: '#f2915f' }}>સહમંત્રી</span>}
+                    phone={<span style={{ color: '#4c74e5' }}>📞 ૯૯૨૫૦૭૫૮૮૦</span>}
+                    image={Layer20}
+                  />
+                </OwlCarousel>
+              </div>
+            </div>
+          </div>
+
+          <div className='col-6 mt-3'>
+            <h1 className='text-center'>સોશિયલ વેલ્ફેર ટ્રસ્ટ</h1>
+            <div className='row' >
+              <div className='first'>
+                <OwlCarousel className="owl-theme" {...options}>
+                  <CarouselItem
+                    // title="સામાજ ના હોડેદારો"
+                    name={<span style={{ color: '#4c74e5' }}>મીતુલભાઈ પી. પટેલ</span>}
+                    position={<span style={{ color: '#f2915f' }}>ઉપપ્રમુખ</span>}
+                    phone={<span style={{ color: '#4c74e5' }}>📞 ૯૮૨૪૦૨૧૧૩૮</span>}
+                    image={Layer_20}
+                  />
+                  <CarouselItem
+                    // title="સામાજ ના હોડેદારો"
+                    name={<span style={{ color: '#4c74e5' }}>ચેલાભાઈ જી. પટેલ</span>}
+                    position={<span style={{ color: '#f2915f' }}>પ્રમુખ</span>}
+                    phone={<span style={{ color: '#4c74e5' }}>📞 ૯૮૨૫૮૪૧૭૨૩</span>}
                     image={Layer2}
                   />
                   <CarouselItem
-                    // title="એકમોના પ્રમુખ/મંત્રી"
-                    name="બકલુકુમાર એચ. પટેલ"
-                    position="મંત્રી મેનેજમેન્ એકમ"
-                    phone="📞 0987654321"
-                    image={Layer2}
+                    // title="સામાજ ના હોડેદારો"
+                    name={<span style={{ color: '#4c74e5' }}>ભરતભાઈ એ. પટેલ</span>}
+                    position={<span style={{ color: '#f2915f' }}>મંંત્રી</span>}
+                    phone={<span style={{ color: '#4c74e5' }}>📞 ૯૪૨૬૪૮૮૨૪૧</span>}
+                    image={Layer3}
+                  />
+                  <CarouselItem
+                    // title="સામાજ ના હોડેદારો"
+                    name={<span style={{ color: '#4c74e5' }}>દિનેશભાઈ બી. પટેલ</span>}
+                    position={<span style={{ color: '#f2915f' }}>સહમંત્રી</span>}
+                    phone={<span style={{ color: '#4c74e5' }}>📞 ૯૮૯૮૩૫૬૪૬૧</span>}
+                    image={Layer4}
+                  />
+                  <CarouselItem
+                    // title="સામાજ ના હોડેદારો"
+                    name={<span style={{ color: '#4c74e5' }}>ધનજીભાઈ વી. પટેલ</span>}
+                    position={<span style={{ color: '#f2915f' }}>ઉપપ્રમુખ</span>}
+                    phone={<span style={{ color: '#4c74e5' }}>📞 1234567890</span>}
+                    image={Layer5}
+                  />
+                  <CarouselItem
+                    // title="સામાજ ના હોડેદારો"
+                    name={<span style={{ color: '#4c74e5' }}>ધનજીભાઈ વી. પટેલ</span>}
+                    position={<span style={{ color: '#f2915f' }}>ઉપપ્રમુખ</span>}
+                    phone={<span style={{ color: '#4c74e5' }}>📞 1234567890</span>}
+                    image={Layer6}
                   />
                 </OwlCarousel>
               </div>
@@ -276,14 +370,13 @@ function MainPage() {
           <div className="row">
             <div className="col-lg-3">
               <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={Event1} />
+                <Card.Img variant="top" src={Event1} style={{ height: '12rem' }} />
                 <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
+                  <Card.Title>વિકાસ ટ્ર્સ્ટ જનરલ સભા</Card.Title>
                   <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                    2022-02-01
                   </Card.Text>
-                  <Button variant="outline-info" className='btn btn-secondary bg-bondiBlue mt-3' style={{ 'borderRadius': '30px' }}>
+                  <Button variant="outline-info" className='btn bg-bondiBlue mt-4 button' style={{ 'borderRadius': '30px' }}>
                     વધુ વાંચો
                   </Button>
                 </Card.Body>
@@ -292,14 +385,14 @@ function MainPage() {
 
             <div className="col-lg-3">
               <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={Event1} />
+                <Card.Img variant="top" src={Event2} />
                 <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
+                  <Card.Title>મહેસાણા સ્નેહમિલન
+                  </Card.Title>
                   <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                    2022-03-13
                   </Card.Text>
-                  <Button variant="outline-info" className='btn btn-secondary bg-bondiBlue mt-3' style={{ 'borderRadius': '30px' }}>
+                  <Button variant="outline-info" className='btn bg-bondiBlue  mt-4 button' style={{ 'borderRadius': '30px' }}>
                     વધુ વાંચો
                   </Button>
                 </Card.Body>
@@ -308,14 +401,13 @@ function MainPage() {
 
             <div className="col-lg-3">
               <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={Event1} />
+                <Card.Img variant="top" src={Event3} />
                 <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
+                  <Card.Title>મહેસાણા ક્રિકેટ ટુર્નામેન્ટ</Card.Title>
                   <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                    2022-04-23
                   </Card.Text>
-                  <Button variant="outline-info" className='btn btn-secondary bg-bondiBlue mt-3' style={{ 'borderRadius': '30px' }}>
+                  <Button variant="outline-info" className='btn  bg-bondiBlue mt-4 button' style={{ 'borderRadius': '30px' }}>
                     વધુ વાંચો
                   </Button>
                 </Card.Body>
@@ -324,14 +416,13 @@ function MainPage() {
 
             <div className="col-lg-3">
               <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={Event1} />
+                <Card.Img variant="top" src={Event27} style={{ height: '12rem' }} />
                 <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
+                  <Card.Title>અમદાવાદ ક્રિકેટ ટુર્નામેન્ટ</Card.Title>
                   <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                    bd
                   </Card.Text>
-                  <Button variant="outline-info" className='btn btn-secondary bg-bondiBlue mt-3' style={{ 'borderRadius': '30px' }}>
+                  <Button variant="outline-info" className='btn bg-bondiBlue  mt-4 button' style={{ 'borderRadius': '30px' }}>
                     વધુ વાંચો
                   </Button>
                 </Card.Body>
@@ -340,6 +431,12 @@ function MainPage() {
           </div>
         </div>
       </div>
+      {/* --------------------------------card Section End ----------------------------------------*/}
+
+      {/* --------------------------------Footer Section Start ----------------------------------------*/}
+
+      <Footer />
+      {/* --------------------------------Footer Section Start ----------------------------------------*/}
     </>
   )
 }
