@@ -252,7 +252,7 @@ function MainPage() {
                     phone={<span style={{ color: '#4c74e5' }}>📞 ૯૯૭૯૬૯૯૩૦૯</span>}
                     image={Mantri1}
                   />
-                  <CarouselItem
+                  <CarouselItemss
                     // title="સામાજ ના હોડેદારો"
                     name={<span style={{ color: '#4c74e5' }}>અશોકભાઈ જેઠાલાલ પટેલ</span>}
                     position={<span style={{ color: '#f2915f' }}>પ્રમુખ અમદાવાદ એકમ</span>}
