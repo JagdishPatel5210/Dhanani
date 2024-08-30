@@ -186,14 +186,10 @@ li {
 /* Adding a hover effect with an animated underline */
 .button::before {
     content: '';
-    position: absolute;
-    /* left: 50%; */
-    transform: translateX(-50%);
-    /* bottom: 0; */
+    position: absolute; 
+    transform: translateX(-50%); 
     width: 0%;
-    height: 2px;
-    /* background-color: #ffffff; */
-    /* Underline color */
+    height: 2px; 
     transition: width 0.4s ease;
     z-index: -1;
 }
@@ -203,8 +199,7 @@ li {
 }
 
 .button:hover {
-    background-color: black;
-    /* Darker background color on hover */
+    background-color: black; 
 }
 
 .parallax{

@@ -27,7 +27,6 @@ import Layer20 from '../../Images/Layer20.png';
 import Layer10 from '../../Images/Layer10.png';
 import Layer12 from '../../Images/Layer12.png';
 import Event1 from '../../Images/Event1.jpg';
-import { NavLink } from 'react-router-dom';
 import Event2 from '../../Images/Event2.jpeg';
 import Event3 from '../../Images/Event3.jpeg';
 import Event27 from '../../Images/Event27.jpeg';
@@ -36,10 +35,8 @@ import Footer from '../../Components/Footer';
 
 
 
+
 function MainPage() {
-  const goToLogin = () => {
-    debugger
-  }
 
   const options = {
     loop: false,
@@ -84,48 +81,6 @@ function MainPage() {
   return (
     <>
 
-      {/* // -------------------------- Header Start -------------------------- */}
-      < div className='container-fluid' >
-        <div className='container'>
-          <div className='row'>
-            <div className='col-2'>
-              <img src={MainLogo} className='img-fluid' width={130} />
-            </div>
-            <div className='col-10'>
-              <ul className='d-flex justify-content-end align-items-center h-100 menu'>
-                <li className='p-3'>
-                  <a href="">હોમ</a>
-                </li>
-                <li className='p-3'>
-                  <a href="">અમારા વિશે</a>
-                </li>
-                <li className='p-3'>
-                  <a href="">કારોબારી સભ્યો</a>
-                </li>
-                <li className='p-3'>
-                  <a href="">સમાજ ના સભ્યો</a>
-                </li>
-                <li className='p-3'>
-                  <a href="">પસંદગી માટે</a>
-                </li>
-                <li className='p-3'>
-                  <a href="">જાહેરાત</a>
-                </li>
-                <li className='p-3'>
-                  <a href="">અમારો સંપર્ક કરો</a>
-                </li>
-                <li className="p-3">
-                  <NavLink to='/FormPage' onClick={''}>
-                    <Button variant="outline-info" className='btn btn-secondary bg-bondiBlue ' style={{ 'borderRadius': '30px' }}>
-                      Login
-                    </Button>
-                  </NavLink>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div >
       {/* // - ------------------------- Header Start -------------------------- */}
       <Header />
       {/* -------------------------- Slider1 Start -------------------------- */}
@@ -252,7 +207,7 @@ function MainPage() {
                     phone={<span style={{ color: '#4c74e5' }}>📞 ૯૯૭૯૬૯૯૩૦૯</span>}
                     image={Mantri1}
                   />
-                  <CarouselItem 
+                  <CarouselItem
                     // title="સામાજ ના હોડેદારો"
                     name={<span style={{ color: '#4c74e5' }}>અશોકભાઈ જેઠાલાલ પટેલ</span>}
                     position={<span style={{ color: '#f2915f' }}>પ્રમુખ અમદાવાદ એકમ</span>}
