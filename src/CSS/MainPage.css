@@ -206,3 +206,7 @@ li {
     background-color: black;
     /* Darker background color on hover */
 }
+
+.parallax{
+    background-color: rgb(0 0 0 / 42%);
+}
