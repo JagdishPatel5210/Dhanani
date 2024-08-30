@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import MainLogo from '../Images/MainLogo.png';
 
 export default function Header() {
@@ -13,25 +14,25 @@ export default function Header() {
                         <div className='col-10 header-menu'>
                             <ul className='d-flex justify-content-end align-items-center h-100 menu'>
                                 <li className='p-3'>
-                                    <a href="\MainPage">હોમ</a>
+                                <Link to="/MainPage">હોમ</Link>
                                 </li>
                                 <li className='p-3'>
-                                    <a href='\AmaraVishe'>અમારા વિશે</a>
+                                <Link to="/AmaraVishe">અમારા વિશે</Link>
                                 </li>
                                 <li className='p-3'>
-                                    <a href="">કારોબારી સભ્યો</a>
+                                <Link to="#">કારોબારી સભ્યો</Link>
                                 </li>
                                 <li className='p-3'>
-                                    <a href="">સમાજ ના સભ્યો</a>
+                                <Link to="#">સમાજ ના સભ્યો</Link>
                                 </li>
                                 <li className='p-3'>
-                                    <a href="">પસંદગી માટે</a>
+                                <Link to="#">પસંદગી માટે</Link>
                                 </li>
                                 <li className='p-3'>
-                                    <a href="">જાહેરાત</a>
+                                <Link to="#">જાહેરાત</Link>
                                 </li>
                                 <li className='p-3'>
-                                    <a href="">અમારો સંપર્ક કરો</a>
+                                   <Link to="#">અમારો સંપર્ક કરો</Link>
                                 </li>
                             </ul>
                         </div>
