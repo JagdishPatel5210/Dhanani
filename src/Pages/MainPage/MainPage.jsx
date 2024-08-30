@@ -70,7 +70,7 @@ function MainPage() {
 
   const CarouselItem = ({ title, name, position, phone, image }) => (
     <div className="card text-center">
-      <img src={image} alt={name} className="rounded-circle img-fluid" style={{ width: '40%', height: '50%', margin: 'auto' }} />
+      <img src={image} alt={name} className="rounded-circle img-fluid " style={{ width: '40%', height: '50%', margin: 'auto' }} />
       <h3 className="mt-3">{title}</h3>
       <h5>{name}</h5>
       <p>{position}</p>
@@ -117,7 +117,7 @@ function MainPage() {
               </div>
               <div className='row'>
                 <div className='col-12'>
-                  <Button variant="outline-info" className='btn bg-bondiBlue mt-4 ' style={{ 'borderRadius': '30px' }}>
+                  <Button variant="outline-info" className='btn bg-bondiBlue mt-4 rounded-5'>
                     વધુ વાંચો
                   </Button>
                 </div>
@@ -346,7 +346,7 @@ function MainPage() {
                   <Card.Text>
                     2022-02-01
                   </Card.Text>
-                  <Button variant="outline-info" className='btn bg-bondiBlue mt-4 button' style={{ 'borderRadius': '30px' }}>
+                  <Button variant="outline-info" className='btn bg-bondiBlue mt-4 button rounded-5'>
                     વધુ વાંચો
                   </Button>
                 </Card.Body>
@@ -362,7 +362,7 @@ function MainPage() {
                   <Card.Text>
                     2022-03-13
                   </Card.Text>
-                  <Button variant="outline-info" className='btn bg-bondiBlue  mt-4 button' style={{ 'borderRadius': '30px' }}>
+                  <Button variant="outline-info" className='btn bg-bondiBlue  mt-4 button rounded-5'>
                     વધુ વાંચો
                   </Button>
                 </Card.Body>
@@ -377,7 +377,7 @@ function MainPage() {
                   <Card.Text>
                     2022-04-23
                   </Card.Text>
-                  <Button variant="outline-info" className='btn  bg-bondiBlue mt-4 button' style={{ 'borderRadius': '30px' }}>
+                  <Button variant="outline-info" className='btn  bg-bondiBlue mt-4 button rounded-5'>
                     વધુ વાંચો
                   </Button>
                 </Card.Body>
@@ -392,7 +392,7 @@ function MainPage() {
                   <Card.Text>
                     bd
                   </Card.Text>
-                  <Button variant="outline-info" className='btn bg-bondiBlue  mt-4 button' style={{ 'borderRadius': '30px' }}>
+                  <Button variant="outline-info" className='btn bg-bondiBlue  mt-4 button rounded-5'>
                     વધુ વાંચો
                   </Button>
                 </Card.Body>
