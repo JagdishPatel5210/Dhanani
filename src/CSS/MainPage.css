@@ -23,6 +23,53 @@
     overflow: hidden;
 }
 
+/* Basic styles for the header menu */
+.header-menu {
+    display: flex;
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    background-color: #ffffff;
+    /* Background color of the header */
+    /* padding: 10px 0; */
+}
+
+.header-menu a {
+    text-decoration: none;
+    color: #000000;
+    /* Text color */
+    /* font-size: 18px; */
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    justify-content: end;
+}
+
+/* Hover effect */
+.header-menu a:hover {
+    color: #007bff;
+    /* Change text color on hover */
+}
+
+/* Adding an underline effect on hover */
+.header-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #007bff;
+    /* Underline color */
+    left: 50%;
+    bottom: 0;
+    transition: all 0.3s ease;
+}
+
+.header-menu a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
 a {
     color: black !important;
     text-decoration: none !important;
@@ -61,7 +108,7 @@ li {
     /* box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); */
     border: 0;
     /* position: absolute; */
-   
+
 }
 
 .card img {
@@ -90,7 +137,76 @@ li {
     color: #000;
 }
 
-.owl-nav span{
+.owl-nav span {
     font-size: 50px;
 
+}
+
+.footer {
+    height: 50vh;
+    background-image: url(../Images/footer_map.png);
+    background-color: #262e3b;
+    position: relative;
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Basic button styling */
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    /* color: #00b4d8; */
+    /* Text color */
+    /* background-color: #6c757d; */
+    /* Button background color */
+    border: 2px solid #00b4d8;
+    /* Border color */
+    border-radius: 30px;
+    /* Rounded corners */
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.4s ease;
+    /* Smooth transition */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Hover effect */
+.button:hover {
+    color: #ffffff;
+    /* Change text color on hover */
+    background-color: #00b4d8;
+    /* Change background color on hover */
+    border-color: #00b4d8;
+    /* Change border color on hover */
+}
+
+/* Adding a hover effect with an animated underline */
+.button::before {
+    content: '';
+    position: absolute;
+    /* left: 50%; */
+    transform: translateX(-50%);
+    /* bottom: 0; */
+    width: 0%;
+    height: 2px;
+    /* background-color: #ffffff; */
+    /* Underline color */
+    transition: width 0.4s ease;
+    z-index: -1;
+}
+
+.button:hover::before {
+    width: 100%;
+}
+
+.button:hover {
+    background-color: black;
+    /* Darker background color on hover */
+}
+
+.parallax{
+    background-color: rgb(0 0 0 / 42%);
 }
