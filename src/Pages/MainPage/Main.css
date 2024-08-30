@@ -1,0 +1,8 @@
+.accordion-button:not(.collapsed){
+    color: white !important;
+    background-color: #079bbb !important;
+}
+
+/* .input{
+       
+} */

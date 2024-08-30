@@ -12,10 +12,14 @@ import Card from 'react-bootstrap/Card';
 import Layer1 from '../../Images/Layer1.png';
 import Layer2 from '../../Images/Layer2.png';
 import Event1 from '../../Images/Event1.jpg';
+import { NavLink } from 'react-router-dom';
 
 
 
 function MainPage() {
+  const goToLogin = () => {
+    debugger
+  }
 
   const options = {
     loop: false,
@@ -89,6 +93,13 @@ function MainPage() {
                 </li>
                 <li className='p-3'>
                   <a href="">અમારો સંપર્ક કરો</a>
+                </li>
+                <li className="p-3">
+                  <NavLink to='/FormPage' onClick={''}>
+                    <Button variant="outline-info" className='btn btn-secondary bg-bondiBlue ' style={{ 'borderRadius': '30px' }}>
+                      Login
+                    </Button>
+                  </NavLink>
                 </li>
               </ul>
             </div>
