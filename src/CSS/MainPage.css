@@ -23,52 +23,47 @@
     overflow: hidden;
 }
 
-/* Basic styles for the header menu */
-.header-menu {
-    display: flex;
-    /* justify-content: space-around; */
-    /* align-items: center; */
-    background-color: #ffffff;
-    /* Background color of the header */
-    /* padding: 10px 0; */
+.menu li {
+    list-style-type: none;
 }
 
-.header-menu a {
+.menu li a {
     text-decoration: none;
-    color: #000000;
-    /* Text color */
-    /* font-size: 18px; */
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: all 0.3s ease;
+    color: #333;
+    /* Default text color */
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 5px;
+    display: inline-block;
     position: relative;
-    justify-content: end;
 }
 
-/* Hover effect */
-.header-menu a:hover {
+.menu li a:hover {
     color: #007bff;
     /* Change text color on hover */
 }
 
-/* Adding an underline effect on hover */
-.header-menu a::after {
+.menu li a::after {
     content: '';
-    position: absolute;
-    width: 0;
+    width: 0%;
     height: 2px;
     background-color: #007bff;
-    /* Underline color */
-    left: 50%;
-    bottom: 0;
-    transition: all 0.3s ease;
-}
-
-.header-menu a:hover::after {
-    width: 100%;
+    /* Line color */
+    position: absolute;
     left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
 }
 
+.menu li a:hover::after {
+    width: 100%;
+    /* Extend the line on hover */
+}
+
+/* Style for the menu list */
+.menu {
+    margin-right: auto;
+    /* Pushes the menu items to the left */
+}
 
 a {
     color: black !important;
@@ -156,10 +151,7 @@ li {
 .button {
     padding: 10px 20px;
     font-size: 16px;
-    /* color: #00b4d8; */
-    /* Text color */
-    /* background-color: #6c757d; */
-    /* Button background color */
+
     border: 2px solid #00b4d8;
     /* Border color */
     border-radius: 30px;
@@ -186,10 +178,10 @@ li {
 /* Adding a hover effect with an animated underline */
 .button::before {
     content: '';
-    position: absolute; 
-    transform: translateX(-50%); 
+    position: absolute;
+    transform: translateX(-50%);
     width: 0%;
-    height: 2px; 
+    height: 2px;
     transition: width 0.4s ease;
     z-index: -1;
 }
@@ -199,9 +191,9 @@ li {
 }
 
 .button:hover {
-    background-color: black; 
+    background-color: black;
 }
 
-.parallax{
+.parallax {
     background-color: rgb(0 0 0 / 42%);
 }

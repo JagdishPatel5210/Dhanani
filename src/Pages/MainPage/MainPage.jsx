@@ -117,7 +117,7 @@ function MainPage() {
               </div>
               <div className='row'>
                 <div className='col-12'>
-                  <Button variant="outline-info" className='btn bg-bondiBlue mt-4 button' style={{ 'borderRadius': '30px' }}>
+                  <Button variant="outline-info" className='btn bg-bondiBlue mt-4 ' style={{ 'borderRadius': '30px' }}>
                     વધુ વાંચો
                   </Button>
                 </div>
