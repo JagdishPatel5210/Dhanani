@@ -7,7 +7,7 @@ import { FaFacebook } from "react-icons/fa6";
 export default function Footer() {
     return (
         <div>
-            <div className="container-fluid footer">
+            <div className="container-fluid footer mt-5">
                 <div className="container">
                     <div className="row">
                         <div className="col-4 mt-5">

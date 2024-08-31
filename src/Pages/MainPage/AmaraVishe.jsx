@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/Button';
 import MainPage from './MainPage';
 
 
+
 export default function AmaraVishe() {
   return (
     <>
