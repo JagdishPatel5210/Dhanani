@@ -44,7 +44,7 @@ export default function AmaraVishe() {
                 </div>
               </div>
               <div className='col-6'>
-                <img src='https://www.15gamkpsmain.com/assets/images/slider/umiya.jpg' className='img-fluid  shadow-lg bg-white rounded' style={{ width: '70%' }} />
+                <img src='https://www.15gamkpsmain.com/assets/images/slider/umiya.jpg' className='img-fluid  shadow-lg bg-white rounded w-75'  />
               </div>
             </div>
           </div>

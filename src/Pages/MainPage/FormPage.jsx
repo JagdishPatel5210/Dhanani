@@ -258,15 +258,12 @@ function FormPage() {
                                                 </select>
                                             </div>
                                             <div className="p-3">
-                                                <div class="form-check p-3">
-                                                    <input type="checkbox"
-                                                        name="nir"
-                                                        value={formData.nir}
-                                                        onChange={handleChange}
-                                                        class="form-check-input"
-                                                        id="option1" />
-                                                    <label class="form-check-label fw-bold" for="option1"> વિદેશ રહેઠાણ</label>
-                                                </div>
+                                                <label className='mt-3 fw-bold'> વિદેશ રહેઠાણ :- </label>
+                                                <input
+                                                    type="text"
+                                                    name="nir"
+                                                    value={formData.nir}
+                                                    onChange={handleChange} />
                                             </div>
                                         </div>
                                     </div>
@@ -329,7 +326,7 @@ function FormPage() {
                                                 <input
                                                     type="email"
                                                     name="email"
-                                                    value={formData.number}
+                                                    value={formData.email}
                                                     onChange={handleChange} />
                                             </div>
                                         </div>
