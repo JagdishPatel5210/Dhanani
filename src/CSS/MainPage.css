@@ -109,10 +109,87 @@ li {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Add some padding inside the card container */
-/* .container {
-    padding: 2px 16px;
-} */
+
+/*input */
+  .form-input {
+    position: relative;
+  }
+  
+  .form-input input::placeholder {
+    opacity: 0;
+  }
+  
+  .form-input input {
+    width: 90%;
+    margin: 5px;
+    font-size: 1.2rem;
+    padding: 5px;
+    outline: none;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  
+  .form-input label {
+    position: absolute;
+    left: 10px;
+    top: 25px;
+    transform: translateY(-50%);
+    font-size: 15px;
+    color: grey;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+  }
+  
+  .form-input input:focus + label,
+  .form-input input:not(:placeholder-shown) + label {
+    top: 0;
+    font-size: 0.8rem;
+    color: #007bff;
+    background: #fff;
+    padding: 5px;
+  }
+  
+  .form-input input:focus {
+    border: 2px solid #007bff;
+  }
+
+
+
+
+
+  /* select */
+.select {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  .select .titulo {font-size: .9em; color: #ababab;}
+  .select .view {
+    position: relative;
+    width: fit-content;
+  }
+  .select .view select {
+    appearance: none;
+    width: max-content;
+    padding: 0.5em 0.75em;
+    padding-right: 2em;
+    background:  grey;
+    border-radius: 5px;
+    color: black;
+    font-size: 1em;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+  }
+ 
+   
+
+
+
+
 
 .custom-link {
     position: relative;
@@ -143,13 +220,11 @@ li {
 
 .custom-link:hover {
     color: #007bff;
-    /* Change text color on hover */
 }
 
 .custom-link:hover::before,
 .custom-link:hover::after {
     width: 100%;
-    /* Expand the lines to full width */
 }
 
 .card img {
