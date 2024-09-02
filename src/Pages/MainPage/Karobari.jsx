@@ -281,9 +281,9 @@ export default function Karobari() {
                 </div>
             </div>
 
-            {/* footer sectionn start */}
+            {/* --------------------------------Footer Section Start ----------------------------------------*/}
             <Footer />
-            {/* footer sectionn end */}
+            {/* --------------------------------Footer Section End ----------------------------------------*/}
 
         </>
     )

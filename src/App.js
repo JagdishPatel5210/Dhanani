@@ -6,6 +6,9 @@ import FormPage from './Pages/MainPage/FormPage';
 import AmaraVishe from './Pages/MainPage/AmaraVishe';
 import Header from './Components/Header';
 import Karobari from '../src/Pages/MainPage/Karobari';
+import SamajNaSabhyo from './Pages/MainPage/SamajNaSabhyo';
+import Jaherat from './Pages/MainPage/Jaherat';
+import ContactUs from './Pages/MainPage/ContactUs';
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
           <Route path='/Karobari' element={<Karobari />} />
           <Route path='/MainPage' element={<MainPage />} />
           <Route path='/AmaraVishe' element={<AmaraVishe />} />
+          <Route path='/SamajNaSabhyo' element={<SamajNaSabhyo />} />
+          <Route path='/Jaherat' element={<Jaherat />} />
+          <Route path='/ContactUs' element={<ContactUs />} />
           <Route path='/Header' element={<Header />} />
         </Routes>
       </BrowserRouter>

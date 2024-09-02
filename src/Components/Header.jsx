@@ -25,22 +25,20 @@ export default function Header() {
                                     <Link to="/Karobari">કારોબારી સભ્યો</Link>
                                 </li>
                                 <li className='p-3'>
-                                    <Link to="#">સમાજ ના સભ્યો</Link>
+                                    <Link to="/SamajNaSabhyo">સમાજ ના સભ્યો</Link>
                                 </li>
                                 <li className='p-3'>
                                     <Link to="#">પસંદગી માટે</Link>
                                 </li>
                                 <li className='p-3'>
-                                    <Link to="#">જાહેરાત</Link>
+                                    <Link to="/Jaherat">જાહેરાત</Link>
                                 </li>
                                 <li className='p-3'>
-                                    <Link to="#">અમારો સંપર્ક કરો</Link>
+                                    <Link to="/ContactUs">અમારો સંપર્ક કરો</Link>
                                 </li>
                                 <div className='px-5 '>
                                     <NavLink to='/FormPage' onClick={''}>
-                                        <Button variant="outline-info" className='btn btn-secondary bg-bondiBlue rounded-5'>
-                                            Login
-                                        </Button>
+                                        <button type="Login" className="submit-btn">Login</button>
                                     </NavLink>
                                 </div>
                             </ul>
