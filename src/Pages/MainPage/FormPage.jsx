@@ -51,161 +51,175 @@ function FormPage() {
                                 <h1 className='text-center pt-5'>અમરાપર(ધાનાણી) પટેલ સમાજ - સુરત</h1>
                                 <div className="row d-flex">
                                     <div className="justify-content-center d-flex p-3">
-                                        <div className='p-3'>
-                                            <label className='p-2 fw-bold'> સભ્ય નંબર:- </label>
+
+                                        <div class="form-input">
                                             <input
                                                 type="number"
-                                                name="Number"
-                                                value={formData.membernum}
-                                                onChange={handleChange} />
+                                                placeholder="Enter subtitle"
+                                                id="subtitle" />
+                                            <label for="subtitle">સભ્ય નંબર</label>
                                         </div>
 
-                                        <div className='p-3'>
-                                            <label className='p-2 fw-bold'> ફોર્મ નંબર:- </label>
+                                        <div class="form-input">
                                             <input
                                                 type="number"
                                                 name="Number"
+                                                placeholder="Enter subtitle"
                                                 value={formData.fromnum}
                                                 onChange={handleChange} />
+                                            <label for="subtitle">ફોર્મ નંબર</label>
                                         </div>
 
-                                        <div className='p-3'>
-                                            <label className='p-2 fw-bold'>તારીખ:-</label>
+
+                                        <div class="form-input">
                                             <input
                                                 type="date"
                                                 name="Number"
+                                                //    placeholder="Enter subtitle"
                                                 value={formData.fromdate}
                                                 onChange={handleChange}
                                             />
+                                              <label for="subtitle">તારીખ</label>
                                         </div>
+
                                     </div>
 
 
                                     <div className="row">
-                                        <div className="col-7 pt-2 d-flex ">
-                                            <label className='p-2 mt-3 fw-bold'> નામ :- </label>
-                                            <div className='ps-2 '>
-                                                <div className='d-grid'>
-                                                    <label >અટક</label>
-                                                    <input
-                                                        type="text"
-                                                        name="Name"
-                                                        value={formData.surname}
-                                                        onChange={handleChange} />
-                                                </div>
-                                            </div>
-                                            <div className='ps-2'>
-                                                <div className='d-grid'>
-                                                    <label >નામ</label>
-                                                    <input
-                                                        type="text"
-                                                        name="fname"
-                                                        value={formData.fname}
-                                                        onChange={handleChange} />
-                                                </div>
+                                        <div className="col-7 pt-2 d-flex">
+                                            <label className='pt-2 fs-5 fw-bold'> નામ:- </label>
+
+                                            <div class="form-input">
+                                                <input
+                                                    type="text"
+                                                    name="Name"
+                                                    placeholder="Enter subtitle"
+                                                    value={formData.surname}
+                                                    onChange={handleChange} />
+                                                <label for="subtitle">અટક</label>
                                             </div>
 
-                                            <div className='ps-2'>
-                                                <div className='d-grid'>
-                                                    <label >પિતા નુ નામ</label>
-                                                    <input
-                                                        type="text"
-                                                        name="lname"
-                                                        value={formData.lname}
-                                                        onChange={handleChange} />
-                                                </div>
+                                            <div class="form-input">
+                                                <input
+                                                    type="text"
+                                                    name="fname"
+                                                    placeholder="Enter subtitle"
+                                                    value={formData.fname}
+                                                    onChange={handleChange} />
+                                                <label for="subtitle">નામ</label>
                                             </div>
 
-                                            <div className='ps-2'>
-                                                <div className='d-grid'>
-                                                    <label >દાદા</label>
-                                                    <input
-                                                        type="text"
-                                                        name="Name"
-                                                        value={formData.dadaname}
-                                                        onChange={handleChange} />
-                                                </div>
+                                            <div class="form-input">
+                                                <input
+                                                    type="text"
+                                                    name="lname"
+                                                    placeholder="Enter subtitle"
+                                                    value={formData.lname}
+                                                    onChange={handleChange} />
+                                                <label for="subtitle">પિતા નુ નામ</label>
+                                            </div>
+
+
+                                            <div class="form-input">
+                                                <input
+                                                    type="text"
+                                                    name="Name"
+                                                    placeholder="Enter subtitle"
+                                                    value={formData.dadaname}
+                                                    onChange={handleChange} />
+                                                <label for="subtitle">દાદા</label>
                                             </div>
                                         </div>
-                                        <div className="col-5 d-flex ">
-                                            <div className="p-4">
-                                                <label className=' mt-3 fw-bold '> સભ્ય સાથે નું સગપણ :- </label>
+
+
+                                        <div className="col-5 d-flex pt-2 ">
+                                            <div class="form-input ">
                                                 <input
                                                     type="text"
                                                     name="relation"
+                                                    placeholder="Enter subtitle"
                                                     value={formData.relation}
                                                     onChange={handleChange} />
+                                                <label for="subtitle">સભ્ય સાથે નું સગપણ </label>
                                             </div>
-                                            <div className="p-4">
-                                                <label className='mt-3 fw-bold'> અભ્યાસ :- </label>
+
+                                            <div class="form-input ">
                                                 <input
                                                     type="text"
                                                     name="stdy"
+                                                    placeholder="Enter subtitle"
                                                     value={formData.stdy}
                                                     onChange={handleChange} />
+                                                <label for="subtitle">અભ્યાસ </label>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div className="row">
-                                        <div className="col-7 pt-2 d-flex ">
-                                            <label className='p-2 mt-3 fw-bold'> મોસાળ ની વિગત :- </label>
-                                            <div className='ps-2 '>
-                                                <div className='d-grid'>
-                                                    <label >અટક</label>
-                                                    <input
-                                                        type="text"
-                                                        name="Name"
-                                                        value={formData.number}
-                                                        onChange={handleChange} />
-                                                </div>
-                                            </div>
-                                            <div className='ps-2'>
-                                                <div className='d-grid'>
-                                                    <label >નામ</label>
-                                                    <input
-                                                        type="text"
-                                                        name="Name"
-                                                        value={formData.number}
-                                                        onChange={handleChange} />
-                                                </div>
+                                    {/* મોસાળ ની વિગત   */}
+
+                                    <div className="row py-4">
+                                        <div className="col-7 pt-2 d-flex">
+                                            <label className='pt-2  fw-bold'> મોસાળ ની વિગત:- </label>
+
+                                            <div class="form-input">
+                                                <input
+                                                    type="text"
+                                                    name="Name"
+                                                    placeholder="Enter subtitle"
+                                                    value={formData.number}
+                                                    onChange={handleChange} />
+                                                <label for="subtitle">અટક</label>
                                             </div>
 
-                                            <div className='ps-2'>
-                                                <div className='d-grid'>
-                                                    <label >પિતા નુ નામ</label>
-                                                    <input
-                                                        type="text"
-                                                        name="Name"
-                                                        value={formData.number}
-                                                        onChange={handleChange} />
-                                                </div>
+                                            <div class="form-input">
+                                                <input
+                                                    type="text"
+                                                    name="Name"
+                                                    placeholder="Enter subtitle"
+                                                    value={formData.number}
+                                                    onChange={handleChange} />
+                                                <label for="subtitle">નામ</label>
                                             </div>
 
-                                            <div className='ps-2'>
-                                                <div className='d-grid'>
-                                                    <label >ગામ</label>
-                                                    <input
-                                                        type="text"
-                                                        name="Name"
-                                                        value={formData.number}
-                                                        onChange={handleChange} />
-                                                </div>
+
+                                            <div class="form-input">
+                                                <input
+                                                    type="text"
+                                                    name="Name"
+                                                    placeholder="Enter subtitle"
+                                                    value={formData.number}
+                                                    onChange={handleChange} />
+                                                <label for="subtitle">પિતા નુ નામ</label>
+                                            </div>
+
+
+                                            <div class="form-input">
+                                                <input
+                                                    type="text"
+                                                    name="Name"
+                                                    placeholder="Enter subtitle"
+                                                    value={formData.number}
+                                                    onChange={handleChange} />
+                                                <label for="subtitle">ગામ</label>
                                             </div>
                                         </div>
-                                        <div className="col-5  d-flex justify-align-content-between">
-                                            <div className='p-3 mt-4'>
-                                                <label className='p-2 fw-bold'>જન્મતારીખ:-</label>
+
+
+                                        <div className="col-5 d-flex pt-2 ">
+                                            <div class="form-input ">
                                                 <input
                                                     type="date"
                                                     name="dbdate"
+                                                    placeholder="Enter subtitle"
                                                     value={formData.dbdate}
-                                                    onChange={handleChange}
-                                                />
+                                                    onChange={handleChange} />
+                                                <label for="subtitle">જન્મતારીખ</label>
                                             </div>
-                                            <div className='px-5 mt-4'>
-                                                <label className='p-2 mt-3 fw-bold'>બ્લડ ગ્રૂપ:-</label>
-                                                <select
+
+                                            <div class="select">
+                                            <label className='m-2 fw-bold'>બ્લડ ગ્રૂપ :- </label> 
+                                                <div class="view">
+                                                    <select 
                                                     name="bloodGroup"
                                                     value={formData.bloodGroup}
                                                     onChange={handleChange}>
@@ -218,25 +232,34 @@ function FormPage() {
                                                     <option value="AB-">AB-</option>
                                                     <option value="O+">O+</option>
                                                     <option value="O-">O-</option>
-                                                </select>
+                                                    </select>
+                                                </div>
                                             </div>
 
                                         </div>
                                     </div>
 
-                                    <div className="row">
-                                        <div className="col-7 ">
-                                            <label className='p-2 mt-3 fw-bold'> સરનામું :- </label>
-                                            <input
-                                                className='w-75'
+
+
+                                    <div className="row p-3 ">
+                                    <div className="col-7 ">
+                                        <div class="form-input">
+                                        <input
+                                                className=''
                                                 type="text"
                                                 name="Name"
+                                                placeholder="Enter subtitle"
                                                 value={formData.number}
                                                 onChange={handleChange} />
+                                                <label for="subtitle">સરનામું </label>
+                                            </div>
                                         </div>
-                                        <div className="col-5 d-flex p-0  justify-content-around">
-                                            <div className='p-2'>
-                                                <label className='p-2 mt-3 fw-bold'>જાતિ:-</label>
+
+
+                                        <div className="col-5 d-flex ">
+                                        <div class="select">
+                                            <label className='m-2 fw-bold'>જાતિ:- </label> 
+                                                <div class="view">
                                                 <select
                                                     name="gender"
                                                     value={formData.gender}
@@ -245,9 +268,13 @@ function FormPage() {
                                                     <option value="પુરુષ">પુરુષ</option>
                                                     <option value="સ્ત્રી">સ્ત્રી</option>
                                                 </select>
+                                                </div>
                                             </div>
-                                            <div className='p-2'>
-                                                <label className='p-2 mt-3 fw-bold'>પરણિત સ્થિતિ:-</label>
+
+
+                                            <div class="select">
+                                            <label className='m-2 fw-bold'>પરણિત સ્થિતિ:- </label> 
+                                                <div class="view">
                                                 <select
                                                     name="maritalStatus"
                                                     value={formData.maritalStatus}
@@ -256,49 +283,57 @@ function FormPage() {
                                                     <option value="પરણિત">પરણિત</option>
                                                     <option value="અપરણિત">અપરણિત</option>
                                                 </select>
+                                                </div>
                                             </div>
-                                            <div className="p-3">
-                                                <label className='mt-3 fw-bold'> વિદેશ રહેઠાણ :- </label>
-                                                <input
+                                            
+                                        </div>
+                                    </div>
+
+
+                                    <div className="row">
+                                        <div className="col-7 pt-4 d-flex">
+                                           
+                                        <div class="form-input">
+                                        <input
+                                                    type="text"
+                                                    name="Name"
+                                                    placeholder="Enter subtitle"
+                                                    value={formData.number}
+                                                    onChange={handleChange} />
+                                                <label for="subtitle">વ્યવસાય</label>
+                                            </div>
+
+                                            <div class="form-input">
+                                        <input
+                                                    type="text"
+                                                    name="Name"
+                                                    placeholder="Enter subtitle"
+                                                    value={formData.number}
+                                                    onChange={handleChange} />
+                                                <label for="subtitle">વ્યવસાય નુ સરનામું</label>
+                                            </div>
+                                        </div>
+
+                                        <div className="col-5 pt-4 ">
+                                        <div class="form-input ">
+                                        <input
                                                     type="text"
                                                     name="nir"
+                                                    className='w-50'
+                                                    placeholder="Enter subtitle"
                                                     value={formData.nir}
                                                     onChange={handleChange} />
+                                                <label for="subtitle">વિદેશ રહેઠાણ </label>
                                             </div>
                                         </div>
                                     </div>
 
 
-                                    <div className="row">
-                                        <div className="col-6 d-flex">
-                                            <div className="">
-                                                <label className='p-2 mt-3 fw-bold'> વ્યવસાય :- </label>
-                                                <input
-                                                    type="text"
-                                                    name="Name"
-                                                    value={formData.number}
-                                                    onChange={handleChange} />
-                                            </div>
-                                            <div className="ps-3">
-                                                <label className='p-2 mt-3 fw-bold'> વ્યવસાય નુ સરનામું :- </label>
-                                                <input
-                                                    className='justify-content-end'
-                                                    type="text"
-                                                    name="Name"
-                                                    value={formData.number}
-                                                    onChange={handleChange} />
-                                            </div>
-                                        </div>
-                                        <div className="col-6 ">
-                                        </div>
-                                    </div>
-
-
-                                    <div className="row">
+                                    <div className="row pt-3">
                                         <div className="col-7 pt-3 d-flex">
-                                            <div className='p-3 d-flex'>
-                                                <label className='p-2 fw-bold'>મો.ન.(૧) :-</label>
-                                                <input
+
+                                        <div class="form-input">
+                                        <input
                                                     type="tel"
                                                     name="phone1"
                                                     value={formData.phone1}
@@ -307,10 +342,11 @@ function FormPage() {
                                                     maxLength="10"
                                                     placeholder="01234 56789"
                                                 />
+                                                <label for="subtitle">મો.ન.(૧)</label>
                                             </div>
-                                            <div className='p-3 d-flex'>
-                                                <label className='p-2 fw-bold'>મો.ન.(૨) :- </label>
-                                                <input
+
+                                               <div class="form-input">
+                                               <input
                                                     type="tel"
                                                     name="phone2"
                                                     value={formData.phone2}
@@ -319,19 +355,22 @@ function FormPage() {
                                                     maxLength="10"
                                                     placeholder="01234 56789"
                                                 />
+                                                <label for="subtitle">મો.ન.(૨)</label>
                                             </div>
 
-                                            <div className="p-4">
-                                                <label className=' fw-bold '> ઈમેલ:- </label>
-                                                <input
+                                            <div class="form-input">
+                                            <input
                                                     type="email"
                                                     name="email"
+                                                    placeholder="Enter subtitle"
                                                     value={formData.email}
                                                     onChange={handleChange} />
+                                                <label for="subtitle">ઈમેલ</label>
                                             </div>
+
                                         </div>
                                         <div className="col-5 d-flex justify-content-center">
-                                            <div className="pt-3">
+                                            <div className="p-5">
                                                 <button type="submit" className='btn btn-primary'>Submit</button> </div>
                                         </div>
                                     </div>
