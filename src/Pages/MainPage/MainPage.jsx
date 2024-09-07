@@ -346,7 +346,7 @@ function MainPage() {
                   <Card.Text>
                     2022-02-01
                   </Card.Text>
-                  <Button variant="outline-info" className='btn bg-bondiBlue mt-4 button rounded-5'>
+                  <Button variant="outline-info" className='btn bg-bondiBlue mt-4 button rounded-5' href='/Event1'>
                     વધુ વાંચો
                   </Button>
                 </Card.Body>
@@ -362,7 +362,7 @@ function MainPage() {
                   <Card.Text>
                     2022-03-13
                   </Card.Text>
-                  <Button variant="outline-info" className='btn bg-bondiBlue  mt-4 button rounded-5'>
+                  <Button variant="outline-info" className='btn bg-bondiBlue  mt-4 button rounded-5' href='/Event2'>
                     વધુ વાંચો
                   </Button>
                 </Card.Body>
@@ -377,7 +377,7 @@ function MainPage() {
                   <Card.Text>
                     2022-04-23
                   </Card.Text>
-                  <Button variant="outline-info" className='btn  bg-bondiBlue mt-4 button rounded-5'>
+                  <Button variant="outline-info" className='btn  bg-bondiBlue mt-4 button rounded-5' href='/Event3'>
                     વધુ વાંચો
                   </Button>
                 </Card.Body>
@@ -392,7 +392,7 @@ function MainPage() {
                   <Card.Text>
                     bd
                   </Card.Text>
-                  <Button variant="outline-info" className='btn bg-bondiBlue  mt-4 button rounded-5'>
+                  <Button variant="outline-info" className='btn bg-bondiBlue  mt-4 button rounded-5' href='/Event4'>
                     વધુ વાંચો
                   </Button>
                 </Card.Body>
@@ -407,6 +407,7 @@ function MainPage() {
       <Footer />
       {/* --------------------------------Footer Section End ----------------------------------------*/}
     </>
+
   )
 }
 

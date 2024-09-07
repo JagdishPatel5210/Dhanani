@@ -25,7 +25,7 @@ export default function Footer() {
 
                             <div className="d-flex">
                                 <i className='text-white'><BsEnvelope className='fs-4' /></i>
-                                <p className='ps-3 text-white fs-6'>  15gamkpsmain@gmail.com</p>
+                                <p className='ps-3 text-white fs-6'> SilverTech@gmail.com</p>
                             </div>
 
                             <div className="d-flex mt-2">
@@ -36,7 +36,7 @@ export default function Footer() {
                         <div className="col-3 mt-5 px-4">
                             <h5 className='text-white pt-3 fw-bold'>અમારા વિશે</h5>
                             <ul className='text-light list-unstyled'>
-                                <li>હોમ</li>
+                                <li className='pt-2'>હોમ</li>
                                 <li className='pt-2'>અમારા વિશે</li>
                                 <li className='pt-2'>કારોબારી સભ્યો</li>
                                 <li className='pt-2'>સમાજના સભ્યો</li>
@@ -50,18 +50,18 @@ export default function Footer() {
                         <div className="col-5 mt-5 " >
                             <h5 className='text-white pt-3 fw-bold '>તાજેતરના સમાચાર</h5>
                             <marquee behavior="" direction="up" scrollamount="3" hight="250">
-                                <ul >
-                                <li className='text-white  px-3 fs-6 bg-danger text-justify rounded-2'>
-                                    <p className='p-2'>આપના પુત્ર અથવા પુત્રીનો સબંધ થાય ત્યારે વહેલામાં વહેલી તકે આપનુ ફોમઁ રદ કરાવો</p>
-                                </li>
+                                <ul>
+                                    <li className='text-white  px-3 fs-6 bg-danger text-justify rounded-2'>
+                                        <p className='p-2'>આપના પુત્ર અથવા પુત્રીનો સબંધ થાય ત્યારે વહેલામાં વહેલી તકે આપનુ ફોમઁ રદ કરાવો</p>
+                                    </li>
 
-                                <li className='text-white px-3  fs-6 bg-danger rounded-2' >
-                                    <p className='p-2'>કોઈ પણ પ્રકારની ભૂલ જણાય તો અમને આપની માહિતી ૯૭૭૩૧૨૪૫૯૮ (SILVER TECHNOLOGIES) પર WhatsApp કરી આપવી. (કોલ કરવો નહી.)</p>
-                                </li>
+                                    <li className='text-white px-3  fs-6 bg-danger rounded-2' >
+                                        <p className='p-2'>કોઈ પણ પ્રકારની ભૂલ જણાય તો અમને આપની માહિતી ૯૭૭૩૧૨૪૫૯૮ (SILVER TECHNOLOGIES) પર WhatsApp કરી આપવી. (કોલ કરવો નહી.)</p>
+                                    </li>
 
-                                <li className='text-white px-3 fs-6 bg-danger rounded-2' >
-                                    <p className='p-2'>તમે મોકલેલા ફોર્મમાં અમારા દ્વાર થયેલી ભૂલ ને જ હાલ બદલી આપવામાં આવશે. અન્ય માહિતી અપડેટ કરવા માટે આપને સમય જણાવવામાં આવશે. જેની જાણ વેબસાઈટ પર કરવામાં આવશે.</p>
-                                </li>
+                                    <li className='text-white px-3 fs-6 bg-danger rounded-2'>
+                                        <p className='p-2'>તમે મોકલેલા ફોર્મમાં અમારા દ્વાર થયેલી ભૂલ ને જ હાલ બદલી આપવામાં આવશે. અન્ય માહિતી અપડેટ કરવા માટે આપને સમય જણાવવામાં આવશે. જેની જાણ વેબસાઈટ પર કરવામાં આવશે.</p>
+                                    </li>
                                 </ul>
                             </marquee>
                         </div>
