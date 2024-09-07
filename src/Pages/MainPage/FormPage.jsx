@@ -1,8 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Accordion } from 'react-bootstrap';
 import './Main.css'
+import { useDispatch } from 'react-redux';
+import { addData as DynamicAdd } from '../Slices/DynamicSlice.js';
+import { useForm } from 'react-hook-form';
 
 function FormPage() {
+
+    const dispatch = useDispatch();
+    const { register, handleSubmit, setValue, reset, formState: { errors } } = useForm();
     // Form data માટે state
     const [formData, setFormData] = useState({
         fname: '',
@@ -22,31 +28,41 @@ function FormPage() {
 
     // Form field value handle કરવું
     const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
+        // setFormData({
+        //     ...formData,
+        //     [e.target.name]: e.target.value
+        // });
 
     }
 
-    // Form submit કરો
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setTableData([...tableData, formData]); // form data ને tableData state માં add કરો
-        setFormData({ fname: '', lname: '', relation: '', email: '', dbdate: ' ', bloodGroup: '', stdy: '', gender: '', maritalStatus: '', nir: '' }); // Form reset
-    }
+    // // Form submit કરો
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     setTableData([...tableData, formData]); // form data ને tableData state માં add કરો
+    //     setFormData({ fname: '', lname: '', relation: '', email: '', dbdate: ' ', bloodGroup: '', stdy: '', gender: '', maritalStatus: '', nir: '' }); // Form reset
+    // }
 
+    const saveData = async (saveObj) => {
+        const objJson = {
+            jsonObj1: [{ MEMBERID: formData.MemberID }],
+            SPName: 'API_MemberDetailSave'
+        };
 
+        try {
+            await dispatch(DynamicAdd(objJson));
+            reset();
+        } catch (error) {
+            console.error("Failed to save data!", error);
+        }
+    };
 
     return (
         <>
-
-
             <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0">
                     <Accordion.Header></Accordion.Header>
                     <Accordion.Body>
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={handleSubmit(saveData)}>
                             <div className="container-fluid">
                                 <h1 className='text-center pt-5'>અમરાપર(ધાનાણી) પટેલ સમાજ - સુરત</h1>
                                 <div className="row d-flex">
@@ -79,7 +95,7 @@ function FormPage() {
                                                 value={formData.fromdate}
                                                 onChange={handleChange}
                                             />
-                                              <label for="subtitle">તારીખ</label>
+                                            <label for="subtitle">તારીખ</label>
                                         </div>
 
                                     </div>
@@ -217,21 +233,21 @@ function FormPage() {
                                             </div>
 
                                             <div class="select">
-                                            <label className='m-2 fw-bold'>બ્લડ ગ્રૂપ :- </label> 
+                                                <label className='m-2 fw-bold'>બ્લડ ગ્રૂપ :- </label>
                                                 <div class="view">
-                                                    <select 
-                                                    name="bloodGroup"
-                                                    value={formData.bloodGroup}
-                                                    onChange={handleChange}>
-                                                    <option value="">પસંદ કરો</option>
-                                                    <option value="A+">A+</option>
-                                                    <option value="A-">A-</option>
-                                                    <option value="B+">B+</option>
-                                                    <option value="B-">B-</option>
-                                                    <option value="AB+">AB+</option>
-                                                    <option value="AB-">AB-</option>
-                                                    <option value="O+">O+</option>
-                                                    <option value="O-">O-</option>
+                                                    <select
+                                                        name="bloodGroup"
+                                                        value={formData.bloodGroup}
+                                                        onChange={handleChange}>
+                                                        <option value="">પસંદ કરો</option>
+                                                        <option value="A+">A+</option>
+                                                        <option value="A-">A-</option>
+                                                        <option value="B+">B+</option>
+                                                        <option value="B-">B-</option>
+                                                        <option value="AB+">AB+</option>
+                                                        <option value="AB-">AB-</option>
+                                                        <option value="O+">O+</option>
+                                                        <option value="O-">O-</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -242,59 +258,59 @@ function FormPage() {
 
 
                                     <div className="row p-3 ">
-                                    <div className="col-7 ">
-                                        <div class="form-input">
-                                        <input
-                                                className=''
-                                                type="text"
-                                                name="Name"
-                                                placeholder="Enter subtitle"
-                                                value={formData.number}
-                                                onChange={handleChange} />
+                                        <div className="col-7 ">
+                                            <div class="form-input">
+                                                <input
+                                                    className=''
+                                                    type="text"
+                                                    name="Name"
+                                                    placeholder="Enter subtitle"
+                                                    value={formData.number}
+                                                    onChange={handleChange} />
                                                 <label for="subtitle">સરનામું </label>
                                             </div>
                                         </div>
 
 
                                         <div className="col-5 d-flex ">
-                                        <div class="select">
-                                            <label className='m-2 fw-bold'>જાતિ:- </label> 
+                                            <div class="select">
+                                                <label className='m-2 fw-bold'>જાતિ:- </label>
                                                 <div class="view">
-                                                <select
-                                                    name="gender"
-                                                    value={formData.gender}
-                                                    onChange={handleChange}>
-                                                    <option value="">પસંદ કરો</option>
-                                                    <option value="પુરુષ">પુરુષ</option>
-                                                    <option value="સ્ત્રી">સ્ત્રી</option>
-                                                </select>
+                                                    <select
+                                                        name="gender"
+                                                        value={formData.gender}
+                                                        onChange={handleChange}>
+                                                        <option value="">પસંદ કરો</option>
+                                                        <option value="પુરુષ">પુરુષ</option>
+                                                        <option value="સ્ત્રી">સ્ત્રી</option>
+                                                    </select>
                                                 </div>
                                             </div>
 
 
                                             <div class="select">
-                                            <label className='m-2 fw-bold'>પરણિત સ્થિતિ:- </label> 
+                                                <label className='m-2 fw-bold'>પરણિત સ્થિતિ:- </label>
                                                 <div class="view">
-                                                <select
-                                                    name="maritalStatus"
-                                                    value={formData.maritalStatus}
-                                                    onChange={handleChange}>
-                                                    <option value="">પસંદ કરો</option>
-                                                    <option value="પરણિત">પરણિત</option>
-                                                    <option value="અપરણિત">અપરણિત</option>
-                                                </select>
+                                                    <select
+                                                        name="maritalStatus"
+                                                        value={formData.maritalStatus}
+                                                        onChange={handleChange}>
+                                                        <option value="">પસંદ કરો</option>
+                                                        <option value="પરણિત">પરણિત</option>
+                                                        <option value="અપરણિત">અપરણિત</option>
+                                                    </select>
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
                                     </div>
 
 
                                     <div className="row">
                                         <div className="col-7 pt-4 d-flex">
-                                           
-                                        <div class="form-input">
-                                        <input
+
+                                            <div class="form-input">
+                                                <input
                                                     type="text"
                                                     name="Name"
                                                     placeholder="Enter subtitle"
@@ -304,7 +320,7 @@ function FormPage() {
                                             </div>
 
                                             <div class="form-input">
-                                        <input
+                                                <input
                                                     type="text"
                                                     name="Name"
                                                     placeholder="Enter subtitle"
@@ -315,8 +331,8 @@ function FormPage() {
                                         </div>
 
                                         <div className="col-5 pt-4 ">
-                                        <div class="form-input ">
-                                        <input
+                                            <div class="form-input ">
+                                                <input
                                                     type="text"
                                                     name="nir"
                                                     className='w-50'
@@ -332,8 +348,8 @@ function FormPage() {
                                     <div className="row pt-3">
                                         <div className="col-7 pt-3 d-flex">
 
-                                        <div class="form-input">
-                                        <input
+                                            <div class="form-input">
+                                                <input
                                                     type="tel"
                                                     name="phone1"
                                                     value={formData.phone1}
@@ -345,8 +361,8 @@ function FormPage() {
                                                 <label for="subtitle">મો.ન.(૧)</label>
                                             </div>
 
-                                               <div class="form-input">
-                                               <input
+                                            <div class="form-input">
+                                                <input
                                                     type="tel"
                                                     name="phone2"
                                                     value={formData.phone2}
@@ -359,7 +375,7 @@ function FormPage() {
                                             </div>
 
                                             <div class="form-input">
-                                            <input
+                                                <input
                                                     type="email"
                                                     name="email"
                                                     placeholder="Enter subtitle"
@@ -371,7 +387,8 @@ function FormPage() {
                                         </div>
                                         <div className="col-5 d-flex justify-content-center">
                                             <div className="p-5">
-                                                <button type="submit" className='btn btn-primary'>Submit</button> </div>
+                                                <button type="submit" className='btn btn-primary'>Submit</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
