@@ -28,21 +28,13 @@ function FormPage() {
 
     // Form field value handle કરવું
     const handleChange = (e) => {
-        // setFormData({
-        //     ...formData,
-        //     [e.target.name]: e.target.value
-        // });
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
 
-    }
-
-    // // Form submit કરો
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     setTableData([...tableData, formData]); // form data ને tableData state માં add કરો
-    //     setFormData({ fname: '', lname: '', relation: '', email: '', dbdate: ' ', bloodGroup: '', stdy: '', gender: '', maritalStatus: '', nir: '' }); // Form reset
-    // }
-
-    const saveData = async (saveObj) => {
+    const saveData = async () => {
         const objJson = {
             jsonObj1: [{ MEMBERID: formData.MemberID }],
             SPName: 'API_MemberDetailSave'
@@ -50,12 +42,27 @@ function FormPage() {
 
         try {
             await dispatch(DynamicAdd(objJson));
-            reset();
+            setTableData([...tableData, formData]); // Add form data to tableData
+            reset(); // Reset form after submission
+            setFormData({
+                fname: '',
+                lname: '',
+                relation: '',
+                email: '',
+                dbdate: '',
+                bloodGroup: '',
+                stdy: '',
+                gender: '',
+                maritalStatus: '',
+                nir: '',
+                phone1: '',
+                phone2: ''
+            }); // Clear form data
         } catch (error) {
             console.error("Failed to save data!", error);
         }
     };
-
+    
     return (
         <>
             <Accordion defaultActiveKey="0">
