@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Accordion } from 'react-bootstrap';
 import './Main.css'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addData as DynamicAdd } from '../Slices/DynamicSlice.js';
 import { useForm } from 'react-hook-form';
+import { Dropdown } from 'primereact/dropdown';
 
 function FormPage() {
 
@@ -11,22 +12,25 @@ function FormPage() {
     const { register, handleSubmit, setValue, reset, formState: { errors } } = useForm();
     // Form data માટે state
     const [formData, setFormData] = useState({
-        fname: '',
-        lname: '',
-        relation: '',
-        email: '',
-        dbdate: ' ',
-        bloodGroup: '',
-        stdy: '',
-        gender: '',
-        nir: ''
+        MemberID: null, formData: null, BirthDate: null, SurName: null, MemberName: null, FatherName: null, GFatherName: null, RelationWithMainMember: null, Education: null, Mat_SurName: null, Mat_Name: null,
+        Mat_FatherName: null, Mat_Village: null, BirthDate: null, BloodGrp: null, Foreign_Resident_Address: null, Gender: null, MaritalStatus: null, Business: null, Business_address: null,
+        Mobile_1: null, Mobile_2: null, EmailID: null
 
     });
 
-    // Table data માટે state
     const [tableData, setTableData] = useState([]);
+    const [optionsBloodGrp, setoptionsBloodGrp] = useState([]);
+    const [memberID, setMemberID] = useState(1);
+    const DropDown = useSelector(state => state.DropDown)
 
-    // Form field value handle કરવું
+    useEffect(() => {
+        const fetchData = async () => {
+            let GetDropDownParty = DropDown?.BLOODGRP;
+            setoptionsBloodGrp(GetDropDownParty);
+        };
+        fetchData();
+    }, []);
+
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -34,35 +38,30 @@ function FormPage() {
         });
     };
 
-    const saveData = async () => {
+    const saveData = async (newObj) => {
+        const SaveObj = Array.isArray(newObj) ? newObj : [newObj];
+
         const objJson = {
-            jsonObj1: [{ MEMBERID: formData.MemberID }],
+            jsonObj1: SaveObj,
             SPName: 'API_MemberDetailSave'
         };
+        console.log("objjson", newObj.MemberName);
 
         try {
             await dispatch(DynamicAdd(objJson));
-            setTableData([...tableData, formData]); // Add form data to tableData
+            setTableData([...tableData, { ...newObj, memberID }]); // Add form data with MemberID to tableData
             reset(); // Reset form after submission
             setFormData({
-                fname: '',
-                lname: '',
-                relation: '',
-                email: '',
-                dbdate: '',
-                bloodGroup: '',
-                stdy: '',
-                gender: '',
-                maritalStatus: '',
-                nir: '',
-                phone1: '',
-                phone2: ''
+                MemberID: memberID + 1, FormNumber: '', BirthDate: '', SurName: '', MemberName: '', FatherName: '', GFatherName: '', RelationWithMainMember: '', 
+                Education: '', Mat_SurName: '', Mat_Name: '', Mat_FatherName: '', Mat_Village: '', BloodGrp: '', Foreign_Resident_Address: '', Gender: '', 
+                MaritalStatus: '', Business: '', Business_address: '', Mobile_1: '', Mobile_2: '', EmailID: ''
             }); // Clear form data
+            setMemberID(memberID + 1); // Increment MemberID for the next entry
         } catch (error) {
             console.error("Failed to save data!", error);
         }
     };
-    
+
     return (
         <>
             <Accordion defaultActiveKey="0">
@@ -74,178 +73,174 @@ function FormPage() {
                                 <h1 className='text-center pt-5'>અમરાપર(ધાનાણી) પટેલ સમાજ - સુરત</h1>
                                 <div className="row d-flex">
                                     <div className="justify-content-center d-flex p-3">
-
-                                        <div class="form-input">
+                                        <div className="form-input">
                                             <input
                                                 type="number"
                                                 placeholder="Enter subtitle"
-                                                id="subtitle" />
+                                                name='MemberID'
+                                                value={formData.MemberID}
+                                                id="subtitle"
+                                                {...register("MemberID", { required: false })}
+                                            />
                                             <label for="subtitle">સભ્ય નંબર</label>
                                         </div>
-
-                                        <div class="form-input">
+                                        <div className="form-input">
                                             <input
                                                 type="number"
                                                 name="Number"
                                                 placeholder="Enter subtitle"
-                                                value={formData.fromnum}
-                                                onChange={handleChange} />
+                                                value={formData.FormNumber}
+                                                onChange={handleChange}
+                                                {...register("FormNumber", { required: false })}
+                                            />
                                             <label for="subtitle">ફોર્મ નંબર</label>
                                         </div>
-
-
-                                        <div class="form-input">
+                                        <div className="form-input">
                                             <input
                                                 type="date"
                                                 name="Number"
                                                 //    placeholder="Enter subtitle"
-                                                value={formData.fromdate}
+                                                value={formData.BirthDate}
                                                 onChange={handleChange}
+                                                {...register("BirthDate", { required: false })}
                                             />
                                             <label for="subtitle">તારીખ</label>
                                         </div>
-
                                     </div>
-
-
                                     <div className="row">
                                         <div className="col-7 pt-2 d-flex">
                                             <label className='pt-2 fs-5 fw-bold'> નામ:- </label>
-
-                                            <div class="form-input">
+                                            <div className="form-input">
                                                 <input
                                                     type="text"
                                                     name="Name"
                                                     placeholder="Enter subtitle"
-                                                    value={formData.surname}
-                                                    onChange={handleChange} />
+                                                    value={formData.SurName}
+                                                    onChange={handleChange}
+                                                    {...register("SurName", { required: false })}
+                                                />
                                                 <label for="subtitle">અટક</label>
                                             </div>
-
-                                            <div class="form-input">
+                                            <div className="form-input">
                                                 <input
                                                     type="text"
-                                                    name="fname"
+                                                    name="MemberName"
                                                     placeholder="Enter subtitle"
-                                                    value={formData.fname}
-                                                    onChange={handleChange} />
+                                                    value={formData.MemberName}
+                                                    onChange={handleChange}
+                                                    {...register("MemberName", { required: false })}
+                                                />
                                                 <label for="subtitle">નામ</label>
                                             </div>
-
-                                            <div class="form-input">
+                                            <div className="form-input">
                                                 <input
                                                     type="text"
                                                     name="lname"
                                                     placeholder="Enter subtitle"
-                                                    value={formData.lname}
-                                                    onChange={handleChange} />
+                                                    value={formData.FatherName}
+                                                    onChange={handleChange}
+                                                    {...register("FatherName", { required: false })} />
                                                 <label for="subtitle">પિતા નુ નામ</label>
                                             </div>
-
-
-                                            <div class="form-input">
+                                            <div className="form-input">
                                                 <input
                                                     type="text"
                                                     name="Name"
                                                     placeholder="Enter subtitle"
-                                                    value={formData.dadaname}
-                                                    onChange={handleChange} />
+                                                    value={formData.GFatherName}
+                                                    onChange={handleChange}
+                                                    {...register("GFatherName", { required: false })} />
                                                 <label for="subtitle">દાદા</label>
                                             </div>
                                         </div>
-
-
                                         <div className="col-5 d-flex pt-2 ">
-                                            <div class="form-input ">
+                                            <div className="form-input ">
                                                 <input
                                                     type="text"
                                                     name="relation"
                                                     placeholder="Enter subtitle"
-                                                    value={formData.relation}
-                                                    onChange={handleChange} />
+                                                    value={formData.RelationWithMainMember}
+                                                    onChange={handleChange}
+                                                    {...register("RelationWithMainMember", { required: false })} />
                                                 <label for="subtitle">સભ્ય સાથે નું સગપણ </label>
                                             </div>
-
-                                            <div class="form-input ">
+                                            <div className="form-input ">
                                                 <input
                                                     type="text"
                                                     name="stdy"
                                                     placeholder="Enter subtitle"
-                                                    value={formData.stdy}
-                                                    onChange={handleChange} />
+                                                    value={formData.Education}
+                                                    onChange={handleChange}
+                                                    {...register("Education", { required: false })} />
                                                 <label for="subtitle">અભ્યાસ </label>
                                             </div>
                                         </div>
                                     </div>
-
                                     {/* મોસાળ ની વિગત   */}
-
                                     <div className="row py-4">
                                         <div className="col-7 pt-2 d-flex">
                                             <label className='pt-2  fw-bold'> મોસાળ ની વિગત:- </label>
-
-                                            <div class="form-input">
+                                            <div className="form-input">
                                                 <input
                                                     type="text"
                                                     name="Name"
                                                     placeholder="Enter subtitle"
-                                                    value={formData.number}
-                                                    onChange={handleChange} />
+                                                    value={formData.Mat_SurName}
+                                                    onChange={handleChange}
+                                                    {...register("Mat_SurName", { required: false })} />
                                                 <label for="subtitle">અટક</label>
                                             </div>
-
-                                            <div class="form-input">
+                                            <div className="form-input">
                                                 <input
                                                     type="text"
                                                     name="Name"
                                                     placeholder="Enter subtitle"
-                                                    value={formData.number}
-                                                    onChange={handleChange} />
+                                                    value={formData.Mat_Name}
+                                                    onChange={handleChange}
+                                                    {...register("Mat_Name", { required: false })}
+                                                />
                                                 <label for="subtitle">નામ</label>
                                             </div>
-
-
-                                            <div class="form-input">
+                                            <div className="form-input">
                                                 <input
                                                     type="text"
                                                     name="Name"
                                                     placeholder="Enter subtitle"
-                                                    value={formData.number}
-                                                    onChange={handleChange} />
+                                                    value={formData.Mat_FatherName}
+                                                    onChange={handleChange}
+                                                    {...register("Mat_FatherName", { required: false })}
+                                                />
                                                 <label for="subtitle">પિતા નુ નામ</label>
                                             </div>
-
-
-                                            <div class="form-input">
+                                            <div className="form-input">
                                                 <input
                                                     type="text"
                                                     name="Name"
                                                     placeholder="Enter subtitle"
-                                                    value={formData.number}
-                                                    onChange={handleChange} />
+                                                    value={formData.Mat_Village}
+                                                    onChange={handleChange}
+                                                    {...register("Mat_Village", { required: false })} />
                                                 <label for="subtitle">ગામ</label>
                                             </div>
                                         </div>
-
-
                                         <div className="col-5 d-flex pt-2 ">
-                                            <div class="form-input ">
+                                            <div className="form-input ">
                                                 <input
                                                     type="date"
                                                     name="dbdate"
                                                     placeholder="Enter subtitle"
-                                                    value={formData.dbdate}
-                                                    onChange={handleChange} />
+                                                    value={formData.BirthDate}
+                                                    onChange={handleChange}
+                                                    {...register("BirthDate", { required: false })} />
                                                 <label for="subtitle">જન્મતારીખ</label>
                                             </div>
-
-                                            <div class="select">
-                                                <label className='m-2 fw-bold'>બ્લડ ગ્રૂપ :- </label>
-                                                <div class="view">
+                                            <div className="select col-12 col-lg-6 col-sm-4 col-md-4">
+                                                {/* <div className="view">
                                                     <select
                                                         name="bloodGroup"
-                                                        value={formData.bloodGroup}
-                                                        onChange={handleChange}>
+                                                        value={formData.BloodGrp}
+                                                        onChange={handleChange}
+                                                        {...register("BloodGrp", { required: false })}>
                                                         <option value="">પસંદ કરો</option>
                                                         <option value="A+">A+</option>
                                                         <option value="A-">A-</option>
@@ -256,161 +251,158 @@ function FormPage() {
                                                         <option value="O+">O+</option>
                                                         <option value="O-">O-</option>
                                                     </select>
-                                                </div>
+                                                </div> */}
+                                                <Dropdown
+                                                    value={formData.BloodGrp}
+                                                    onChange={(e) => setFormData({ ...formData, BloodGrp: e.target.value })}
+                                                    options={optionsBloodGrp?.map((option) => ({ label: option.Name, value: option.Code }))}
+                                                    placeholder="બ્લડ ગ્રૂપ"
+                                                    filter
+                                                    className="w-100 view"
+                                                />
                                             </div>
-
                                         </div>
                                     </div>
-
-
-
                                     <div className="row p-3 ">
                                         <div className="col-7 ">
-                                            <div class="form-input">
+                                            <div className="form-input">
                                                 <input
                                                     className=''
                                                     type="text"
                                                     name="Name"
                                                     placeholder="Enter subtitle"
-                                                    value={formData.number}
-                                                    onChange={handleChange} />
+                                                    value={formData.Address}
+                                                    onChange={handleChange}
+                                                    {...register("Address", { required: false })} />
                                                 <label for="subtitle">સરનામું </label>
                                             </div>
                                         </div>
-
-
                                         <div className="col-5 d-flex ">
-                                            <div class="select">
+                                            <div className="select">
                                                 <label className='m-2 fw-bold'>જાતિ:- </label>
-                                                <div class="view">
+                                                <div className="view">
                                                     <select
                                                         name="gender"
-                                                        value={formData.gender}
-                                                        onChange={handleChange}>
+                                                        value={formData.Gender}
+                                                        onChange={handleChange}
+                                                        {...register("Gender", { required: false })}>
                                                         <option value="">પસંદ કરો</option>
                                                         <option value="પુરુષ">પુરુષ</option>
                                                         <option value="સ્ત્રી">સ્ત્રી</option>
                                                     </select>
                                                 </div>
                                             </div>
-
-
-                                            <div class="select">
+                                            <div className="select">
                                                 <label className='m-2 fw-bold'>પરણિત સ્થિતિ:- </label>
-                                                <div class="view">
+                                                <div className="view">
                                                     <select
                                                         name="maritalStatus"
-                                                        value={formData.maritalStatus}
-                                                        onChange={handleChange}>
+                                                        value={formData.MaritalStatus}
+                                                        onChange={handleChange}
+                                                        {...register("MaritalStatus", { required: false })}>
                                                         <option value="">પસંદ કરો</option>
                                                         <option value="પરણિત">પરણિત</option>
                                                         <option value="અપરણિત">અપરણિત</option>
                                                     </select>
                                                 </div>
                                             </div>
-
                                         </div>
                                     </div>
-
-
                                     <div className="row">
                                         <div className="col-7 pt-4 d-flex">
 
-                                            <div class="form-input">
+                                            <div className="form-input">
                                                 <input
                                                     type="text"
                                                     name="Name"
                                                     placeholder="Enter subtitle"
-                                                    value={formData.number}
-                                                    onChange={handleChange} />
+                                                    value={formData.Business}
+                                                    onChange={handleChange}
+                                                    {...register("Business", { required: false })} />
                                                 <label for="subtitle">વ્યવસાય</label>
                                             </div>
-
-                                            <div class="form-input">
+                                            <div className="form-input">
                                                 <input
                                                     type="text"
                                                     name="Name"
                                                     placeholder="Enter subtitle"
-                                                    value={formData.number}
-                                                    onChange={handleChange} />
+                                                    value={formData.Business_address}
+                                                    onChange={handleChange}
+                                                    {...register("Business_address", { required: false })} />
                                                 <label for="subtitle">વ્યવસાય નુ સરનામું</label>
                                             </div>
                                         </div>
-
                                         <div className="col-5 pt-4 ">
-                                            <div class="form-input ">
+                                            <div className="form-input ">
                                                 <input
                                                     type="text"
                                                     name="nir"
                                                     className='w-50'
                                                     placeholder="Enter subtitle"
-                                                    value={formData.nir}
-                                                    onChange={handleChange} />
+                                                    value={formData.Foreign_Resident_Address}
+                                                    onChange={handleChange}
+                                                    {...register("Foreign_Resident_Address", { required: false })} />
                                                 <label for="subtitle">વિદેશ રહેઠાણ </label>
                                             </div>
                                         </div>
                                     </div>
-
-
                                     <div className="row pt-3">
                                         <div className="col-7 pt-3 d-flex">
 
-                                            <div class="form-input">
+                                            <div className="form-input">
                                                 <input
                                                     type="tel"
                                                     name="phone1"
-                                                    value={formData.phone1}
+                                                    value={formData.Mobile_1}
                                                     onChange={handleChange}
                                                     pattern="\d{10}"
                                                     maxLength="10"
                                                     placeholder="01234 56789"
+                                                    {...register("Mobile_1", { required: false })}
                                                 />
                                                 <label for="subtitle">મો.ન.(૧)</label>
                                             </div>
-
-                                            <div class="form-input">
+                                            <div className="form-input">
                                                 <input
                                                     type="tel"
                                                     name="phone2"
-                                                    value={formData.phone2}
+                                                    value={formData.Mobile_2}
                                                     onChange={handleChange}
                                                     pattern="\d{10}"
                                                     maxLength="10"
                                                     placeholder="01234 56789"
+                                                    {...register("Mobile_2", { required: false })}
                                                 />
                                                 <label for="subtitle">મો.ન.(૨)</label>
                                             </div>
-
-                                            <div class="form-input">
+                                            <div className="form-input">
                                                 <input
                                                     type="email"
                                                     name="email"
                                                     placeholder="Enter subtitle"
-                                                    value={formData.email}
-                                                    onChange={handleChange} />
+                                                    value={formData.EmailID}
+                                                    onChange={handleChange}
+                                                    {...register("EmailID", { required: false })} />
                                                 <label for="subtitle">ઈમેલ</label>
                                             </div>
-
                                         </div>
                                         <div className="col-5 d-flex justify-content-center">
                                             <div className="p-5">
-                                                <button type="submit" className='btn btn-primary'>Submit</button>
+                                                <button type="submit" className='btn btn-primary' onClick={handleSubmit(saveData)}>Submit</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </form>
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
 
 
-
-            <div class="container-fluid">
+            <div className="container-fluid">
                 <h2 className='text-center p-4'>કૌટુંબિક સભ્યના નામ </h2>
-                <table class="table table-bordered" >
+                <table className="table table-bordered" >
                     <thead >
                         <tr>
                             <th>ક્રમ</th>
@@ -430,25 +422,21 @@ function FormPage() {
                             tableData.map((data, index) => (
                                 <tr key={index}>
                                     <td>{index + 1}</td>
-                                    <td>{data.fname} {data.lname}</td>
-                                    <td>{data.relation}</td>
-                                    <td>{data.email}</td>
-                                    <td>{data.dbdate}</td>
-                                    <td>{data.bloodGroup}</td>
-                                    <td>{data.stdy}</td>
-                                    <td>{data.gender}</td>
-                                    <td>{data.maritalStatus}</td>
-                                    <td>{data.nir}</td>
+                                    <td>{data.MemberName} {data.FatherName}</td>
+                                    <td>{data.RelationWithMainMember}</td>
+                                    <td>{data.EmailID}</td>
+                                    <td>{data.BirthDate}</td>
+                                    <td>{data.BloodGrp}</td>
+                                    <td>{data.Education}</td>
+                                    <td>{data.Gender}</td>
+                                    <td>{data.MaritalStatus}</td>
+                                    <td>{data.Foreign_Resident_Address}</td>
                                 </tr>
                             ))
                         }
                     </tbody>
                 </table>
             </div>
-
-
-
-
         </>
     )
 }
