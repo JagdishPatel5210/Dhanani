@@ -3,6 +3,125 @@
     background-color: #079bbb !important;
 }
 
+
+.p-multiselect.p-multiselect-chip .p-multiselect-token {
+    font-size: 12px;
+    padding: 3px;
+    margin-right: 5px;
+}
+
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item {
+    padding: 3px;
+}
+
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item .p-checkbox {
+    margin-right: 8px;
+}
+
+.p-multiselect-token-label {
+    margin-right: 6px;
+    margin-left: 3px;
+}
+
+.p-dropdown:not(.p-disabled):hover,
+.p-multiselect:not(.p-disabled):hover {
+    border-color: gray;
+}
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+    color: #4338ca;
+}
+
+.p-dropdown-panel {
+    border: 1px solid var(---IconColor) !important;
+}
+
+.p-dropdown,
+.p-multiselect {
+    transition: none
+}
+
+.p-dropdown:not(.p-disabled):hover,
+.p-multiselect:not(.p-disabled):hover {
+    border-color: var(---IconColor) !important;
+}
+
+.p-dropdown:not(.p-disabled).p-focus,
+.p-multiselect:not(.p-disabled).p-focus {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: none;
+    border-color: var(---IconColor) !important;
+    ;
+}
+
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item.p-highlight {
+    Color: var(---IconColor) !important;
+    font-size: 13px !important;
+}
+
+.p-multiselect-panel .p-component .p-ripple-disabled .p-connected-overlay-enter-done {
+    z-index: 3000 !important;
+}
+    
+.p-dropdown .p-dropdown-label,
+.p-multiselect-label,
+.p-multiselect-items {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    padding: 5px;
+}
+
+.form-label {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item.p-highlight.p-focus {
+    color: var(---IconColor) !important;
+    background-color: var(---WhiteColor) !important;
+}
+
+/* Firefox */
+.rapaportTable input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.p-dropdown-panel .p-dropdown-item {
+    font-size: 16px !important;
+    padding: 8px 10px;
+}
+
+.p-dropdown-filter {
+    padding: 5px 10px;
+}
+
+.p-dropdown-items {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.popover {
+    width: 50% !important;
+}
+
+.popover-body {
+    padding: 10px 13px;
+}
+
+.PopBtn {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.p-dropdown,
+.p-multiselect {
+    transition: none;
+    width: 100% !important;
+}
+
+
 /* .input{
        
 } */
