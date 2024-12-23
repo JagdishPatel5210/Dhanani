@@ -14,7 +14,7 @@ export const fetchData = (data) => async (dispatch) => {
 
 
 export const fetchDataNew = async (obj) => {
-  let GetDet = await HttpMethod.post(`/SystemConfig/InsUpdDel/DynSpExDisp`, obj)
+  let GetDet = await HttpMethod.post(`/SystemConfig/InsUpdDel/DynSpExDisp`, obj);
   return GetDet.data.DynDisp
 
 }

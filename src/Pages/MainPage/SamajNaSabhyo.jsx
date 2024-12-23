@@ -19,10 +19,6 @@ import Layer18 from '../../Images/Layer18.png';
 import Layer19 from '../../Images/Layer19.png';
 import Footer from '../../Components/Footer';
 
-import { Dropdown } from 'primereact/dropdown';
-
-
-
 export default function SamajNaSabhyo() {
     return (
         <>

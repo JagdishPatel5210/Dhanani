@@ -100,7 +100,7 @@ function MainPage() {
 
       {/* -------------------------- About US Start -------------------------- */}
       <div className='container-fluid mt-5'>
-        <div className='container'>
+        <div className='container pt-3 pb-3'>
           <div className='row'>
             <div className='col-6'>
               <div className='row'>
@@ -115,16 +115,16 @@ function MainPage() {
                   </p>
                 </div>
               </div>
-              <div className='row'>
+              <div className='row mt-3'>
                 <div className='col-12'>
-                  <Button variant="outline-info" className='btn bg-bondiBlue mt-4 rounded-5'>
+                  <button className='btn-moreRead'>
                     વધુ વાંચો
-                  </Button>
+                  </button>
                 </div>
               </div>
             </div>
-            <div className='col-6'>
-              <img src='https://www.15gamkpsmain.com/assets/images/slider/umiya.jpg' className='img-fluid  shadow-lg bg-white rounded' style={{ width: '70%' }} />
+            <div className='col-6 text-end'>
+              <img src='https://www.15gamkpsmain.com/assets/images/slider/umiya.jpg' className='img-fluid img-god' style={{ width: '70%' }} />
             </div>
           </div>
         </div>
@@ -134,10 +134,10 @@ function MainPage() {
 
       {/* --------------------------------card-Carousel Section  Start ----------------------------------------*/}
 
-      <div className="container border-0">
+      <div className="container border-0 pt-3 pb-3">
         <div className="row mt-5">
           <div className='col-6 '>
-            <h1 className='text-center'>સામાજ ના હોડેદારો</h1>
+            <h3 className='text-center fw-semibold'>સામાજ ના હોડેદારો</h3>
             <div className='row' >
               <div className='first border-0'>
                 <OwlCarousel className="owl-theme" {...options}>
@@ -189,7 +189,7 @@ function MainPage() {
           </div>
 
           <div className='col-6 '>
-            <h1 className='text-center'>એકમોના પ્રમુખ/મંત્રી</h1>
+            <h3 className='text-center fw-semibold'>એકમોના પ્રમુખ/મંત્રી</h3>
             <div className='row' >
               <div className='first'>
                 <OwlCarousel className="owl-theme" {...options}>
@@ -240,8 +240,8 @@ function MainPage() {
             </div>
           </div>
 
-          <div className='col-6 mt-3'>
-            <h1 className='text-center'>વિકાસ ટ્રસ્ટ ના હોદ્દેદારો</h1>
+          <div className='col-6 mt-4'>
+            <h3 className='text-center fw-semibold'>વિકાસ ટ્રસ્ટ ના હોદ્દેદારો</h3>
             <div className='row' >
               <div className='first'>
                 <OwlCarousel className="owl-theme" {...options}>
@@ -278,8 +278,8 @@ function MainPage() {
             </div>
           </div>
 
-          <div className='col-6 mt-3'>
-            <h1 className='text-center'>સોશિયલ વેલ્ફેર ટ્રસ્ટ</h1>
+          <div className='col-6 mt-4'>
+            <h3 className='text-center fw-semibold'>સોશિયલ વેલ્ફેર ટ્રસ્ટ</h3>
             <div className='row' >
               <div className='first'>
                 <OwlCarousel className="owl-theme" {...options}>
@@ -334,67 +334,74 @@ function MainPage() {
       {/* --------------------------------card-Carousel Section end ----------------------------------------*/}
 
       {/* --------------------------------card Section Start ----------------------------------------*/}
-      <div className="container-fluid mt-5">
-        <div className="container">
-          <h1 className='text-center fw-bold'>ઇવેન્ટસ</h1>
+      <div className="container-fluid mt-5 EventsPart">
+        <div className="container pt-3 pb-3">
+          <h2 className='text-center fw-bold'>ઇવેન્ટસ</h2>
           <div className="row">
             <div className="col-lg-3">
-              <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={Event1} style={{ height: '12rem' }} />
+              <Card style={{ width: '100%', minHeight: '380px' }}>
+                <Card.Img variant="top" src={Event1} style={{ minHeight: '230px' }} />
                 <Card.Body>
-                  <Card.Title>વિકાસ ટ્ર્સ્ટ જનરલ સભા</Card.Title>
-                  <Card.Text>
+                  <Card.Title>
+                    <h5 className='fw-bold'>વિકાસ ટ્ર્સ્ટ જનરલ સભા</h5>
+                  </Card.Title>
+                  <Card.Text className='text-danger fw-semibold'>
                     2022-02-01
                   </Card.Text>
-                  <Button variant="outline-info" className='btn bg-bondiBlue mt-4 button rounded-5' href='/Event1'>
+                  <button className='btn-moreRead' href='/Event1'>
                     વધુ વાંચો
-                  </Button>
+                  </button>
                 </Card.Body>
               </Card>
             </div>
 
             <div className="col-lg-3">
-              <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={Event2} />
+              <Card style={{ width: '100%', minHeight: '380px' }}>
+                <Card.Img variant="top" src={Event2} style={{ minHeight: '230px' }} />
                 <Card.Body>
-                  <Card.Title>મહેસાણા સ્નેહમિલન
+                  <Card.Title>
+                    <h5 className='fw-bold'>મહેસાણા સ્નેહમિલન</h5>
                   </Card.Title>
-                  <Card.Text>
+                  <Card.Text className='text-danger fw-semibold'>
                     2022-03-13
                   </Card.Text>
-                  <Button variant="outline-info" className='btn bg-bondiBlue  mt-4 button rounded-5' href='/Event2'>
+                  <button className='btn-moreRead' href='/Event2'>
                     વધુ વાંચો
-                  </Button>
+                  </button>
                 </Card.Body>
               </Card>
             </div>
 
             <div className="col-lg-3">
-              <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={Event3} />
+              <Card style={{ width: '100%', minHeight: '380px' }}>
+                <Card.Img variant="top" src={Event3} style={{ minHeight: '230px' }} />
                 <Card.Body>
-                  <Card.Title>મહેસાણા ક્રિકેટ ટુર્નામેન્ટ</Card.Title>
-                  <Card.Text>
+                  <Card.Title>
+                    <h5 className='fw-bold'>મહેસાણા ક્રિકેટ ટુર્નામેન્ટ</h5>
+                  </Card.Title>
+                  <Card.Text className='text-danger fw-semibold'>
                     2022-04-23
                   </Card.Text>
-                  <Button variant="outline-info" className='btn  bg-bondiBlue mt-4 button rounded-5' href='/Event3'>
+                  <button className='btn-moreRead' href='/Event3'>
                     વધુ વાંચો
-                  </Button>
+                  </button>
                 </Card.Body>
               </Card>
             </div>
 
             <div className="col-lg-3">
-              <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={Event27} style={{ height: '12rem' }} />
+              <Card style={{ width: '100%', minHeight: '380px' }}>
+                <Card.Img variant="top" src={Event27} style={{ minHeight: '230px' }} />
                 <Card.Body>
-                  <Card.Title>અમદાવાદ ક્રિકેટ ટુર્નામેન્ટ</Card.Title>
-                  <Card.Text>
+                  <Card.Title>
+                    <h5 className='fw-bold'>અમદાવાદ ક્રિકેટ ટુર્નામેન્ટ</h5>
+                  </Card.Title>
+                  <Card.Text className='text-danger fw-semibold'>
                     bd
                   </Card.Text>
-                  <Button variant="outline-info" className='btn bg-bondiBlue  mt-4 button rounded-5' href='/Event4'>
+                  <button className='btn-moreRead' href='/Event4'>
                     વધુ વાંચો
-                  </Button>
+                  </button>
                 </Card.Body>
               </Card>
             </div>

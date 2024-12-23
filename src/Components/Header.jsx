@@ -2,19 +2,21 @@ import React from 'react'
 import { NavLink, Link } from 'react-router-dom';
 import MainLogo from '../Images/MainLogo.png';
 import Button from 'react-bootstrap/Button';
+import { IoLogInSharp } from 'react-icons/io5';
 
 export default function Header() {
+    const handleLogin = () => { }
+
     return (
         <>
-
             <div className="container-fluid">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-3 ps-5">
+                    <div className="row align-items-center">
+                        <div className="col-3">
                             <img src={MainLogo} className='logo' />
                         </div>
-                        <div className="col-9">
-                            <ul className='d-flex  pt-4 menu'>
+                        <div className="col-7">
+                            <ul className='d-flex align-items-center menu'>
                                 <li className='p-3'>
                                     <Link to="/MainPage">હોમ</Link>
                                 </li>
@@ -36,12 +38,15 @@ export default function Header() {
                                 <li className='p-3'>
                                     <Link to="/ContactUs">અમારો સંપર્ક કરો</Link>
                                 </li>
-                                <div className='px-5 '>
-                                    <NavLink to='/FormPage' onClick={''}>
-                                        <button type="Login" className="submit-btn">Login</button>
-                                    </NavLink>
-                                </div>
                             </ul>
+                        </div>
+                        <div className='col-2 text-end'>
+                            <NavLink to='/Login' onClick={handleLogin}>
+                                <button type="Login" className="submit-btn">
+                                    <IoLogInSharp size={17} className='me-2' />
+                                    Login
+                                </button>
+                            </NavLink>
                         </div>
                     </div>
                 </div>

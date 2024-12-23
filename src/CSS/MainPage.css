@@ -7,6 +7,12 @@
     box-sizing: border-box;
 }
 
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     ---blackColor: #0000;
 }
@@ -23,7 +29,7 @@
 }
 
 .logo {
-    width: 120px;
+    width: 150px;
 }
 
 .menu li {
@@ -47,7 +53,7 @@
     content: '';
     width: 0%;
     height: 2px;
-    background-color: #007bff;
+    background-color: #9A0C0C;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -71,7 +77,7 @@ a {
 li {
     list-style-type: none !important;
     font-weight: 550 !important;
-    font-size: small;
+    font-size: 14px;
 }
 
 .fs-13 {
@@ -87,30 +93,65 @@ li {
     padding: 10px 35px;
 }
 
-/* .Card{
-    margin-top: 5%;
-    color: #041d57   
-} */
+.EventsPart .card {
+    border: none !important;
+    box-shadow: 0 0 7px 5px rgb(218, 217, 217) !important;
+}
+
+.LoginPage .card {
+    box-shadow: 0 0 5px 5px rgb(189, 189, 189);
+    border: none !important;
+    background: linear-gradient(to right, rgb(248, 248, 248), rgb(238, 237, 237)) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 25px !important;
+}
+
+.LoginPage input{
+    padding: 7px 7px !important;
+    border-radius: 10px !important;
+    border: 2px solid rgb(226, 226, 226) !important;
+    background-color: rgb(226, 226, 226) !important;
+}
+
+.LoginPage input:focus{
+    border: 2px solid rgb(0, 80, 100) !important;
+    box-shadow: none !important;
+}
+
+.LoginPage input::placeholder{
+    font-size: 14px !important;
+    padding-left: 5px !important;
+    font-weight: 700 !important;
+}
+
+.LoginPage .btn-login{
+    border: none !important;
+    background-color: #3d52a0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+}
+
+.LoginPage .border-danger-subtle{
+    border-bottom: 2px solid #d6536d !important;
+}
 
 .card {
     background-color: #fff;
-    padding: 20px;
+    padding: 10px;
+    margin: 10px;
     border-radius: 10px;
-    border: 0;
-    /* position: absolute; */
+    border: 1px solid rgb(219, 218, 218);
+    transition: 0.5s;
 }
 
-.card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-}
-
-/* On mouse-over, add a deeper shadow */
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(209, 209, 209);
+    box-shadow: 0 0 10px 5px rgb(219, 219, 219);
+    transition: 0.5s;
 }
-
 
 /*input */
 .form-input {
@@ -127,7 +168,6 @@ li {
     font-size: 1.2rem;
     padding: 5px;
     outline: none;
-    border: 1px solid gray;
     box-sizing: border-box;
     border-radius: 5px;
 }
@@ -137,12 +177,16 @@ li {
     left: 10px;
     top: 25px;
     transform: translateY(-50%);
-    font-size: 15px;
-    color: grey;
+    font-size: 13px;
+    color: black;
     letter-spacing: 1px;
     transition: 0.3s;
     font-family: "Roboto", sans-serif;
-    font-weight: 600;
+    font-weight: 550;
+}
+
+.input-Date {
+    font-size: 13px !important;
 }
 
 .form-input input:focus+label,
@@ -155,14 +199,9 @@ li {
 }
 
 .form-input input:focus {
-    border: 2px solid #007bff;
+    border: 1px solid #007bff;
 }
 
-
-
-
-
-/* select */
 .select {
     display: flex;
     flex-direction: row;
@@ -192,12 +231,6 @@ li {
     outline: 0;
     cursor: pointer;
 }
-
-
-
-
-
-
 
 .custom-link {
     position: relative;
@@ -266,14 +299,60 @@ li {
 
 }
 
+.footerPage a {
+    color: white !important;
+}
+
 .footer {
-    height: 50vh;
+    height: 400px;
     background-image: url(../Images/footer_map.png);
     background-color: #262e3b;
     position: relative;
     background-position: center right;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.footer-li {
+    transition: 0.5s;
+}
+
+.footer-li li:hover {
+    color: rgb(230, 146, 146);
+    transition: 0.5s;
+}
+
+.address {
+    background-color: #f74848c0;
+    padding: 5px;
+}
+
+.contact {
+    background-color: rgb(7, 173, 90);
+    padding: 5px;
+}
+
+.mailID {
+    background-color: rgb(53, 138, 218);
+    padding: 5px;
+}
+
+.footer-title {
+    color: #cb4a4a;
+    font-weight: 550 !important;
+}
+
+.footer-text {
+    font-size: 14px !important;
+}
+
+.footer-news {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.bg-brown {
+    background-color: #e6720ec7;
 }
 
 /* Basic button styling */
@@ -368,6 +447,10 @@ li {
     border-radius: 5px;
 } */
 
+.img-god {
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgb(223, 222, 222);
+}
 
 .image-container {
     position: relative;
@@ -443,15 +526,38 @@ textarea {
 }
 
 .submit-btn {
-    background-color: #00cc99;
-    color: white;
-    padding: 10px 20px;
+    background-color: #f89f1a;
+    color: black;
+    padding: 5px 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 15px;
+    transition: 0.3s;
 }
 
 .submit-btn:hover {
-    background-color: #009973;
+    background-color: #AE2C2E;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn-moreRead {
+    background-color: rgb(6, 94, 105);
+    color: white;
+    padding: 5px 10px;
+    border: 1px solid rgb(6, 94, 105);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.btn-moreRead:hover {
+    background-color: transparent;
+    border: 1px solid rgb(6, 94, 105);
+    color: rgb(6, 94, 105);
+    font-weight: bold;
+    transition: 0.5s;
 }

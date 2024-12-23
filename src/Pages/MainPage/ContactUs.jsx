@@ -2,8 +2,10 @@ import React from 'react'
 import Header from '../../Components/Header'
 import background from '../../Images/background.webp'
 import Footer from '../../Components/Footer';
+import { RiLoginCircleFill } from 'react-icons/ri';
 
 export default function ContactUs() {
+    debugger
     return (
         <>
             {/* // - ------------------------- Header Start -------------------------- */}
@@ -26,28 +28,26 @@ export default function ContactUs() {
                                 <div className="contact-form-container">
                                     <div className="form-section">
                                         <h2>Drop us a line</h2>
-                                        <form>
+                                        <form className='pt-3'>
                                             <div className="form-group">
-                                                <label>નામ</label>
-                                                <input type="text" name="name" required />
+                                                <input type="text" name="name" placeholder='નામ' required />
                                             </div>
                                             <div className="form-group">
-                                                <label>ઈમેલ</label>
-                                                <input type="email" name="email" required />
+                                                <input type="email" name="email" placeholder='ઈમેલ' required />
                                             </div>
                                             <div className="form-group">
-                                                <label>ગામ નું નામ</label>
-                                                <input type="text" name="villageName" required />
+                                                <input type="text" name="villageName" placeholder='ગામ નું નામ' required />
                                             </div>
                                             <div className="form-group">
-                                                <label>મોબાઈલ નંબર</label>
-                                                <input type="tel" name="mobileNumber" required />
+                                                <input type="tel" name="mobileNumber" placeholder='મોબાઈલ નંબર' required />
                                             </div>
                                             <div className="form-group">
-                                                <label>આપનું સૂચન</label>
-                                                <textarea name="message" rows="4" required></textarea>
+                                                <textarea name="message" rows="4" placeholder='આપનું સૂચન' required></textarea>
                                             </div>
-                                            <button type="submit" className="submit-btn">SUBMIT</button>
+                                            <button type="submit" className="btn btn-success">
+                                                <RiLoginCircleFill size={17} className='me-2' />
+                                                Submit
+                                            </button>
                                         </form>
                                     </div>
                                     <div className="map-section">

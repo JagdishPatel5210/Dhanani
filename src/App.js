@@ -13,6 +13,7 @@ import Event1 from './Pages/Events/Event1';
 import Event2 from './Pages/Events/Event2';
 import Event3 from './Pages/Events/Event3';
 import Event4 from './Pages/Events/Event4';
+import Login from './Pages/MainPage/Login';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
           <Route path='/Event3' element={<Event3 />} />
           <Route path='/Event4' element={<Event4 />} />
           <Route path='/Header' element={<Header />} />
+          <Route path='/Login' element={<Login />} />
         </Routes>
       </BrowserRouter>
     </>
