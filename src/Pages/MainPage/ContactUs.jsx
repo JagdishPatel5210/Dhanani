@@ -23,8 +23,8 @@ export default function ContactUs() {
 
                 <div className="container-fluid mt-5">
                     <div className="container">
-                        <div className="col-12">
                             <div className="row">
+                            <div className="col-12">
                                 <div className="contact-form-container">
                                     <div className="form-section">
                                         <h2>Drop us a line</h2>
@@ -50,6 +50,7 @@ export default function ContactUs() {
                                             </button>
                                         </form>
                                     </div>
+                                
                                     <div className="map-section">
                                         {/* Embed Google Map */}
                                         <iframe

@@ -12,7 +12,7 @@ export default function Footer() {
             <div className="container-fluid footer mt-5">
                 <div className="container">
                     <div className="row">
-                        <div className="col-4 mt-5">
+                        <div className="col-lg-4  mt-5">
                             <div className='row'>
                                 <div className='col-12'>
                                     <h5 className='text-white fs-5 pt-3 fw-bold'>અમારો સંપર્ક કરો</h5>
@@ -38,7 +38,7 @@ export default function Footer() {
                             </div>
                             {/* </div> */}
                         </div>
-                        <div className="col-3 mt-5 px-4">
+                        <div className="col-lg-3 mt-5 px-4">
                             <h5 className='text-white fs-5 pt-3 fw-bold'>અમારા વિશે</h5>
                             <ul className='text-white pt-3 footer-li'>
                                 <Link to="/MainPage">
@@ -92,7 +92,9 @@ export default function Footer() {
                             </ul>
                         </div>
 
-                        <div className="col-5 mt-5 " >
+
+
+                        <div className="col-lg-5 mt-5 " >
                             <h5 className='text-white fs-5 pt-3 fw-bold mb-2'>તાજેતરના સમાચાર</h5>
                             <marquee behavior="" direction="up" scrollamount="3" hight="250">
                                 <ul>

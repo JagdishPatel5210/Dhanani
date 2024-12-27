@@ -6,6 +6,10 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+/* .row{
+    padding-left:0;
+     padding-right: 0 ;
+} */
 
 ul,
 li {
@@ -17,39 +21,39 @@ li {
     ---blackColor: #0000;
 }
 
-.container-fluid {
+/* .container-fluid {
     width: 100% !important;
     overflow: hidden;
-}
+} */
 
-.container {
-    width: 1320px;
-    margin: auto;
-    overflow: hidden;
-}
+/* .container { */
+    /* width: 1320px; */
+    /* margin: auto; */
+    /* overflow: hidden; */
+/* } */
 
 .logo {
     width: 150px;
 }
 
-.menu li {
+/* .menu li {
     list-style-type: none;
-}
+} */
 
-.menu li a {
+/* .menu li a {
     text-decoration: none;
     color: #333;
     transition: color 0.3s ease, border-bottom 0.3s ease;
     padding-bottom: 5px;
     display: inline-block;
     position: relative;
-}
+} */
 
-.menu li a:hover {
+/* .menu li a:hover {
     color: #007bff;
-}
+} */
 
-.menu li a::after {
+/* .menu li a::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -58,20 +62,21 @@ li {
     left: 0;
     bottom: 0;
     transition: width 0.3s ease;
-}
+} */
 
-.menu li a:hover::after {
+/* .menu li a:hover::after {
     width: 100%;
-}
+} */
 
 /* Style for the menu list */
-.menu {
+/* .menu {
     margin-right: auto;
-}
+} */
 
 a {
     color: black !important;
     text-decoration: none !important;
+    /* text-align: center; */
 }
 
 li {
@@ -79,6 +84,42 @@ li {
     font-weight: 550 !important;
     font-size: 14px;
 }
+
+
+  
+
+.menu2{
+    text-align: center;
+}
+
+.menu .nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .menu-line {
+    display: block;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+  }
+  
+  .menu-line::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #9A0C0C;
+    transition: width .3s;
+  }
+  
+  .menu-line:hover::after {
+    width: 100%;
+  }
 
 .fs-13 {
     font-size: 13px !important;
@@ -136,6 +177,16 @@ li {
 
 .LoginPage .border-danger-subtle{
     border-bottom: 2px solid #d6536d !important;
+}
+
+
+.imge {
+  position: absolute;
+  /* position: fixed; */
+  left: 15%;
+  top: 8%;
+  z-index: -1;
+  opacity: 0.1;
 }
 
 .card {
@@ -284,10 +335,10 @@ li {
     font-weight: 500;
 }
 
-.card p {
+/* .card p {
     color: #777;
     font-size: 14px;
-}
+} */
 
 .cust {
     font-size: 2rem;
@@ -304,7 +355,7 @@ li {
 }
 
 .footer {
-    height: 400px;
+    /* height: 400px; */
     background-image: url(../Images/footer_map.png);
     background-color: #262e3b;
     position: relative;
@@ -560,4 +611,28 @@ textarea {
     color: rgb(6, 94, 105);
     font-weight: bold;
     transition: 0.5s;
+}
+
+
+@media (max-width: 576px) {
+
+.nav1 {
+    text-align: start;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .button-grid {
+    margin: 0;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .nav-link {
+    padding: 10px 0;
+  }
 }

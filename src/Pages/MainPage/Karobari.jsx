@@ -4,7 +4,9 @@ import background from '../../Images/background.webp'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Pagination from 'react-bootstrap/Pagination';
-import Layer_20 from '../../Images/Layer_20.png';
+import cardimg from '../../Images/poster4.jpg'
+
+// import Layer_20 from '../../Images/Layer_20.png';
 import Layer1 from '../../Images/Layer1.png';
 import Layer2 from '../../Images/Layer2.png';
 import Layer6 from '../../Images/Layer6.png';
@@ -50,7 +52,7 @@ export default function Karobari() {
                     </div>
                 </div>
 
-                <div className='container-fluid  p-5' id='karo-bari'>
+                <div className='container-fluid pt-5' id='karo-bari'>
                     <div className='container'>
                         <div className='row'>
                             <h1 className='text-center fw-bold mt-3' style={{ color: '#041d57' }}>કારોબારી સભ્યો</h1>
@@ -58,15 +60,15 @@ export default function Karobari() {
                         <div className="row">
                             <div className="col-lg-3">
                                 <Card style={{ width: '18rem' }}>
-                                    <Card.Img variant="top" src={Layer_20} />
+                                    <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className='text-center'>
                                             <Card.Title>પ્રમુખ</Card.Title>
-                                            <Card.Subtitle className="mb-2 text-muted">ગામ : દાંતકરોડી</Card.Subtitle>
+                                            {/* <Card.Subtitle className="mb-2 text-muted">ગામ : દાંતકરોડી</Card.Subtitle> */}
                                             <Card.Text>
-                                                ફોન : ૯૮૨૫૫૫૬૫૦૫
+                                                ફોન : ૯૮૨૫૧ ૪૭૩૦૭ 
                                             </Card.Text>
-                                            <Card.Link href="#" className='text-center custom-link'>રાકેશભાઈ આર.  પટેલ</Card.Link>
+                                            <Card.Link href="#" className='text-center custom-link'>ગેવરીયા ગીરધરભાઈ લક્ષ્મણભાઈ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -74,15 +76,15 @@ export default function Karobari() {
 
                             <div className="col-lg-3">
                                 <Card style={{ width: '18rem' }}>
-                                    <Card.Img variant="top" src={Layer1} />
+                                    <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className='text-center'>
                                             <Card.Title>ઉપપ્રમુખ</Card.Title>
-                                            <Card.Subtitle className="mb-2 text-muted">ગામ : દેદીયાસણ</Card.Subtitle>
+                                            {/* <Card.Subtitle className="mb-2 text-muted">ગામ : દેદીયાસણ</Card.Subtitle> */}
                                             <Card.Text>
-                                                ફોન : ૯૪૨૬૩૨૪૫૦૪
+                                                ફોન : ૯૯૯૮૯ ૫૦૬૯૦ 
                                             </Card.Text>
-                                            <Card.Link href="#" className='custom-link'>શાંતિલાલ ટી.  પટેલ</Card.Link>
+                                            <Card.Link href="#" className='custom-link'>જસાણી જયસુખભાઈ વલ્લભભાઈ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -90,16 +92,16 @@ export default function Karobari() {
 
                             <div className="col-lg-3">
                                 <Card style={{ width: '18rem' }}>
-                                    <Card.Img variant="top" src={Layer2} />
+                                    <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className='text-center'>
                                             <Card.Title>મંંત્રી</Card.Title>
-                                            <Card.Subtitle className="mb-2 text-muted">ગામ : મીઠાધરવા</Card.Subtitle>
+                                            {/* <Card.Subtitle className="mb-2 text-muted">ગામ : મીઠાધરવા</Card.Subtitle> */}
                                             <Card.Text>
-                                                ફોન : ૯૯૨૫૦૭૫૮૮૦
+                                                ફોન : ૯૮૭૯૨ ૮૦૧૯૨
                                             </Card.Text>
 
-                                            <Card.Link href="#" className='custom-link'>સુરેશભાઈ આઈ.  પટેલ</Card.Link>
+                                            <Card.Link href="#" className='custom-link'>રાજપરા નરેન્દ્રભાઈ શંભુભાઈ</Card.Link> 
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -107,15 +109,15 @@ export default function Karobari() {
 
                             <div className="col-lg-3">
                                 <Card style={{ width: '18rem' }}>
-                                    <Card.Img variant="top" src={Layer6} />
+                                    <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className='text-center'>
                                             <Card.Title>સહમંત્રી</Card.Title>
-                                            <Card.Subtitle className="mb-2 text-muted">ગામ : ચવેલી</Card.Subtitle>
+                                            {/* <Card.Subtitle className="mb-2 text-muted">ગામ : ચવેલી</Card.Subtitle> */}
                                             <Card.Text>
-                                                ફોન : ૯૪૨૮૮૧૩૨૨૫
+                                                ફોન : ૯૮૭૯૪ ૬૭૩૬૮ 
                                             </Card.Text>
-                                            <Card.Link href="#" className='custom-link'>અરુણભાઇ બી. પટેલ</Card.Link>
+                                            <Card.Link href="#" className='custom-link'>જાગણી રસીકભાઈ રવજીભાઈ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -126,18 +128,18 @@ export default function Karobari() {
                         <div className="row mt-4">
                             <div className="col-lg-3">
                                 <Card style={{ width: '18rem' }}>
-                                    <Card.Img variant="top" src={Layer4} />
+                                    <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className="text-center">
 
 
                                             <Card.Title>ખજાનચી</Card.Title>
-                                            <Card.Subtitle className="mb-2 text-muted">ગામ : માતપુર</Card.Subtitle>
+                                            {/* <Card.Subtitle className="mb-2 text-muted">ગામ : માતપુર</Card.Subtitle> */}
                                             <Card.Text>
-                                                ફોન : ૯૯૨૪૫૫૧૦૧૭
+                                                ફોન : ૯૮૭૯૬ ૫૫૧૦૯ 
                                             </Card.Text>
 
-                                            <Card.Link href="#" className='custom-link'>Another Link</Card.Link>
+                                            <Card.Link href="#" className='custom-link'>ગેવરીયા અરવિંદભાઈ પોપટભાઈ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -145,15 +147,15 @@ export default function Karobari() {
 
                             <div className="col-lg-3">
                                 <Card style={{ width: '18rem' }}>
-                                    <Card.Img variant="top" src={Layer17} />
+                                    <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className="text-center">
-                                            <Card.Title>આંતરિક ઓડીટર</Card.Title>
-                                            <Card.Subtitle className="mb-2 text-muted">ગામ : ખટાસણા</Card.Subtitle>
+                                            <Card.Title>કો. ઓડીનેટર</Card.Title>
+                                            {/* <Card.Subtitle className="mb-2 text-muted">ગામ : ખટાસણા</Card.Subtitle> */}
                                             <Card.Text>
-                                                ફોન : ૯૪૨૭૫૪૩૮૯૯
+                                                ફોન : ૯૮૨૫૭ ૪૮૪૯૯
                                             </Card.Text>
-                                            <Card.Link href="#" className='custom-link'>Another Link</Card.Link>
+                                            <Card.Link href="#" className='custom-link'>જસાણી ફુલાભાઈ બાબુભાઈ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -161,18 +163,18 @@ export default function Karobari() {
 
                             <div className="col-lg-3">
                                 <Card style={{ width: '18rem' }}>
-                                    <Card.Img variant="top" src={Layer18} />
+                                    <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className="text-center">
 
 
-                                            <Card.Title>કારોબારી સભ્ય</Card.Title>
-                                            <Card.Subtitle className="mb-2 text-muted">ગામ : સામેત્રા</Card.Subtitle>
+                                            <Card.Title>સલાહકાર</Card.Title>
+                                            {/* <Card.Subtitle className="mb-2 text-muted">ગામ : સામેત્રા</Card.Subtitle> */}
                                             <Card.Text>
-                                                ફોન : ૯૯૦૯૩૦૭૦૩૩
+                                                ફોન : ૯૮૨૫૫ ૭૫૫૬૫
                                             </Card.Text>
 
-                                            <Card.Link href="#" className='custom-link'>Another Link</Card.Link>
+                                            <Card.Link href="#" className='custom-link'>સોરઠીયા લાલજીભાઈ લક્ષ્મણભાઈ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -180,15 +182,15 @@ export default function Karobari() {
 
                             <div className="col-lg-3">
                                 <Card style={{ width: '18rem' }}>
-                                    <Card.Img variant="top" src={Layer19} />
+                                    <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className="text-center">
-                                            <Card.Title>કારોબારી સભ્ય</Card.Title>
-                                            <Card.Subtitle className="mb-2 text-muted">ગામ : ખટાસણા</Card.Subtitle>
+                                            <Card.Title>સલાહકાર</Card.Title>
+                                            {/* <Card.Subtitle className="mb-2 text-muted">ગામ : ખટાસણા</Card.Subtitle> */}
                                             <Card.Text>
-                                                ફોન : ૯૮૨૫૭૩૨૬૧૦
+                                                ફોન : ૯૮૨૫૧ ૩૫૧૧
                                             </Card.Text>
-                                            <Card.Link href="#" className='custom-link'>Another Link</Card.Link>
+                                            <Card.Link href="#" className='custom-link'>ખોયાણી કેશવભાઈ જાદવભાઈ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -198,15 +200,15 @@ export default function Karobari() {
                         <div className="row mt-4">
                             <div className="col-lg-3">
                                 <Card style={{ width: '18rem' }}>
-                                    <Card.Img variant="top" src={Layer16} />
+                                    <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className="text-center">
-                                            <Card.Title>કારોબારી સભ્ય</Card.Title>
-                                            <Card.Subtitle className="mb-2 text-muted">ગામ : દાંતકરોડી</Card.Subtitle>
+                                            <Card.Title>સલાહકાર</Card.Title>
+                                            {/* <Card.Subtitle className="mb-2 text-muted">ગામ : દાંતકરોડી</Card.Subtitle> */}
                                             <Card.Text>
-                                                ફોન : ૯૮૨૫૦૪૦૮૪૭
+                                                ફોન : ૯૯૦૯૨ ૮૯૩૪૬
                                             </Card.Text>
-                                            <Card.Link href="#" className='custom-link'>Another Link</Card.Link>
+                                            <Card.Link href="#" className='custom-link'>જોગાણી ચુનીભાઈ કાનજીભાઈ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -214,15 +216,15 @@ export default function Karobari() {
 
                             <div className="col-lg-3">
                                 <Card style={{ width: '18rem' }}>
-                                    <Card.Img variant="top" src={Layer10} />
+                                    <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className="text-center">
-                                            <Card.Title>કારોબારી સભ્ય</Card.Title>
-                                            <Card.Subtitle className="mb-2 text-muted">ગામ : મીઠા</Card.Subtitle>
+                                            <Card.Title>સલાહકાર</Card.Title>
+                                            {/* <Card.Subtitle className="mb-2 text-muted">ગામ : મીઠા</Card.Subtitle> */}
                                             <Card.Text>
-                                                ફોન : ૯૮૨૪૦૭૬૩૦૪
+                                                ફોન : ૯૮૭૯૦ ૪૮૦૦૨
                                             </Card.Text>
-                                            <Card.Link href="#" className='custom-link'>Another Link</Card.Link>
+                                            <Card.Link href="#" className='custom-link'>ગેવરીયા મથુરભાઇ નાનજીભાઇ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -230,15 +232,15 @@ export default function Karobari() {
 
                             <div className="col-lg-3">
                                 <Card style={{ width: '18rem' }}>
-                                    <Card.Img variant="top" src={Layer12} />
+                                    <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className="text-center">
-                                            <Card.Title>કારોબારી સભ્ય</Card.Title>
-                                            <Card.Subtitle className="mb-2 text-muted">ગામ : સામેત્રા</Card.Subtitle>
+                                            <Card.Title>સલાહકાર</Card.Title>
+                                            {/* <Card.Subtitle className="mb-2 text-muted">ગામ : સામેત્રા</Card.Subtitle> */}
                                             <Card.Text>
-                                                ફોન : ૭૮૭૪૦૭૮૫૧૭
+                                                ફોન : ૯૮૨૫૪ ૨૫૮33
                                             </Card.Text>
-                                            <Card.Link href="#" className='custom-link'>Another Link</Card.Link>
+                                            <Card.Link href="#" className='custom-link'>ગેવરીયા મનસુખભાઇ ગોકળભાઇ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -246,21 +248,23 @@ export default function Karobari() {
 
                             <div className="col-lg-3">
                                 <Card style={{ width: '18rem' }}>
-                                    <Card.Img variant="top" src={Layer15} />
+                                    <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className="text-center">
-                                            <Card.Title>કારોબારી સભ્ય</Card.Title>
-                                            <Card.Subtitle className="mb-2 text-muted">ગામ : દેદીયાસણ</Card.Subtitle>
+                                            <Card.Title>સલાહકાર</Card.Title>
+                                            {/* <Card.Subtitle className="mb-2 text-muted">ગામ : દેદીયાસણ</Card.Subtitle> */}
                                             <Card.Text>
-                                                ફોન : ૯૮૨૫૦૨૬૧૭૫
+                                                ફોન :૯૮૨૫૪ ૫૫૧૭૧
                                             </Card.Text>
-                                            <Card.Link href="#" className='custom-link'>Another Link</Card.Link>
+                                            <Card.Link href="#" className='custom-link'>પટોળીયા કનુભાઇ ભુરાભાઇ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
                             </div>
                         </div>
-                        <div className="row mt-4">
+
+                        
+                        {/* <div className="row mt-4">
                             <Pagination>
                                 <Pagination.First />
                                 <Pagination.Prev />
@@ -276,7 +280,7 @@ export default function Karobari() {
                                 <Pagination.Next />
                                 <Pagination.Last />
                             </Pagination>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
