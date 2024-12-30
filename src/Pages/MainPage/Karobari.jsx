@@ -1,39 +1,10 @@
 import React from 'react'
 import Header from '../../Components/Header';
-import background from '../../Images/background.webp'
+import background from '../../Images/01.jpg'
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import Pagination from 'react-bootstrap/Pagination';
 import cardimg from '../../Images/poster4.jpg'
-
-// import Layer_20 from '../../Images/Layer_20.png';
-import Layer1 from '../../Images/Layer1.png';
-import Layer2 from '../../Images/Layer2.png';
-import Layer6 from '../../Images/Layer6.png';
-import Layer4 from '../../Images/Layer4.png';
-import Layer5 from '../../Images/Layer5.png';
-import Layer10 from '../../Images/Layer10.png';
-import Layer12 from '../../Images/Layer12.png';
-import Layer15 from '../../Images/Layer15.png';
-import Layer16 from '../../Images/Layer16.png';
-import Layer17 from '../../Images/Layer17.png';
-import Layer18 from '../../Images/Layer18.png';
-import Layer19 from '../../Images/Layer19.png';
 import Footer from '../../Components/Footer';
-
-
-
-
-
-
-
-
 import { CardImg } from 'react-bootstrap';
-
-
-
-
-
 
 
 export default function Karobari() {
@@ -45,9 +16,8 @@ export default function Karobari() {
 
             <div className='container-fluid' >
                 <div className="row d-block">
-                    <div className="parallax" style={{ backgroundImage: `url(${background})`, position: 'relative', height: '30vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed', }}>
-                        <div className="overlay" style={{ position: 'absolute', zIndex: '1', }}>
-
+                    <div className="parallax" style={{ backgroundImage: `url(${background})`, position: 'relative', height: '40vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed', }}>
+                        <div className="overlay" style={{ position: 'absolute', zIndex: '1', width: '100px' }}>
                         </div>
                     </div>
                 </div>
@@ -59,7 +29,7 @@ export default function Karobari() {
                         </div>
                         <div className="row">
                             <div className="col-lg-3">
-                                <Card style={{ width: '18rem' }}>
+                                <Card>
                                     <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className='text-center'>
@@ -75,7 +45,7 @@ export default function Karobari() {
                             </div>
 
                             <div className="col-lg-3">
-                                <Card style={{ width: '18rem' }}>
+                                <Card>
                                     <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className='text-center'>
@@ -91,7 +61,7 @@ export default function Karobari() {
                             </div>
 
                             <div className="col-lg-3">
-                                <Card style={{ width: '18rem' }}>
+                                <Card>
                                     <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className='text-center'>
@@ -108,7 +78,7 @@ export default function Karobari() {
                             </div>
 
                             <div className="col-lg-3">
-                                <Card style={{ width: '18rem' }}>
+                                <Card>
                                     <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className='text-center'>
@@ -117,7 +87,7 @@ export default function Karobari() {
                                             <Card.Text>
                                                 ફોન : ૯૮૭૯૪ ૬૭૩૬૮ 
                                             </Card.Text>
-                                            <Card.Link href="#" className='custom-link'>જાગણી રસીકભાઈ રવજીભાઈ</Card.Link>
+                                            <Card.Link href="#" className='custom-link'>જોગણી રસીકભાઈ રવજીભાઈ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -127,7 +97,7 @@ export default function Karobari() {
 
                         <div className="row mt-4">
                             <div className="col-lg-3">
-                                <Card style={{ width: '18rem' }}>
+                                <Card>
                                     <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className="text-center">
@@ -146,7 +116,7 @@ export default function Karobari() {
                             </div>
 
                             <div className="col-lg-3">
-                                <Card style={{ width: '18rem' }}>
+                                <Card>
                                     <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className="text-center">
@@ -162,7 +132,7 @@ export default function Karobari() {
                             </div>
 
                             <div className="col-lg-3">
-                                <Card style={{ width: '18rem' }}>
+                                <Card>
                                     <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className="text-center">
@@ -181,7 +151,7 @@ export default function Karobari() {
                             </div>
 
                             <div className="col-lg-3">
-                                <Card style={{ width: '18rem' }}>
+                                <Card>
                                     <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className="text-center">
@@ -199,7 +169,7 @@ export default function Karobari() {
 
                         <div className="row mt-4">
                             <div className="col-lg-3">
-                                <Card style={{ width: '18rem' }}>
+                                <Card>
                                     <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className="text-center">
@@ -215,7 +185,7 @@ export default function Karobari() {
                             </div>
 
                             <div className="col-lg-3">
-                                <Card style={{ width: '18rem' }}>
+                                <Card>
                                     <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className="text-center">
@@ -231,7 +201,7 @@ export default function Karobari() {
                             </div>
 
                             <div className="col-lg-3">
-                                <Card style={{ width: '18rem' }}>
+                                <Card>
                                     <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className="text-center">
@@ -247,7 +217,7 @@ export default function Karobari() {
                             </div>
 
                             <div className="col-lg-3">
-                                <Card style={{ width: '18rem' }}>
+                                <Card>
                                     <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className="text-center">

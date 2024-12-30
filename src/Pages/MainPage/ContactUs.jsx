@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../../Components/Header'
-import background from '../../Images/background.webp'
+import background from '../../Images/logo_medium.jpg'
 import Footer from '../../Components/Footer';
 import { RiLoginCircleFill } from 'react-icons/ri';
 
@@ -14,14 +14,14 @@ export default function ContactUs() {
 
             <div className='container-fluid' >
                 <div className="row d-block">
-                    <div className="parallax" style={{ backgroundImage: `url(${background})`, position: 'relative', height: '30vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed', }}>
+                    <div className="parallax" style={{ backgroundImage: `url(${background})`, position: 'relative', height: '50vh',backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed', }}>
                         <div className="overlay" style={{ position: 'absolute', zIndex: '1', }}>
 
                         </div>
                     </div>
                 </div>
 
-                <div className="container-fluid mt-5">
+                <div className="container-fluid my-5">
                     <div className="container">
                             <div className="row">
                             <div className="col-12">

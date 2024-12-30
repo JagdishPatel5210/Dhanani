@@ -17,7 +17,7 @@ function Login() {
                                             <div className='col-12 p-2 d-flex justify-content-center align-items-center'>
                                                 <div className='row'>
                                                     <div className='col-12 d-flex justify-content-center'>
-                                                        <h3 className='border-bottom border-2 border-danger-subtle fs-5 fw-bold' style={{ color: '#071a5f' }}>ધાનાણી પરિવાર...</h3>
+                                                        <h3 className='border-bottom border-2 border-danger-subtle fs-5 fw-bold' style={{ color: '#071a5f' }}>અમરાપુર પરિવાર...</h3>
                                                     </div>
 
                                                     <div className='col-12 d-flex justify-content-center pt-5'>

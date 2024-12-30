@@ -4,32 +4,32 @@ import { IoHome } from 'react-icons/io5';
 import { MdEmail, MdPhoneInTalk } from 'react-icons/md';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import { IoIosArrowForward } from 'react-icons/io';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
     return (
-        <div className='footerPage'>
-            <div className="container-fluid footer mt-5">
+        <div className='footerPage pt-3'>
+            <div className="container-fluid footer border-bottom">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-4  mt-5">
+                        <div className="col-lg-4 py-4">
                             <div className='row'>
                                 <div className='col-12'>
                                     <h5 className='text-white fs-5 pt-3 fw-bold'>અમારો સંપર્ક કરો</h5>
                                 </div>
 
                                 <div className="d-flex mt-4">
-                                    <IoHome color='white' className='address' size={30} />
-                                    <p className='ps-3 text-white footer-text'>  શ્રી દ્વારકેશ ભવન અવસર પાર્ટી પ્લોટની પાછળ, મોઢેરા રોડ, મહેસાણા.</p>
+                                    <IoHome  className='address text-light' size={30} />
+                                    <p className='ps-3 text-white footer-text'> અમરાપુર </p>
                                 </div>
 
                                 <div className="d-flex mt-2">
-                                    <MdPhoneInTalk color='white' className='contact' size={30} />
-                                    <p className='ps-3 text-white footer-text'>  +91 99250 75880</p>
+                                    <MdPhoneInTalk  className='contact text-light' size={30} />
+                                    <p className='ps-3 text-white footer-text'>  +91 96873 82647</p>
                                 </div>
 
                                 <div className="d-flex mt-2">
-                                    <MdEmail color='white' className='mailID' size={30} />
+                                    <MdEmail  className='mailID text-light' size={30} />
                                     <p className='ps-3 text-white footer-text'> SilverTech@gmail.com</p>
                                 </div>
                                 {/* <div className="d-flex mt-1">
@@ -38,63 +38,55 @@ export default function Footer() {
                             </div>
                             {/* </div> */}
                         </div>
-                        <div className="col-lg-3 mt-5 px-4">
+                        <div className="col-lg-3 my-4 px-4 ">
                             <h5 className='text-white fs-5 pt-3 fw-bold'>અમારા વિશે</h5>
                             <ul className='text-white pt-3 footer-li'>
-                                <Link to="/MainPage">
                                     <li className='fw-light'>
                                         <IoIosArrowForward size={20} className='me-2' />
-                                        હોમ
+                                      <Link to='/MainPage'> હોમ </Link>
                                     </li>
-                                </Link>
-                                <Link to='/AmaraVishe'>
+                               
                                     <li className='pt-2 fw-light footer-li'>
                                         <IoIosArrowForward size={20} className='me-2' />
-                                        અમારા વિશે
+                                        <Link to='#'> અમારા વિશે </Link>
                                     </li>
-                                </Link>
-                                <Link to='/Karobari'>
+                              
                                     <li className='pt-2 fw-light footer-li'>
                                         <IoIosArrowForward size={20} className='me-2' />
-                                        કારોબારી સભ્યો
+                                        <Link to='/Karobari'>કારોબારી સભ્યો </Link>
                                     </li>
-                                </Link>
-                                <Link to='/SamajNaSabhyo'>
+                                
                                     <li className='pt-2 fw-light footer-li'>
                                         <IoIosArrowForward size={20} className='me-2' />
-                                        સમાજના સભ્યો
+                                        <Link to='#'> સમાજના સભ્યો </Link>
                                     </li>
-                                </Link>
-                                <Link>
+                               
                                     <li className='pt-2 fw-light footer-li'>
                                         <IoIosArrowForward size={20} className='me-2' />
-                                        પસંદગી માટે
+                                        <Link to='#'> પસંદગી માટે </Link>
                                     </li>
-                                </Link>
-                                <Link>
+                               
                                     <li className='pt-2 fw-light footer-li'>
                                         <IoIosArrowForward size={20} className='me-2' />
-                                        ઇવેન્ટ્સ
+                                        <Link to='#'>  ઇવેન્ટ્સ </Link>
                                     </li>
-                                </Link>
-                                <Link to='/Jaherat'>
+                               
                                     <li className='pt-2 fw-light footer-li'>
                                         <IoIosArrowForward size={20} className='me-2' />
-                                        જાહેરાત
+                                        <Link to='#'> જાહેરાત </Link>
                                     </li>
-                                </Link>
-                                <Link to='/ContactUs'>
+                              
                                     <li className='pt-2 fw-light footer-li'>
                                         <IoIosArrowForward size={20} className='me-2' />
-                                        અમારો સંપર્ક કરો
+                                        <Link to='/ContactUs'>  અમારો સંપર્ક કરો </Link>
                                     </li>
-                                </Link>
+                            
                             </ul>
                         </div>
 
 
 
-                        <div className="col-lg-5 mt-5 " >
+                        <div className="col-lg-5 my-4" >
                             <h5 className='text-white fs-5 pt-3 fw-bold mb-2'>તાજેતરના સમાચાર</h5>
                             <marquee behavior="" direction="up" scrollamount="3" hight="250">
                                 <ul>
@@ -112,9 +104,25 @@ export default function Footer() {
                                 </ul>
                             </marquee>
                         </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
+
+    <div className='container-fluid bg-danger'>
+      <div className="container">
+        <div className="row">
+            <div className="col-lg-6 col-sm-12 d-flex">
+            <h6 className='pt-2 text-light'> Developed & Maintained by <span className='foot'> Jasani Corporation </span> 
+             <Link className='corpohover'> <MdEmail className='fs-4'/> jasanicorp@gmail.com</Link></h6>
+            </div>
+            <div className="col-lg-6 col-sm-12 justify-content-end d-flex">
+            <h6 className='pt-2 text-light'> Rahul Jasani  <Link className='corpohover'> <MdPhoneInTalk className='fs-4'/> +91 96873 82647</Link> </h6>
+            </div>
+        </div>
+      </div>
+      </div> 
+
         </div>
     )
 }
+

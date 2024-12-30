@@ -6,77 +6,22 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-/* .row{
-    padding-left:0;
-     padding-right: 0 ;
-} */
-
-ul,
-li {
-    margin: 0;
-    padding: 0;
-}
 
 :root {
     ---blackColor: #0000;
 }
 
-/* .container-fluid {
-    width: 100% !important;
-    overflow: hidden;
-} */
-
-/* .container { */
-    /* width: 1320px; */
-    /* margin: auto; */
-    /* overflow: hidden; */
-/* } */
-
 .logo {
     width: 150px;
 }
 
-/* .menu li {
-    list-style-type: none;
-} */
-
-/* .menu li a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-    padding-bottom: 5px;
-    display: inline-block;
-    position: relative;
-} */
-
-/* .menu li a:hover {
-    color: #007bff;
-} */
-
-/* .menu li a::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background-color: #9A0C0C;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    transition: width 0.3s ease;
-} */
-
-/* .menu li a:hover::after {
-    width: 100%;
-} */
-
-/* Style for the menu list */
-/* .menu {
-    margin-right: auto;
-} */
+  ul {
+    padding-left: 3px;
+}
 
 a {
     color: black !important;
     text-decoration: none !important;
-    /* text-align: center; */
 }
 
 li {
@@ -86,9 +31,8 @@ li {
 }
 
 
-  
-
-.menu2{
+/* navbar */
+.menu2 {
     text-align: center;
 }
 
@@ -97,29 +41,39 @@ li {
     margin: 0;
     padding: 0;
     text-align: center;
-  }
-  
-  .menu-line {
+}
+
+.menu-line {
+    padding: 3px;
+    /* display: block;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder; */
+}
+
+.menu-line2{
     display: block;
     padding: 5px;
     text-align: center;
     text-decoration: none;
     color: black;
     font-weight: bolder;
-  }
-  
-  .menu-line::after {
+}
+
+.menu-line2::after {
     content: '';
     display: block;
     width: 0;
     height: 2px;
     background: #9A0C0C;
     transition: width .3s;
-  }
-  
-  .menu-line:hover::after {
+}
+
+.menu-line2:hover::after {
     width: 100%;
-  }
+}
 
 .fs-13 {
     font-size: 13px !important;
@@ -148,25 +102,25 @@ li {
     border-radius: 25px !important;
 }
 
-.LoginPage input{
+.LoginPage input {
     padding: 7px 7px !important;
     border-radius: 10px !important;
     border: 2px solid rgb(226, 226, 226) !important;
     background-color: rgb(226, 226, 226) !important;
 }
 
-.LoginPage input:focus{
+.LoginPage input:focus {
     border: 2px solid rgb(0, 80, 100) !important;
     box-shadow: none !important;
 }
 
-.LoginPage input::placeholder{
+.LoginPage input::placeholder {
     font-size: 14px !important;
     padding-left: 5px !important;
     font-weight: 700 !important;
 }
 
-.LoginPage .btn-login{
+.LoginPage .btn-login {
     border: none !important;
     background-color: #3d52a0;
     padding: 5px 10px;
@@ -175,18 +129,19 @@ li {
     font-size: 14px;
 }
 
-.LoginPage .border-danger-subtle{
+.LoginPage .border-danger-subtle {
     border-bottom: 2px solid #d6536d !important;
 }
 
 
 .imge {
-  position: absolute;
-  /* position: fixed; */
-  left: 15%;
-  top: 8%;
-  z-index: -1;
-  opacity: 0.1;
+    width: 75%;
+    position: absolute;
+    /* position: fixed; */
+    left: 12%;
+    top: 8%;
+    z-index: -1;
+    opacity: 0.1;
 }
 
 .card {
@@ -369,7 +324,7 @@ li {
 }
 
 .footer-li li:hover {
-    color: rgb(230, 146, 146);
+    color: rgb(240, 130, 130);
     transition: 0.5s;
 }
 
@@ -388,10 +343,10 @@ li {
     padding: 5px;
 }
 
-.footer-title {
+/* .footer-title {
     color: #cb4a4a;
     font-weight: 550 !important;
-}
+} */
 
 .footer-text {
     font-size: 14px !important;
@@ -614,25 +569,42 @@ textarea {
 }
 
 
-@media (max-width: 576px) {
-
-.nav1 {
-    text-align: start;
-  }
-
-  .menu {
-    display: block;
-  }
-
-  .button-grid {
-    margin: 0;
-  }
-
-  .navbar-nav {
-    flex-direction: column;
-  }
-
-  .nav-link {
-    padding: 10px 0;
-  }
+.corpohover :hover{
+    color: #001a4d;
 }
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .imge {
+        width: 500px;
+        left: -15%;
+    }
+
+    .foot {
+        display: block;
+    }
+
+    .menu-line2:hover::after {
+        justify-content: center;
+        margin-left: 25%;
+        width: 50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

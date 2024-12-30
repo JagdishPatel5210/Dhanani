@@ -7,9 +7,9 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import 'owl.carousel';
 import { Carousel } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import '../../JS/carousel.js';
+
 // import ExampleCarouselImage from '../../components/ExampleCarouselImage';
 
 // import Carousel from 'react-bootstrap/Carousel';
@@ -31,27 +31,27 @@ import Carouselimg12 from '../../Images/12.jpg'
 import Carouselimg13 from '../../Images/13.jpg'
 
 
-import Layer1 from '../../Images/Layer1.png';
-import Layer2 from '../../Images/Layer2.png';
-import Layer3 from '../../Images/Layer3.png';
-import Layer4 from '../../Images/Layer4.png';
-import Layer5 from '../../Images/Layer5.png';
-import Layer6 from '../../Images/Layer6.png';
-import Layer_20 from '../../Images/Layer_20.png';
-import President1 from '../../Images/President1.png';
-import Mantri1 from '../../Images/Mantri1.jpeg';
-import Layer15 from '../../Images/Layer15.png';
-import Layer16 from '../../Images/Layer16.png';
-import Layer17 from '../../Images/Layer17.png';
-import Layer18 from '../../Images/Layer18.png';
-import Layer19 from '../../Images/Layer19.png';
-import Layer20 from '../../Images/Layer20.png';
-import Layer10 from '../../Images/Layer10.png';
-import Layer12 from '../../Images/Layer12.png';
-import Event1 from '../../Images/Event1.jpg';
-import Event2 from '../../Images/Event2.jpeg';
-import Event3 from '../../Images/Event3.jpeg';
-import Event27 from '../../Images/Event27.jpeg';
+// import Layer1 from '../../Images/Layer1.png';
+// import Layer2 from '../../Images/Layer2.png';
+// import Layer3 from '../../Images/Layer3.png';
+// import Layer4 from '../../Images/Layer4.png';
+// import Layer5 from '../../Images/Layer5.png';
+// import Layer6 from '../../Images/Layer6.png';
+// import Layer_20 from '../../Images/Layer_20.png';
+// import President1 from '../../Images/President1.png';
+// import Mantri1 from '../../Images/Mantri1.jpeg';
+// import Layer15 from '../../Images/Layer15.png';
+// import Layer16 from '../../Images/Layer16.png';
+// import Layer17 from '../../Images/Layer17.png';
+// import Layer18 from '../../Images/Layer18.png';
+// import Layer19 from '../../Images/Layer19.png';
+// import Layer20 from '../../Images/Layer20.png';
+// import Layer10 from '../../Images/Layer10.png';
+// import Layer12 from '../../Images/Layer12.png';
+// import Event1 from '../../Images/Event1.jpg';
+// import Event2 from '../../Images/Event2.jpeg';
+// import Event3 from '../../Images/Event3.jpeg';
+// import Event27 from '../../Images/Event27.jpeg';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
 
@@ -103,13 +103,6 @@ function MainPage() {
     </div>
   );
 
-
-
-  const [isHighlighted, setIsHighlighted] = useState(false);
-
-  const toggleHighlight = () => {
-    setIsHighlighted(!isHighlighted);
-  }
   return (
     <>
 
@@ -119,55 +112,141 @@ function MainPage() {
 
       {/* -------------------------- Slider1 Stop --------------------------*/}
 
-      <div className='container-fluid'>
-        <div className='row bg-light'>
-          <div className="col-lg-3"></div>
+      {/* <div class="container">
+</div>
+
+<div id="carousel-1" class="carousel slide multi-item-carousel" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-1" data-slide-to="1"></li>
+    <li data-target="#carousel-1" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <div class="item__third">
+        <img src={Carouselimg1} alt=""/>
+        <div class="carousel-caption hidden-xs">
+          <h5>First slide label</h5>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item__third">
+        <img src={Carouselimg2} alt=""/>
+        <div class="carousel-caption hidden-xs">
+          <h5>Second slide label</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item__third">
+        <img src={Carouselimg3} alt=""/>
+        <div class="carousel-caption hidden-xs">
+          <h5>Third slide label</h5>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#carousel-1" class="left carousel-control" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+  <a href="#carousel-1" class="right carousel-control" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+</div> */}
+
+
+
+
+
+
+
+{/* 
+      <div class="container">
+  <h1>Use Bootstrap 3's carousel to show multiple items per slide.</h1>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="carousel slide multi-item-carousel" id="theCarousel">
+        <div class="carousel-inner">
+          <div class="item active">
+            <div class="col-xs-4"><a href="#1"><img src={Carouselimg1} class="img-responsive"/></a></div>
+          </div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src={Carouselimg2} class="img-responsive"/></a></div>
+          </div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src={Carouselimg3} class="img-responsive"/></a></div>
+          </div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src={Carouselimg4} class="img-responsive"/></a></div>
+          </div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src={Carouselimg5} class="img-responsive"/></a></div>
+          </div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src={Carouselimg6} class="img-responsive"/></a></div>
+          </div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src={Carouselimg} class="img-responsive"/></a></div>
+          </div>
+          
+        
+        </div>
+        <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+        <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div> */}
+
+       <div className='container-fluid'>
+        <div className='row bg-light'> 
+           <div className="col-lg-3"></div>
           <div className='col-lg-6'>
             <Carousel data-bs-theme="dark">
               <Carousel.Item>
-                <img src={Carouselimg1} alt="First slide" className='img-fluid' />
+                <img src={Carouselimg1} alt="First slide" className='img-fluid  ' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg2} alt="Second slide" className='img-fluid' />
+                <img src={Carouselimg2} alt="Second slide" className='img-fluid ' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg3} alt="Third slide" className='img-fluid' />
+                <img src={Carouselimg3} alt="Third slide" className='img-fluid ' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg4} alt="four slide" className='img-fluid' />
+                <img src={Carouselimg4} alt="four slide" className='img-fluid ' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg5} alt="five slide" className='img-fluid' />
+                <img src={Carouselimg5} alt="five slide" className='img-fluid ' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg6} alt="six slide" className='img-fluid' />
+                <img src={Carouselimg6} alt="six slide" className='img-fluid ' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg7} alt="seven slide" className='img-fluid' />
+                <img src={Carouselimg7} alt="seven slide" className='img-fluid ' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg8} alt="eight slide" className='img-fluid' />
+                <img src={Carouselimg8} alt="eight slide" className='img-fluid ' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg9} alt="nine slide" className='img-fluid' />
+                <img src={Carouselimg9} alt="nine slide" className='img-fluid ' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg10} alt="Ten slide" className='img-fluid' />
+                <img src={Carouselimg10} alt="Ten slide" className='img-fluid ' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg11} alt="oneone slide" className='img-fluid' />
+                <img src={Carouselimg11} alt="oneone slide" className='img-fluid ' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg12} alt="onetwo slide" className='img-fluid' />
+                <img src={Carouselimg12} alt="onetwo slide" className='img-fluid ' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg13} alt="onethree slide" className='img-fluid' />
+                <img src={Carouselimg13} alt="onethree slide" className='img-fluid ' />
               </Carousel.Item>
             </Carousel>
           </div>
-          <div className="col-lg-3"></div>
-        </div>
-      </div>
+          <div className="col-lg-3  "></div>
+         </div>
+      </div> 
 
 
 
@@ -197,19 +276,18 @@ function MainPage() {
 
       {/* -------------------------- About US Start -------------------------- */}
       <div className='container-fluid mt-5 position-relative'>
-        <img src={Carouselimg1} alt="" className="imge" />
+        <img src={Carouselimg1} alt="" className="imge " />
         <div className='container pt-3 pb-3'>
           <div className='row '>
             <div className='col-12'>
               <div className='row'>
-                <div className='col-12 p-1 btm-line mb-4'>
+                <div className='col-12 p-1 btm-line mb-4 text-center'>
                   <h2 className='fw-bold mb-2'>મારુ ગામ</h2>
                 </div>
               </div>
               <div className='row' >
-                <div className='col-12 col-md-12  col-lg-12 col-sm-12 fs-15' >
-                  <p text-align='justify'> <FaArrowRight className='m-2' />
-                    અમરેલી જિલ્લા માં કુંકાવાવ-વડિયા તાલુકામાં અમરાપુર(ધાનાણી) ગામ આવેલું છે.  </p>
+                <div className='col-12 col-md-12  col-lg-12 col-sm-12 fs-15'>
+                  <p> <FaArrowRight className='m-2' /> અમરેલી જિલ્લા માં કુંકાવાવ-વડિયા તાલુકામાં અમરાપુર(ધાનાણી) ગામ આવેલું છે.  </p>
                   <p>  <FaArrowRight className='m-2' /> અમરેલી-કુંકાવાવ રોડ ઉપરઆ ગામ આવેલું છે. અમરેલીથી ૨૦ કિલોમીટર અને કુંકાવાવથી ૬ કિલોમીટર થાયછે. અમરાપુરમાં૬૦% વસ્તીકણબી પટેલ, ૨૦% કાઠી દરબારઅને ૨૦%  અન્યકોમવસેછે. અમરાપુર માં આવતી જ્ઞાતિમાં, દોશી, દેસાઈ, શેઠ, અને મડીયાઆ શાખા ના ભાઈ ઓ હતા, હાલ આ સર્વે મુંબઈ તથા અન્ય સ્થળે રહેવા ગયેલછે. હાલ આ ભાઈઓ માંથી અમરાપુર માં દોશી સિવાય કોઈપણ નથી.</p>
                   <p>  <FaArrowRight className='m-2' />દોશી કુંટુંબના સુરાપુરા પુ. હેમચંદબાપાની સર્વભાઈઓ ના સાથ-સહકારથી શ્રી હેમચંદબાપા પબ્લીકટ્રસ્ટ કરી, શ્રી મોતીચંદ ભગવાનજી દોશી ની ડેલી માંજે જગ્યા તેમના સુપુત્રોએ વિનામુલ્યે ટ્રસ્ટઆપેલછે. તે જગ્યામાં સર્વેદોશીભાઈઓ ના સહકારથી પાકુમકાન, ડીપવેલ,,સર્વે સુવિધા સાથેનું બનાવી વિક્રમસંવત૨૦૪૭ ના ભાદરવા સુદ-૧૨ ને શુક્રવાર તા. ૨૦-૯-૧૯૯૧ ના શુભદિને સંપૂર્ણ વિધી સર હોમ-હવન કરી સર્વે દોશીભાઈઓ ની હાજરીમાં સ્થાપના કરેલછે. સવાર-સાંજ આરતી ધુપ-દિપ માટે મહારાજરાખેલ છે.</p>
                   <p>  <FaArrowRight className='m-2' />શ્રી મણીલાલ સુંદરજી દોશી, શ્રી મગનલાલ હરિલાલદોશી, શ્રી વિનોદલાલ હરિલાલ દોશી શ્રી બાબુલાલમોતી ચંદદોશી, દિપકભાઈ હરગોવિંદભાઈ દોશીના સહકારથી તન,મન, અને ધનથી સેવા આપી શ્રી હેમચંદબાપા ની જગ્યાનું નિર્માણ થયેલ.</p>
@@ -247,7 +325,7 @@ function MainPage() {
 
       {/* --------------------------------card-Carousel Section  Start ----------------------------------------*/}
 
-      <div className="container border-0 pt-3 pb-3">
+      {/* <div className="container border-0 pt-3 pb-3">
         <div className="row mt-5">
           <div className='col-6'>
             <h3 className='text-center fw-semibold'>સામાજ ના હોદેદારો</h3>
@@ -449,7 +527,7 @@ function MainPage() {
             </div>
           </div>
         </div>
-      </div >
+      </div > */}
       {/* --------------------------------card-Carousel Section end ----------------------------------------*/}
 
       {/* --------------------------------card Section Start ----------------------------------------*/}
@@ -459,13 +537,13 @@ function MainPage() {
           <div className="row">
             <div className="col-lg-3 mb-3">
               <Card className='h-100 pt-3'>
-                <Card.Img variant="top" src={Event1} className='img-fluid h-75'  />
+                {/* <Card.Img variant="top" src={Event1} className='img-fluid h-75'  /> */}
                 <Card.Body>
                   <Card.Title>
-                    <h5 className='fw-bold'>વિકાસ ટ્ર્સ્ટ જનરલ સભા</h5>
+                    <h5 className='fw-bold'>સ્નેહમિલન(2021)</h5>
                   </Card.Title>
                   <Card.Text className='text-danger fw-semibold'>
-                    2022-02-01
+                    2021-02-01
                   </Card.Text>
                   <button className='btn-moreRead' href='/Event1'>
                     વધુ વાંચો
@@ -476,13 +554,13 @@ function MainPage() {
 
             <div className="col-lg-3 mb-3">
               <Card  className='h-100'>
-                <Card.Img variant="top" src={Event2}  />
+                {/* <Card.Img variant="top" src={Event2}  /> */}
                 <Card.Body>
                   <Card.Title>
-                    <h5 className='fw-bold'>મહેસાણા સ્નેહમિલન</h5>
+                    <h5 className='fw-bold'>સ્નેહમિલન(2022)</h5>
                   </Card.Title>
                   <Card.Text className='text-danger fw-semibold'>
-                    2022-03-13
+                    2022-01-01
                   </Card.Text>
                   <button className='btn-moreRead' href='/Event2'>
                     વધુ વાંચો
@@ -493,13 +571,13 @@ function MainPage() {
 
             <div className="col-lg-3 mb-3">
               <Card  className='h-100'>
-                <Card.Img variant="top" src={Event3}  />
+                {/* <Card.Img variant="top" src={Event3}  /> */}
                 <Card.Body>
                   <Card.Title>
-                    <h5 className='fw-bold'>મહેસાણા ક્રિકેટ ટુર્નામેન્ટ</h5>
+                    <h5 className='fw-bold'>સ્નેહમિલન(2023)</h5>
                   </Card.Title>
                   <Card.Text className='text-danger fw-semibold'>
-                    2022-04-23
+                    2023-01-01
                   </Card.Text>
                   <button className='btn-moreRead' href='/Event3'>
                     વધુ વાંચો
@@ -510,13 +588,13 @@ function MainPage() {
 
             <div className="col-lg-3 mb-3">
               <Card  className='h-100'>
-                <Card.Img variant="top" src={Event27}  />
+                {/* <Card.Img variant="top" src={Event27}  /> */}
                 <Card.Body>
                   <Card.Title>
-                    <h5 className='fw-bold'>અમદાવાદ ક્રિકેટ ટુર્નામેન્ટ</h5>
+                    <h5 className='fw-bold'>સ્નેહમિલન(2024)</h5>
                   </Card.Title>
                   <Card.Text className='text-danger fw-semibold'>
-                    bd
+                    2024-01-01
                   </Card.Text>
                   <button className='btn-moreRead' href='/Event4'>
                     વધુ વાંચો
@@ -532,6 +610,7 @@ function MainPage() {
       {/* --------------------------------Footer Section Start ----------------------------------------*/}
       <Footer />
       {/* --------------------------------Footer Section End ----------------------------------------*/}
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </>
 
   )
