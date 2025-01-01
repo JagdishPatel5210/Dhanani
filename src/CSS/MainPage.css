@@ -12,7 +12,7 @@
 }
 
 .logo {
-    width: 150px;
+    width: 50%;
 }
 
   ul {
@@ -29,6 +29,18 @@ li {
     font-weight: 550 !important;
     font-size: 14px;
 }
+
+.image-container {
+    width: 100%;
+    text-align: center;
+    position: relative; 
+    opacity: 1;
+  }
+  
+  .responsive-image {
+    width: 40%; 
+  }
+
 
 
 /* navbar */
@@ -408,9 +420,9 @@ li {
     background-color: black;
 }
 
-.parallax {
+/* .parallax {
     background-color: rgb(0 0 0 / 42%);
-}
+} */
 
 
 /* jaherat open css */
@@ -458,11 +470,11 @@ li {
     box-shadow: 0 0 10px 5px rgb(223, 222, 222);
 }
 
-.image-container {
+/* .image-container {
     position: relative;
-}
+} */
 
-.overlay-1 {
+/* .overlay-1 {
     position: absolute;
     top: 0;
     left: 0;
@@ -470,7 +482,7 @@ li {
     bottom: 0;
     background-color: rgba(219, 75, 75, 0.8);
     /* Background color with opacity */
-    opacity: 0;
+    /* opacity: 0;
     transition: opacity 0.3s ease;
     display: flex;
     justify-content: center;
@@ -478,7 +490,7 @@ li {
     color: white;
     text-align: center;
     padding: 10px;
-}
+} */ */
 
 .image-container:hover .overlay-1 {
     opacity: 1;
@@ -574,14 +586,34 @@ textarea {
 }
 
 
+.item {
+  width: 500px;
+  height: 300px;
+}
+
+
+.carousel .slick-slide {
+  filter: blur(5px);
+  transition: ease .3s;
+  transform: scale(.8, .8);
+}
+
+.carousel .slick-slide.slick-center {
+  filter: none;
+  transform: scale(1, 1);
+}
 
 
 
 
 @media (max-width: 768px) {
+    .logo {
+        width: 120px;
+        margin: 5%;
+    }
     .imge {
-        width: 500px;
-        left: -15%;
+        width: 350px;
+        left: -3%;
     }
 
     .foot {
@@ -593,10 +625,20 @@ textarea {
         margin-left: 25%;
         width: 50%;
     }
+
+    .image-container {
+         height: 230px; 
+        width: 100%; 
+        position: relative; 
+        overflow: hidden;
+      }
+      
+      .responsive-image {
+        width: 350px; 
+        /* height: auto; */
+        object-fit: cover; 
+      }
 }
-
-
-
 
 
 

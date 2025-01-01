@@ -10,12 +10,6 @@ import { Carousel } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import '../../JS/carousel.js';
 
-// import ExampleCarouselImage from '../../components/ExampleCarouselImage';
-
-// import Carousel from 'react-bootstrap/Carousel';
-// import ExampleCarouselImage from './ExampleCarouselImage';
-// import ExampleCarouselImage from '../../components/ExampleCarouselImage';
-
 import Carouselimg1 from '../../Images/01.jpg'
 import Carouselimg2 from '../../Images/2.jpg'
 import Carouselimg3 from '../../Images/3.jpg'
@@ -112,91 +106,6 @@ function MainPage() {
 
       {/* -------------------------- Slider1 Stop --------------------------*/}
 
-      {/* <div class="container">
-</div>
-
-<div id="carousel-1" class="carousel slide multi-item-carousel" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-1" data-slide-to="1"></li>
-    <li data-target="#carousel-1" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <div class="item__third">
-        <img src={Carouselimg1} alt=""/>
-        <div class="carousel-caption hidden-xs">
-          <h5>First slide label</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="item__third">
-        <img src={Carouselimg2} alt=""/>
-        <div class="carousel-caption hidden-xs">
-          <h5>Second slide label</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="item__third">
-        <img src={Carouselimg3} alt=""/>
-        <div class="carousel-caption hidden-xs">
-          <h5>Third slide label</h5>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <a href="#carousel-1" class="left carousel-control" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
-  <a href="#carousel-1" class="right carousel-control" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-</div> */}
-
-
-
-
-
-
-
-{/* 
-      <div class="container">
-  <h1>Use Bootstrap 3's carousel to show multiple items per slide.</h1>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="carousel slide multi-item-carousel" id="theCarousel">
-        <div class="carousel-inner">
-          <div class="item active">
-            <div class="col-xs-4"><a href="#1"><img src={Carouselimg1} class="img-responsive"/></a></div>
-          </div>
-          <div class="item">
-            <div class="col-xs-4"><a href="#1"><img src={Carouselimg2} class="img-responsive"/></a></div>
-          </div>
-          <div class="item">
-            <div class="col-xs-4"><a href="#1"><img src={Carouselimg3} class="img-responsive"/></a></div>
-          </div>
-          <div class="item">
-            <div class="col-xs-4"><a href="#1"><img src={Carouselimg4} class="img-responsive"/></a></div>
-          </div>
-          <div class="item">
-            <div class="col-xs-4"><a href="#1"><img src={Carouselimg5} class="img-responsive"/></a></div>
-          </div>
-          <div class="item">
-            <div class="col-xs-4"><a href="#1"><img src={Carouselimg6} class="img-responsive"/></a></div>
-          </div>
-          <div class="item">
-            <div class="col-xs-4"><a href="#1"><img src={Carouselimg} class="img-responsive"/></a></div>
-          </div>
-          
-        
-        </div>
-        <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-        <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
-      </div>
-    </div>
-  </div>
-</div> */}
 
        <div className='container-fluid'>
         <div className='row bg-light'> 
@@ -204,74 +113,54 @@ function MainPage() {
           <div className='col-lg-6'>
             <Carousel data-bs-theme="dark">
               <Carousel.Item>
-                <img src={Carouselimg1} alt="First slide" className='img-fluid  ' />
+                <img src={Carouselimg1} alt="First slide" className='img-fluid' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg2} alt="Second slide" className='img-fluid ' />
+                <img src={Carouselimg2} alt="Second slide" className='img-fluid' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg3} alt="Third slide" className='img-fluid ' />
+                <img src={Carouselimg3} alt="Third slide" className='img-fluid' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg4} alt="four slide" className='img-fluid ' />
+                <img src={Carouselimg4} alt="four slide" className='img-fluid' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg5} alt="five slide" className='img-fluid ' />
+                <img src={Carouselimg5} alt="five slide" className='img-fluid' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg6} alt="six slide" className='img-fluid ' />
+                <img src={Carouselimg6} alt="six slide" className='img-fluid' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg7} alt="seven slide" className='img-fluid ' />
+                <img src={Carouselimg7} alt="seven slide" className='img-fluid' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg8} alt="eight slide" className='img-fluid ' />
+                <img src={Carouselimg8} alt="eight slide" className='img-fluid' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg9} alt="nine slide" className='img-fluid ' />
+                <img src={Carouselimg9} alt="nine slide" className='img-fluid' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg10} alt="Ten slide" className='img-fluid ' />
+                <img src={Carouselimg10} alt="Ten slide" className='img-fluid' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg11} alt="oneone slide" className='img-fluid ' />
+                <img src={Carouselimg11} alt="oneone slide" className='img-fluid' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg12} alt="onetwo slide" className='img-fluid ' />
+                <img src={Carouselimg12} alt="onetwo slide" className='img-fluid' />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={Carouselimg13} alt="onethree slide" className='img-fluid ' />
+                <img src={Carouselimg13} alt="onethree slide" className='img-fluid' />
               </Carousel.Item>
             </Carousel>
           </div>
-          <div className="col-lg-3  "></div>
+          <div className="col-lg-3"></div>
          </div>
       </div> 
 
 
 
 
-      {/* <div className='container-fluid'>
-      <div className="carousel">
-      <div className="item"> <img src={Carouselimg1} alt="" className='img-fluid w-100' /> </div>
-      <div className="item">  <img src={Carouselimg2} alt="" className='img-fluid w-100' /> </div>
-      <div className="item">  <img src={Carouselimg3} alt="" className='img-fluid w-100' /> </div>
-      <div className="item">  <img src={Carouselimg4} alt="" className='img-fluid w-100' /> </div>
-      <div className="item">  <img src={Carouselimg5} alt="" className='img-fluid w-100' /> </div>
-      <div className="item">  <img src={Carouselimg6} alt="" className='img-fluid w-100' /> </div>
-      <div className="item">  <img src={Carouselimg7} alt="" className='img-fluid w-100' /> </div>
-      <div className="item">  <img src={Carouselimg8} alt="" className='img-fluid w-100' /> </div>
-      <div className="item">  <img src={Carouselimg9} alt="" className='img-fluid w-100' /> </div>
-      <div className="item">  <img src={Carouselimg10} alt="" className='img-fluid w-100' /> </div>
-      <div className="item">  <img src={Carouselimg11} alt="" className='img-fluid w-100' /> </div>
-      <div className="item">  <img src={Carouselimg12} alt="" className='img-fluid w-100' /> </div>
-      <div className="item">  <img src={Carouselimg13} alt="" className='img-fluid w-100' /> </div>
-    </div>
-    <div className="arrows">
-      <i className="fas fa-chevron-left" id="arrow-prev"></i>
-      <i className="fas fa-chevron-right" id="arrow-next"></i>
-    </div>
-</div>  */}
+  
       {/* -------------------------- Header Stop -------------------------- */}
 
       {/* -------------------------- About US Start -------------------------- */}
@@ -304,13 +193,6 @@ function MainPage() {
                   <p> <FaArrowRight className='m-2' />આજથી  અંદાજિત  ૧૦૭  વર્ષ  પહેલા  નાનકડા  છાપરા ના  મકાન  માં પાનબા  ના  ઠાકોરજી ની સ્થાપના કરવામાં આવી હતી ત્યાર પછી એક વર્ષ બાદ તે સમય ના યુવરાજ કુમાર પ.પૂ.ગો.શ્રી ૧૦૮ પુરુષોત્તમ લાલજી મહોદયશ્રી ની આજ્ઞા થી ઠાકોરજી ને અમરાપુર મંદિર માં પાટ પધરાવી વૈષ્ણવ પરિવાર ના કુળદેવતા તરીકે સ્થાપિત કરવા આજ્ઞા થઇ.સમય વીતતા મંદિર નો જીર્ણોદ્ધાર પ્રક્રિયા હાથ ધરવામાં આવી .ત્યાર બાદ વૈષ્ણવ પરિવારો પ્લોટ વિસ્તાર માં સ્થાનાંતરિત થતા શ્રી સાવંત ૨૦૭૦ ના ચૈત્રી વદ ૧૧ ને શુક્રવાર તા. ૧૧-૪-૨૦૧૪ ના દિવસે નૂતન નંદાલય  શ્રી બાલકૃષ્ણ લાલજી ની હવેલી નો પાટોત્સવ અને શતાબ્દી મહોત્સવ ના ઉપક્રમે પૂ.પ.શ્રી.ગો.૧૦૮ શ્રી દ્વારકેશ લાલજી મહારાજ ના કરકમળો દ્વારા પુષ્ટ કરી શ્રી ગોવર્ધન નાથજી પ્રભુ ને પાટ  પધરાવવા માં આવ્યા છે.</p>
                   <p> <FaArrowRight className='m-2' />ગામ માં "સૌનું ઘર" ટિફિન સેવા પણ તા :- ૧૪-૦૧-૨૦૨૪ થી  કાર્યરત છે.જેનું સંચાલન સરદાર પટેલ સેવા સંગઠન (અમરાપુર) દ્વારા ખુબજ સરસ રીતે આરોગ્યપ્રદ જમવાનું બપોરે તથા સાંજે ઘરે ઘરે પહોંચાડવાની તથા સંસ્થા માં પણ જમવાની વ્યવસ્થા છે.</p>
 
-                </div>
-              </div>
-              <div className='row mt-3'>
-                <div className='col-12'>
-                  <button className='btn-moreRead'>
-                    વધુ વાંચો
-                  </button>
                 </div>
               </div>
             </div>

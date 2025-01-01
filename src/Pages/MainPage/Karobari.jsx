@@ -16,16 +16,15 @@ export default function Karobari() {
 
             <div className='container-fluid' >
                 <div className="row d-block">
-                    <div className="parallax" style={{ backgroundImage: `url(${background})`, position: 'relative', height: '40vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed', }}>
-                        <div className="overlay" style={{ position: 'absolute', zIndex: '1', width: '100px' }}>
-                        </div>
+                    <div class="image-container">
+                        <img src={background} alt="Example Image" class="responsive-image" />
                     </div>
                 </div>
 
-                <div className='container-fluid pt-5' id='karo-bari'>
+                <div className='container-fluid' id='karo-bari'>
                     <div className='container'>
                         <div className='row'>
-                            <h1 className='text-center fw-bold mt-3' style={{ color: '#041d57' }}>કારોબારી સભ્યો</h1>
+                            <h1 className='text-center fw-bold my-3' style={{ color: '#041d57' }}>કારોબારી સભ્યો</h1>
                         </div>
                         <div className="row">
                             <div className="col-lg-3">
@@ -36,9 +35,9 @@ export default function Karobari() {
                                             <Card.Title>પ્રમુખ</Card.Title>
                                             {/* <Card.Subtitle className="mb-2 text-muted">ગામ : દાંતકરોડી</Card.Subtitle> */}
                                             <Card.Text>
-                                                ફોન : ૯૮૨૫૧ ૪૭૩૦૭ 
+                                                ફોન : ૯૮૨૫૧ ૪૭૩૦૭
                                             </Card.Text>
-                                            <Card.Link href="#" className='text-center custom-link'>ગેવરીયા ગીરધરભાઈ લક્ષ્મણભાઈ</Card.Link>
+                                            <Card.Link className='text-center custom-link'>ગેવરીયા ગીરધરભાઈ લક્ષ્મણભાઈ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -50,15 +49,16 @@ export default function Karobari() {
                                     <Card.Body>
                                         <div className='text-center'>
                                             <Card.Title>ઉપપ્રમુખ</Card.Title>
-                                            {/* <Card.Subtitle className="mb-2 text-muted">ગામ : દેદીયાસણ</Card.Subtitle> */}
+                                            {/* <Card.Subtitle className="mb-2 text-muted">ગામ : દેદીયાસણ</Card.Subtitle>  */}
                                             <Card.Text>
-                                                ફોન : ૯૯૯૮૯ ૫૦૬૯૦ 
+                                                ફોન : ૯૯૯૮૯ ૫૦૬૯૦
                                             </Card.Text>
-                                            <Card.Link href="#" className='custom-link'>જસાણી જયસુખભાઈ વલ્લભભાઈ</Card.Link>
+                                            <Card.Link className='text-center custom-link'>જસાણી જયસુખભાઈ વલ્લભભાઈ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
                             </div>
+
 
                             <div className="col-lg-3">
                                 <Card>
@@ -71,7 +71,7 @@ export default function Karobari() {
                                                 ફોન : ૯૮૭૯૨ ૮૦૧૯૨
                                             </Card.Text>
 
-                                            <Card.Link href="#" className='custom-link'>રાજપરા નરેન્દ્રભાઈ શંભુભાઈ</Card.Link> 
+                                            <Card.Link className='custom-link'>રાજપરા નરેન્દ્રભાઈ શંભુભાઈ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -85,9 +85,9 @@ export default function Karobari() {
                                             <Card.Title>સહમંત્રી</Card.Title>
                                             {/* <Card.Subtitle className="mb-2 text-muted">ગામ : ચવેલી</Card.Subtitle> */}
                                             <Card.Text>
-                                                ફોન : ૯૮૭૯૪ ૬૭૩૬૮ 
+                                                ફોન : ૯૮૭૯૪ ૬૭૩૬૮
                                             </Card.Text>
-                                            <Card.Link href="#" className='custom-link'>જોગણી રસીકભાઈ રવજીભાઈ</Card.Link>
+                                            <Card.Link className='custom-link'>જોગાણી રસીકભાઈ રવજીભાઈ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -106,10 +106,10 @@ export default function Karobari() {
                                             <Card.Title>ખજાનચી</Card.Title>
                                             {/* <Card.Subtitle className="mb-2 text-muted">ગામ : માતપુર</Card.Subtitle> */}
                                             <Card.Text>
-                                                ફોન : ૯૮૭૯૬ ૫૫૧૦૯ 
+                                                ફોન : ૯૮૭૯૬ ૫૫૧૦૯
                                             </Card.Text>
 
-                                            <Card.Link href="#" className='custom-link'>ગેવરીયા અરવિંદભાઈ પોપટભાઈ</Card.Link>
+                                            <Card.Link className='custom-link'>ગેવરીયા અરવિંદભાઈ પોપટભાઈ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -125,7 +125,7 @@ export default function Karobari() {
                                             <Card.Text>
                                                 ફોન : ૯૮૨૫૭ ૪૮૪૯૯
                                             </Card.Text>
-                                            <Card.Link href="#" className='custom-link'>જસાણી ફુલાભાઈ બાબુભાઈ</Card.Link>
+                                            <Card.Link className='custom-link'>જસાણી ફુલાભાઈ બાબુભાઈ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -136,15 +136,12 @@ export default function Karobari() {
                                     <Card.Img variant="top" src={cardimg} />
                                     <Card.Body>
                                         <div className="text-center">
-
-
                                             <Card.Title>સલાહકાર</Card.Title>
                                             {/* <Card.Subtitle className="mb-2 text-muted">ગામ : સામેત્રા</Card.Subtitle> */}
                                             <Card.Text>
                                                 ફોન : ૯૮૨૫૫ ૭૫૫૬૫
                                             </Card.Text>
-
-                                            <Card.Link href="#" className='custom-link'>સોરઠીયા લાલજીભાઈ લક્ષ્મણભાઈ</Card.Link>
+                                            <Card.Link className='custom-link'>સોરઠીયા લાલજીભાઈ લક્ષ્મણભાઈ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -158,9 +155,9 @@ export default function Karobari() {
                                             <Card.Title>સલાહકાર</Card.Title>
                                             {/* <Card.Subtitle className="mb-2 text-muted">ગામ : ખટાસણા</Card.Subtitle> */}
                                             <Card.Text>
-                                                ફોન : ૯૮૨૫૧ ૩૫૧૧
+                                                ફોન : ૯૮૨૫૧ ૩૫૯૧૧
                                             </Card.Text>
-                                            <Card.Link href="#" className='custom-link'>ખોયાણી કેશવભાઈ જાદવભાઈ</Card.Link>
+                                            <Card.Link className='custom-link'>ખોયાણી કેશવભાઈ જાદવભાઈ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -178,7 +175,7 @@ export default function Karobari() {
                                             <Card.Text>
                                                 ફોન : ૯૯૦૯૨ ૮૯૩૪૬
                                             </Card.Text>
-                                            <Card.Link href="#" className='custom-link'>જોગાણી ચુનીભાઈ કાનજીભાઈ</Card.Link>
+                                            <Card.Link className='custom-link'>જોગાણી ચુનીભાઈ કાનજીભાઈ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -194,7 +191,7 @@ export default function Karobari() {
                                             <Card.Text>
                                                 ફોન : ૯૮૭૯૦ ૪૮૦૦૨
                                             </Card.Text>
-                                            <Card.Link href="#" className='custom-link'>ગેવરીયા મથુરભાઇ નાનજીભાઇ</Card.Link>
+                                            <Card.Link className='custom-link'>ગેવરીયા મથુરભાઇ નાનજીભાઇ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -208,9 +205,9 @@ export default function Karobari() {
                                             <Card.Title>સલાહકાર</Card.Title>
                                             {/* <Card.Subtitle className="mb-2 text-muted">ગામ : સામેત્રા</Card.Subtitle> */}
                                             <Card.Text>
-                                                ફોન : ૯૮૨૫૪ ૨૫૮33
+                                                ફોન : ૯૮૨૫૪ ૨૫૮૩૩
                                             </Card.Text>
-                                            <Card.Link href="#" className='custom-link'>ગેવરીયા મનસુખભાઇ ગોકળભાઇ</Card.Link>
+                                            <Card.Link className='custom-link'>ગેવરીયા મનસુખભાઇ ગોકળભાઇ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -226,14 +223,14 @@ export default function Karobari() {
                                             <Card.Text>
                                                 ફોન :૯૮૨૫૪ ૫૫૧૭૧
                                             </Card.Text>
-                                            <Card.Link href="#" className='custom-link'>પટોળીયા કનુભાઇ ભુરાભાઇ</Card.Link>
+                                            <Card.Link className='custom-link'>પટોળીયા કનુભાઇ ભુરાભાઇ</Card.Link>
                                         </div>
                                     </Card.Body>
                                 </Card>
                             </div>
                         </div>
 
-                        
+
                         {/* <div className="row mt-4">
                             <Pagination>
                                 <Pagination.First />

@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../../Components/Header'
-import background from '../../Images/logo_medium.jpg'
+import background from '../../Images/01.jpg'
 import Footer from '../../Components/Footer';
 import { RiLoginCircleFill } from 'react-icons/ri';
 
@@ -14,10 +14,8 @@ export default function ContactUs() {
 
             <div className='container-fluid' >
                 <div className="row d-block">
-                    <div className="parallax" style={{ backgroundImage: `url(${background})`, position: 'relative', height: '50vh',backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed', }}>
-                        <div className="overlay" style={{ position: 'absolute', zIndex: '1', }}>
-
-                        </div>
+                <div class="image-container">
+                        <img src={background} alt="Example Image" class="responsive-image" />
                     </div>
                 </div>
 
