@@ -92,7 +92,7 @@ li {
 }
 
 .btm-line {
-    width: 200px;
+    width: 150px;
     border-bottom: 2px solid purple;
 }
 
@@ -490,7 +490,7 @@ li {
     color: white;
     text-align: center;
     padding: 10px;
-} */ */
+} */
 
 .image-container:hover .overlay-1 {
     opacity: 1;
@@ -509,17 +509,17 @@ li {
     justify-content: space-between;
     background-color: #001a4d;
     color: white;
-    padding: 20px;
+    padding: 18px;
     border-radius: 10px;
 }
 
-.form-section {
+/* .form-section {
     width: 45%;
-}
+} */
 
-.map-section {
+/* .map-section {
     width: 45%;
-}
+} */
 
 .form-group {
     margin-bottom: 15px;
@@ -619,11 +619,29 @@ textarea {
     .foot {
         display: block;
     }
+     
+    .menu2{
+        text-align: end;
+        padding-right: 20px;
+    }
+
+    .btm-line {
+        width: 100px;
+    }
+
+    .menu-line2{
+        display: block;
+        padding: 5px;
+        text-align: end;
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+    }
 
     .menu-line2:hover::after {
         justify-content: center;
-        margin-left: 25%;
-        width: 50%;
+        margin-left: 50%;
+        width: 55%;
     }
 
     .image-container {
@@ -635,7 +653,6 @@ textarea {
       
       .responsive-image {
         width: 350px; 
-        /* height: auto; */
         object-fit: cover; 
       }
 }

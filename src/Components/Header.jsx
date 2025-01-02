@@ -30,7 +30,7 @@ export default function Header() {
                                             <NavLink to="#" className='px-3 menu-line'><h6 className='menu-line2'>પસંદગી માટે</h6></NavLink>
                                             <NavLink to="#" className='px-3 menu-line'><h6 className='menu-line2'>જાહેરાત</h6></NavLink>
                                             <NavLink to="/ContactUs" className='px-3 menu-line'><h6 className='menu-line2'>અમારો સંપર્ક કરો</h6></NavLink>
-                                    <NavLink to='/Login' className='menu2' onClick={handleLogin}>
+                                         <NavLink to='/Login' className='menu2' onClick={handleLogin}>
                                         <button type="Login" className="submit-btn">
                                             <IoLogInSharp size={17} className='me-2' />
                                             Login

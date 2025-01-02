@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import '../../CSS/MainPage.css'
 import MainLogo from '../../Images/MainLogo.png'
-import OwlCarousel from 'react-owl-carousel';
+
 import $ from 'jquery';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
+// import 'owl.carousel/dist/assets/owl.carousel.css';
+// import 'owl.carousel/dist/assets/owl.theme.default.css';
 import 'owl.carousel';
 import { Carousel } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
@@ -170,8 +170,8 @@ function MainPage() {
           <div className='row '>
             <div className='col-12'>
               <div className='row'>
-                <div className='col-12 p-1 btm-line mb-4 text-center'>
-                  <h2 className='fw-bold mb-2'>મારુ ગામ</h2>
+                <div className='col-12 p-1 mb-4 text-center'>
+                  <h2 className='fw-bold btm-line mb-2'>મારુ ગામ</h2>
                 </div>
               </div>
               <div className='row' >
