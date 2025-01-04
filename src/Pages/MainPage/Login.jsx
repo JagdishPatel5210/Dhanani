@@ -29,8 +29,8 @@ function Login() {
                                                     </div>
 
                                                     <div className='col-12 pt-5 text-center'>
-                                                        {/* <Link to='/FormPage'> */}
-                                                        <Link to='#'>
+                                                        <Link to='/FormPage'>
+                                                        {/* <Link to='#'> */}
                                                             <button type='submit' className='btn-login'>
                                                                 <BiLogInCircle className='me-2' size={17} />
                                                                 Login

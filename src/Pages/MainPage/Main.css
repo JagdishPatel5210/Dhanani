@@ -170,3 +170,28 @@ input {
     border: none !important;
     border-radius: 5px !important;
 }
+
+@media (max-width: 576px) {
+ 
+  /* .col-1 {
+    flex: 0 0 auto;
+    width: 16.333333%;
+} */
+
+.col-2 {
+    flex: 0 0 auto;
+    width: 27.666667%;
+    /* padding-top: px; */
+}
+
+.inputbox{
+    flex: 0 0 auto;
+    width: 32.666667%;
+}
+
+.box{
+     flex: 0 0 auto;
+    width: 45%;
+}
+
+}

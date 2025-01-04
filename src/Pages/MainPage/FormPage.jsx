@@ -73,7 +73,7 @@ function FormPage() {
 
     const DispData = async () => {
         dispatch(startLoader());
-        debugger
+        // debugger
 
         let ObjJsonDet = {
             jsonObj1: [{ MEMBERID: 0 }],
@@ -118,7 +118,7 @@ function FormPage() {
             reset(); // Reset form after submission
             setFormData({
                 MemberID: MemberID + 1, FormNumber: '', FormDate: '', SurName: '', MemberName: '', FatherName: '', GFatherName: '', RelationWithMainMember: '', Education: '',
-                Mat_SurName: '', Mat_Name: '', Mat_FatherName: '', Mat_Village: '', BirthDate: '', BloodGrp: '', Foreign_Resident_Address: '', Gender: '',
+                Mat_SurName: '', Mat_Name: '', Mat_FatherName: '',Education:'', Mat_Village: '', BirthDate: '', BloodGrp: '', Foreign_Resident_Address: '', Gender: '',
                 MaritalStatus: '', Business: '', Business_Address: '', Mobile_1: '', Mobile_2: '', EmailID: ''
             }); // Clear form data
             setMemberID(MemberID + 1); // Increment MemberID for the next entry
@@ -164,15 +164,16 @@ function FormPage() {
                                 </div>
                             </div>
                             <div className='row'>
-                                <div className='col-12'>
+                                <div className='col-12 col-lg-12 col-sm-12'>
                                     <form onSubmit={handleSubmit(saveData)}>
                                         <div className='row'>
                                             <div className='col-12'>
-                                                <h2 className='text-center fw-semibold pt-4'>અમરાપર(ધાનાણી) પટેલ સમાજ - સુરત</h2>
+                                                <h2 className='text-center fw-semibold pt-4'>અમરાપુર(ધાનાણી) પટેલ સમાજ - સુરત</h2>
                                             </div>
                                         </div>
+                                        <div className="row">
                                         <div className='d-flex flex-wrap align-items-center pt-3'>
-                                            <div className='col-1'>
+                                            <div className='col-2'>
                                                 <div className="form-input">
                                                     <input
                                                         type="numeric"
@@ -185,24 +186,25 @@ function FormPage() {
                                                     <label for="subtitle">સભ્ય નંબર</label>
                                                 </div>
                                             </div>
-                                            <div className='col-1'>
-                                                <div className="form-input">
+                                            <div className='col-2'>
+                                                <div className="form-input ">
                                                     <input
                                                         type="numeric"
-                                                        name="Number"
+                                                        name="FormNumber"
+                                                        className='inputbox'
                                                         placeholder="Enter subtitle"
                                                         // value={formData.FormNumber}
                                                         onChange={handleChange}
                                                         {...register("FormNumber", { required: false })}
                                                     />
-                                                    <label for="subtitle">ફોર્મ નંબર</label>
+                                                    <label for="subtitle ">ફોર્મ નંબર</label>
                                                 </div>
                                             </div>
-                                            <div className='col-2'>
+                                            <div className='col-2 ms-2'>
                                                 <div className="input-Date">
                                                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                                                         <DatePicker
-                                                            className='inpur-Date w-65'
+                                                            className='inpur-Date '
                                                             format="DD/MM/YYYY"
                                                             defaultValue={dayjs(defaultSumMaryDate)}
                                                             // value={dayjs(formData.I_DATE)}
@@ -212,9 +214,11 @@ function FormPage() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className='d-flex  flex-wrap align-items-center pt-3'>
-                                            <div className='col-1'>
-                                                <label className='pe-4 fw-bold'> સભ્ય નુ નામ:- </label>
+                                        </div>
+
+                                        <div className='d-flex flex-wrap align-items-center pt-3'>
+                                            <div className='col-1 me-3'>
+                                                <label className='fw-bold'> સભ્યનુ નામ:- </label>
                                             </div>
                                             <div className='col-2'>
                                                 <div className="form-input">
@@ -266,24 +270,25 @@ function FormPage() {
                                                     <label for="subtitle">દાદા</label>
                                                 </div>
                                             </div>
-                                            <div className='col-2'>
-                                                <div className="form-input ">
+                                            <div className='col-2 box'>
+                                                <div className="form-input">
                                                     <input
                                                         type="text"
                                                         name="relation"
+                                                        className='inputbox'
                                                         placeholder="Enter subtitle"
                                                         // value={formData.RelationWithMainMember}
                                                         onChange={handleChange}
                                                         {...register("RelationWithMainMember", { required: false })} />
-                                                    <label for="subtitle">સભ્ય સાથે નું સગપણ </label>
+                                                    <label for="subtitle">સભ્ય સાથે નું સગપણ</label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className='d-flex flex-wrap align-items-center pt-3'>
-                                            <div className='col-1'>
-                                                <label className='fw-bold'> મોસાળ ની વિગત:- </label>
+                                            <div className='col-1 me-5'>
+                                                <label className='fw-bold'> મોસાળની વિગત:- </label>
                                             </div>
-                                            <div className='col-2'>
+                                            <div className='col-2 box'>
                                                 <div className="form-input">
                                                     <input
                                                         type="text"
@@ -335,7 +340,7 @@ function FormPage() {
                                             </div>
                                         </div>
                                         <div className='row align-items-center pt-3'>
-                                            <div className='col-2 input-DropDown'>
+                                            <div className='col-2 input-DropDown box'>
                                                 <Dropdown
                                                     value={formData.BloodGrp}
                                                     onChange={(e) => setFormData({ ...formData, BloodGrp: e.target.value })}
@@ -344,20 +349,23 @@ function FormPage() {
                                                     className="w-100"
                                                 />
                                             </div>
-                                            <div className='col-2'>
-                                                <div className="input-Date">
-                                                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                            <div className='col-2 d-flex box'>
+                                                <label className='fw-bold pt-2'> જન્મતારીખ:-</label>
+                                                <div className="form-input ">
+                                                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                                                         <DatePicker
-                                                            className='inpur-Date w-65'
+                                                            className='inpur-Date'
                                                             format="DD/MM/YYYY"
                                                             defaultValue={dayjs(defaultSumMaryDate)}
                                                             // value={dayjs(formData.I_DATE)}
                                                             onChange={handleDateChange}
+                                                            {...register("BirthDate", { required: true })}
                                                         />
                                                     </LocalizationProvider>
                                                 </div>
-                                            </div>
+                                                </div>
                                         </div>
+
                                         <div className='row pt-3'>
                                             <div className='col-12'>
                                                 <div className="form-input">
@@ -373,7 +381,7 @@ function FormPage() {
                                             </div>
                                         </div>
                                         <div className='row align-items-center pt-3'>
-                                            <div className='col-2 input-DropDown'>
+                                            <div className='col-2 input-DropDown inputbox'>
                                                 <Dropdown
                                                     value={formData.Gender}
                                                     onChange={(e) => setFormData({ ...formData, Gender: e.target.value })}
@@ -382,7 +390,7 @@ function FormPage() {
                                                     className="w-100"
                                                 />
                                             </div>
-                                            <div className='col-2 input-DropDown'>
+                                            <div className='col-2 input-DropDown inputbox'>
                                                 <Dropdown
                                                     value={formData.MaritalStatus}
                                                     onChange={(e) => setFormData({ ...formData, MaritalStatus: e.target.value })}
@@ -391,9 +399,26 @@ function FormPage() {
                                                     className="w-100"
                                                 />
                                             </div>
+                                            <div className='col-2 inputbox'>
+                                                <div className="form-input">
+                                                    <input
+                                                        type="text"
+                                                        name="Name"
+                                                        placeholder="Enter subtitle"
+                                                        // value={formData.Mat_FatherName}
+                                                        onChange={handleChange}
+                                                        {...register("Education", { required: false })}
+                                                    />
+                                                    <label for="subtitle">અભ્યાસ</label>
+                                                </div>
+                                            </div>
+
+
+
+
                                         </div>
                                         <div className='d-flex flex-wrap align-items-center pt-3'>
-                                            <div className='col-2'>
+                                            <div className='col-2 '>
                                                 <div className="form-input">
                                                     <input
                                                         type="text"
@@ -405,7 +430,7 @@ function FormPage() {
                                                     <label for="subtitle">વ્યવસાય</label>
                                                 </div>
                                             </div>
-                                            <div className='col-2'>
+                                            <div className='col-2 box'>
                                                 <div className="form-input">
                                                     <input
                                                         type="text"
@@ -417,7 +442,7 @@ function FormPage() {
                                                     <label for="subtitle">વ્યવસાય નુ સરનામું</label>
                                                 </div>
                                             </div>
-                                            <div className='col-2'>
+                                            <div className='col-2 inputbox'>
                                                 <div className="form-input">
                                                     <input
                                                         type="text"
@@ -431,7 +456,7 @@ function FormPage() {
                                             </div>
                                         </div>
                                         <div className='d-flex flex-wrap align-items-center pt-3'>
-                                            <div className='col-2'>
+                                            <div className='col-2 inputbox'>
                                                 <div className="form-input">
                                                     <input
                                                         type="tel"
@@ -446,7 +471,7 @@ function FormPage() {
                                                     <label for="subtitle">મો.ન.(૧)</label>
                                                 </div>
                                             </div>
-                                            <div className='col-2'>
+                                            <div className='col-2 inputbox'>
                                                 <div className="form-input">
                                                     <input
                                                         type="tel"
@@ -461,7 +486,7 @@ function FormPage() {
                                                     <label for="subtitle">મો.ન.(૨)</label>
                                                 </div>
                                             </div>
-                                            <div className='col-2'>
+                                            <div className='col-2 inputbox'>
                                                 <div className="form-input">
                                                     <input
                                                         type="email"
@@ -492,6 +517,8 @@ function FormPage() {
 
                 <div className="container-fluid">
                     <h4 className='text-center fw-semibold text-success pt-5'>કૌટુંબિક સભ્યના નામ </h4>
+                    <div className='row'>
+                        <div className="col-12">
                     <table className="table table-bordered">
                         <thead >
                             <tr>
@@ -526,6 +553,8 @@ function FormPage() {
                             }
                         </tbody>
                     </table>
+                    </div>
+                    </div>
                 </div>
             </div>
         </>
