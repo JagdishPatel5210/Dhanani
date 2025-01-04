@@ -164,8 +164,10 @@ function FormPage() {
                                     </button>
                                 </div>
                             </div>
+
+
                             <div className='row'>
-                                <div className='col-12 '>
+                                <div className='col-12'>
                                     <form onSubmit={handleSubmit(saveData)}>
                                         <div className='row'>
                                             <div className='col-12'>
@@ -187,6 +189,8 @@ function FormPage() {
                                                         <label for="subtitle">સભ્ય નંબર</label>
                                                     </div>
                                                 </div>
+
+
                                                 <div className='col-2'>
                                                     <div className="form-input">
                                                         <input
@@ -217,12 +221,12 @@ function FormPage() {
                                             </div>
                                         </div>
 
-                                        <div className=' row ps-2 d-flex flex-wrap align-items-center pt-3'>
+                                        <div className='d-flex ps-2 flex-wrap align-items-center pt-3'>
                                             <div className='col-1 spese'>
                                                 <label className='fw-bold'> સભ્યનુ નામ:- </label>
                                             </div>
-                                            <div className='col-2'>
-                                                <div className="form-input">
+                                            <div className='col-2 ps-3'>
+                                            <div className="form-input">
                                                     <input
                                                         type="text"
                                                         name="Name"
@@ -234,8 +238,9 @@ function FormPage() {
                                                     <label for="subtitle">અટક</label>
                                                 </div>
                                             </div>
+
                                             <div className='col-2'>
-                                                <div className="form-input">
+                                            <div className="form-input">
                                                     <input
                                                         type="text"
                                                         name="MemberName"
@@ -248,7 +253,7 @@ function FormPage() {
                                                 </div>
                                             </div>
                                             <div className='col-2'>
-                                                <div className="form-input">
+                                            <div className="form-input">
                                                     <input
                                                         type="text"
                                                         name="lname"
@@ -260,7 +265,7 @@ function FormPage() {
                                                 </div>
                                             </div>
                                             <div className='col-2'>
-                                                <div className="form-input">
+                                            <div className="form-input">
                                                     <input
                                                         type="text"
                                                         name="Name"
@@ -341,6 +346,9 @@ function FormPage() {
                                                 </div>
                                             </div>
                                         </div>
+
+
+
                                         <div className='row  ps-2 align-items-center pt-3'>
                                             <div className='col-2 input-DropDown box'>
                                                 <Dropdown
