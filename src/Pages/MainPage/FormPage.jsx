@@ -11,8 +11,10 @@ import { FaDownload, FaFileImport } from 'react-icons/fa';
 import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import dayjs from 'dayjs';
+import { IoHome } from 'react-icons/io5'; 
 import { IoIosSave } from 'react-icons/io';
 import { startLoader, stopLoader } from '../Slices/loaderSlice.js';
+import { Link } from 'react-router-dom';
 
 function FormPage() {
 
@@ -151,6 +153,7 @@ function FormPage() {
                         <Accordion.Body>
                             <div className='row'>
                                 <div className='col-12 text-end'>
+                                <Link to='/MainPage'> <IoHome  className='address2 text-light mx-2' size={30} /></Link>
                                     <button type="submit" className='btn-success'>
                                         <FaFileImport size={17} className='me-2' />
                                         Import FIle
@@ -214,8 +217,8 @@ function FormPage() {
                                             </div>
                                         </div>
 
-                                        <div className='d-flex flex-wrap align-items-center pt-3'>
-                                            <div className='col-1 me-3'>
+                                        <div className=' row ps-2 d-flex flex-wrap align-items-center pt-3'>
+                                            <div className='col-1 spese'>
                                                 <label className='fw-bold'> સભ્યનુ નામ:- </label>
                                             </div>
                                             <div className='col-2'>
@@ -283,10 +286,10 @@ function FormPage() {
                                             </div>
                                         </div>
                                         <div className='d-flex flex-wrap align-items-center pt-3'>
-                                            <div className='col-1 me-5'>
+                                            <div className='col-1 spese'>
                                                 <label className='fw-bold'> મોસાળની વિગત:- </label>
                                             </div>
-                                            <div className='col-2 box'>
+                                            <div className='col-2 ps-3'>
                                                 <div className="form-input">
                                                     <input
                                                         type="text"
@@ -337,7 +340,7 @@ function FormPage() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className='row align-items-center pt-3'>
+                                        <div className='row  ps-2 align-items-center pt-3'>
                                             <div className='col-2 input-DropDown box'>
                                                 <Dropdown
                                                     value={formData.BloodGrp}
@@ -347,7 +350,7 @@ function FormPage() {
                                                     className="w-100"
                                                 />
                                             </div>
-                                            <div className='col-2  w-75 pt-3 d-flex box'>
+                                            <div className='col-2 d-flex box'>
                                                 <label className='fw-bold pt-2'> જન્મતારીખ:-</label>
                                                 <div className="form-input ">
                                                     <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -364,7 +367,7 @@ function FormPage() {
                                             </div>
                                         </div>
 
-                                        <div className='row pt-3'>
+                                        <div className='row ps-2 pt-3'>
                                             <div className='col-12'>
                                                 <div className="form-input">
                                                     <input
@@ -377,15 +380,16 @@ function FormPage() {
                                                     <label for="subtitle">સરનામું </label>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div className='row align-items-center pt-3'>
+                                            </div>
+                                        
+                                        <div className='row ps-2 align-items-center pt-3'>
                                             <div className='col-2 input-DropDown inputbox'>
                                                 <Dropdown
                                                     value={formData.Gender}
                                                     onChange={(e) => setFormData({ ...formData, Gender: e.target.value })}
                                                     options={genderOptions?.map((option) => ({ label: option.label, value: option.value }))}
                                                     placeholder="જાતિ"
-                                                    className="w-100"
+                                                    className="w-25"
                                                 />
                                             </div>
                                             <div className='col-2 input-DropDown inputbox'>
@@ -410,11 +414,9 @@ function FormPage() {
                                                     <label for="subtitle">અભ્યાસ</label>
                                                 </div>
                                             </div>
+                                            </div>
+                                        
 
-
-
-
-                                        </div>
                                         <div className='d-flex flex-wrap align-items-center pt-3'>
                                             <div className='col-2 '>
                                                 <div className="form-input">
@@ -453,6 +455,7 @@ function FormPage() {
                                                 </div>
                                             </div>
                                         </div>
+                                        
                                         <div className='d-flex flex-wrap align-items-center pt-3'>
                                             <div className='col-2 inputbox'>
                                                 <div className="form-input">

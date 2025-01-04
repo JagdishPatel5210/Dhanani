@@ -28,7 +28,7 @@ input {
 
 .input-DropDown .p-dropdown{
     font-size: 10px !important;
-    padding: 2px !important;
+    /* padding: 2px !important; */
     border: 1px solid #c8cbce !important;
     border-radius: 7px !important;
 }
@@ -64,6 +64,7 @@ input {
 .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
     color: #4338ca;
 }
+
 
 .p-dropdown-panel {
     background-color: white !important;
@@ -160,6 +161,10 @@ input {
     border: none !important;
     border-radius: 5px !important;
 }
+.address2 {
+    background-color: green;
+    padding: 5px;
+}
 
 .btn-primary {
     color: white !important;
@@ -195,12 +200,15 @@ input {
 .col-2 {
     flex: 0 0 auto;
     width: 27.666667%;
-    /* padding-top: px; */
 }
 
 .inputbox{
     flex: 0 0 auto;
     width: 32.666667%;
+}
+
+.spese{
+    margin-right: 8%;
 }
 
 .box{
