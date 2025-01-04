@@ -513,10 +513,10 @@ function FormPage() {
                 </Accordion>
 
 
-                {/* <div className="container-fluid">
+                <div className="container-fluid">
                     <h4 className='text-center fw-semibold text-success pt-5'>કૌટુંબિક સભ્યના નામ </h4>
                     <div className='row'>
-                        <div className="col-12">
+                        <div className="col-12 table-responsive ">
                             <table className="table table-bordered">
                                 <thead >
                                     <tr>
@@ -553,9 +553,9 @@ function FormPage() {
                             </table>
                         </div>
                     </div>
-                </div> */}
+                </div>
 
-                <div className='p-1'></div>
+                {/* <div className='p-1'></div> */}
             </div>
         </>
     )

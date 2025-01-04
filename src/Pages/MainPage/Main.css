@@ -171,12 +171,26 @@ input {
     border-radius: 5px !important;
 }
 
+
+.table-responsive {
+    overflow-x: auto; /* Horizontal scroll enable kare */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for touch devices */
+  }
+  
+  .table {
+    width: 100%; /* Table full width ma render thase */
+    border-collapse: collapse; /* Collapse border spacing */
+  }
+  
+  th, td {
+    white-space: nowrap; /* Prevent wrapping of text */
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd; /* Add border for better visibility */
+  }
+  
+
 @media (max-width: 576px) {
- 
-  /* .col-1 {
-    flex: 0 0 auto;
-    width: 16.333333%;
-} */
 
 .col-2 {
     flex: 0 0 auto;
