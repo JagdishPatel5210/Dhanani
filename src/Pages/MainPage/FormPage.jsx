@@ -221,7 +221,7 @@ function FormPage() {
                                             <div className='col-1 spese'>
                                                 <label className='fw-bold'> સભ્યનુ નામ:- </label>
                                             </div>
-                                            <div className='col-2 inputbox'>
+                                            <div className='col-2'>
                                                 <div className="form-input">
                                                     <input
                                                         type="text"
@@ -234,7 +234,7 @@ function FormPage() {
                                                     <label for="subtitle">અટક</label>
                                                 </div>
                                             </div>
-                                            <div className='col-2 inputbox'>
+                                            <div className='col-2'>
                                                 <div className="form-input">
                                                     <input
                                                         type="text"
@@ -247,7 +247,7 @@ function FormPage() {
                                                     <label for="subtitle">નામ</label>
                                                 </div>
                                             </div>
-                                            <div className='col-2 inputbox'>
+                                            <div className='col-2'>
                                                 <div className="form-input">
                                                     <input
                                                         type="text"
