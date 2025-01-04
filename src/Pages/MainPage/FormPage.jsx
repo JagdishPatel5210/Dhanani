@@ -72,26 +72,26 @@ function FormPage() {
     }, [])
 
     const DispData = async () => {
-        let ObjJsonDet = {
-            jsonObj1: [{ MEMBERID: 0 }],
-            SPName: "API_MemberDetailDisp"
-        }
+        // let ObjJsonDet = {
+        //     jsonObj1: [{ MEMBERID: 0 }],
+        //     SPName: "API_MemberDetailDisp"
+        // }
 
-        const fetchData = async () => {
-            dispatch(startLoader());
-            let DetDT = await DynamicFetchNew(ObjJsonDet);
-            if (Array.isArray(DetDT)) {
-                console.log(DetDT);
-                setTableData(DetDT);
-            } else {
-                console.error('Data is not in the expected array format:', DetDT);
-                setTableData([]);
-            }
+        // const fetchData = async () => {
+        //     dispatch(startLoader());
+        //     let DetDT = await DynamicFetchNew(ObjJsonDet);
+        //     if (Array.isArray(DetDT)) {
+        //         console.log(DetDT);
+        //         setTableData(DetDT);
+        //     } else {
+        //         console.error('Data is not in the expected array format:', DetDT);
+        //         setTableData([]);
+        //     }
 
-            dispatch(stopLoader())
-        };
+        //     dispatch(stopLoader())
+        // };
 
-        fetchData();
+        // fetchData();
     };
 
     const handleChange = (e) => {
@@ -347,7 +347,7 @@ function FormPage() {
                                                     className="w-100"
                                                 />
                                             </div>
-                                            <div className='col-2 d-flex box'>
+                                            <div className='col-2  w-75 pt-3 d-flex box'>
                                                 <label className='fw-bold pt-2'> જન્મતારીખ:-</label>
                                                 <div className="form-input ">
                                                     <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -498,7 +498,7 @@ function FormPage() {
                                             </div>
                                         </div>
                                         <div className='row pt-3'>
-                                            <div className='col-12'>
+                                            <div className='col-12 d-none'>
                                                 <button type='button' className='btn-primary' onClick={handleSubmit(saveData)}>
                                                     <IoIosSave size={20} className='me-1' />
                                                     Submit
