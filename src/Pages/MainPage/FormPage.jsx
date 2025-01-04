@@ -165,7 +165,7 @@ function FormPage() {
                                 </div>
                             </div>
                             <div className='row'>
-                                <div className='col-12 col-lg-12 col-sm-12'>
+                                <div className='col-12 '>
                                     <form onSubmit={handleSubmit(saveData)}>
                                         <div className='row'>
                                             <div className='col-12'>
@@ -247,7 +247,7 @@ function FormPage() {
                                                     <label for="subtitle">નામ</label>
                                                 </div>
                                             </div>
-                                            <div className='col-2'>
+                                            <div className='col-2 inputbox'>
                                                 <div className="form-input">
                                                     <input
                                                         type="text"
