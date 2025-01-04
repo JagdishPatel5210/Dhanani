@@ -15,12 +15,12 @@ export const fetchData = (data) => async (dispatch) => {
 
 export const fetchDataNew = async (obj) => {
   let GetDet = await HttpMethod.post(`/SystemConfig/InsUpdDel/DynSpExDisp`, obj);
-  return GetDet.data.DynDisp
+  return GetDet?.data.DynDisp
 
 }
 export const fetchDataNew1 = async (obj) => {
   let GetDet = await HttpMethod.post(`/SystemConfig/InsUpdDel/DynSpExDisp`, obj)
-  return GetDet.data.DynDisp1
+  return GetDet?.data.DynDisp1
 
 }
 

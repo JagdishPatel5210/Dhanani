@@ -72,15 +72,13 @@ function FormPage() {
     }, [])
 
     const DispData = async () => {
-        dispatch(startLoader());
-        // debugger
-
         let ObjJsonDet = {
             jsonObj1: [{ MEMBERID: 0 }],
             SPName: "API_MemberDetailDisp"
         }
 
         const fetchData = async () => {
+            dispatch(startLoader());
             let DetDT = await DynamicFetchNew(ObjJsonDet);
             if (Array.isArray(DetDT)) {
                 console.log(DetDT);
@@ -118,7 +116,7 @@ function FormPage() {
             reset(); // Reset form after submission
             setFormData({
                 MemberID: MemberID + 1, FormNumber: '', FormDate: '', SurName: '', MemberName: '', FatherName: '', GFatherName: '', RelationWithMainMember: '', Education: '',
-                Mat_SurName: '', Mat_Name: '', Mat_FatherName: '',Education:'', Mat_Village: '', BirthDate: '', BloodGrp: '', Foreign_Resident_Address: '', Gender: '',
+                Mat_SurName: '', Mat_Name: '', Mat_FatherName: '', Education: '', Mat_Village: '', BirthDate: '', BloodGrp: '', Foreign_Resident_Address: '', Gender: '',
                 MaritalStatus: '', Business: '', Business_Address: '', Mobile_1: '', Mobile_2: '', EmailID: ''
             }); // Clear form data
             setMemberID(MemberID + 1); // Increment MemberID for the next entry
@@ -172,48 +170,48 @@ function FormPage() {
                                             </div>
                                         </div>
                                         <div className="row">
-                                        <div className='d-flex flex-wrap align-items-center pt-3'>
-                                            <div className='col-2'>
-                                                <div className="form-input">
-                                                    <input
-                                                        type="numeric"
-                                                        placeholder="Enter subtitle"
-                                                        name='MemberID'
-                                                        // value={formData.MemberID}
-                                                        id="subtitle"
-                                                        {...register("MemberID", { required: false })}
-                                                    />
-                                                    <label for="subtitle">સભ્ય નંબર</label>
-                                                </div>
-                                            </div>
-                                            <div className='col-2'>
-                                                <div className="form-input ">
-                                                    <input
-                                                        type="numeric"
-                                                        name="FormNumber"
-                                                        className='inputbox'
-                                                        placeholder="Enter subtitle"
-                                                        // value={formData.FormNumber}
-                                                        onChange={handleChange}
-                                                        {...register("FormNumber", { required: false })}
-                                                    />
-                                                    <label for="subtitle ">ફોર્મ નંબર</label>
-                                                </div>
-                                            </div>
-                                            <div className='col-2 ms-2'>
-                                                <div className="input-Date">
-                                                    <LocalizationProvider dateAdapter={AdapterDayjs}>
-                                                        <DatePicker
-                                                            className='inpur-Date '
-                                                            format="DD/MM/YYYY"
-                                                            defaultValue={dayjs(defaultSumMaryDate)}
-                                                            // value={dayjs(formData.I_DATE)}
-                                                            onChange={handleDateChange}
+                                            <div className='d-flex flex-wrap align-items-center pt-3'>
+                                                <div className='col-2'>
+                                                    <div className="form-input">
+                                                        <input
+                                                            type="numeric"
+                                                            placeholder="Enter subtitle"
+                                                            name='MemberID'
+                                                            // value={formData.MemberID}
+                                                            id="subtitle"
+                                                            {...register("MemberID", { required: false })}
                                                         />
-                                                    </LocalizationProvider>
+                                                        <label for="subtitle">સભ્ય નંબર</label>
+                                                    </div>
+                                                </div>
+                                                <div className='col-2'>
+                                                    <div className="form-input ">
+                                                        <input
+                                                            type="numeric"
+                                                            name="FormNumber"
+                                                            className='inputbox'
+                                                            placeholder="Enter subtitle"
+                                                            // value={formData.FormNumber}
+                                                            onChange={handleChange}
+                                                            {...register("FormNumber", { required: false })}
+                                                        />
+                                                        <label for="subtitle ">ફોર્મ નંબર</label>
+                                                    </div>
+                                                </div>
+                                                <div className='col-2 ms-2'>
+                                                    <div className="input-Date">
+                                                        <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                                            <DatePicker
+                                                                className='inpur-Date '
+                                                                format="DD/MM/YYYY"
+                                                                defaultValue={dayjs(defaultSumMaryDate)}
+                                                                // value={dayjs(formData.I_DATE)}
+                                                                onChange={handleDateChange}
+                                                            />
+                                                        </LocalizationProvider>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
                                         </div>
 
                                         <div className='d-flex flex-wrap align-items-center pt-3'>
@@ -352,7 +350,7 @@ function FormPage() {
                                             <div className='col-2 d-flex box'>
                                                 <label className='fw-bold pt-2'> જન્મતારીખ:-</label>
                                                 <div className="form-input ">
-                                                 <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                                    <LocalizationProvider dateAdapter={AdapterDayjs}>
                                                         <DatePicker
                                                             className='inpur-Date'
                                                             format="DD/MM/YYYY"
@@ -363,7 +361,7 @@ function FormPage() {
                                                         />
                                                     </LocalizationProvider>
                                                 </div>
-                                                </div>
+                                            </div>
                                         </div>
 
                                         <div className='row pt-3'>
@@ -515,47 +513,49 @@ function FormPage() {
                 </Accordion>
 
 
-                <div className="container-fluid">
+                {/* <div className="container-fluid">
                     <h4 className='text-center fw-semibold text-success pt-5'>કૌટુંબિક સભ્યના નામ </h4>
                     <div className='row'>
                         <div className="col-12">
-                    <table className="table table-bordered">
-                        <thead >
-                            <tr>
-                                <th>ક્રમ</th>
-                                <th>નામ</th>
-                                <th>સભ્ય સાથે નું સગપણ</th>
-                                <th>ઈમેલ</th>
-                                <th>જન્મતારીખ</th>
-                                <th>બ્લડગ્રૂપ</th>
-                                <th>અભ્યાસ</th>
-                                <th>જાતિ</th>
-                                <th>પરણિત સ્થિતિ</th>
-                                <th>વિદેશી રહેઠાણ</th>
-                            </tr>
-                        </thead>
-                        <tbody border="1">
-                            {
-                                Array.isArray(tableData) && tableData.map((data, index) => (
-                                    <tr key={index}>
-                                        <td>{index + 1}</td>
-                                        <td>{data.MemberName} {data.FatherName}</td>
-                                        <td>{data.RelationWithMainMember}</td>
-                                        <td>{data.EmailID}</td>
-                                        <td>{data.BirthDate}</td>
-                                        <td>{data.BloodGrp}</td>
-                                        <td>{data.Education}</td>
-                                        <td>{data.Gender}</td>
-                                        <td>{data.MaritalStatus}</td>
-                                        <td>{data.Foreign_Resident_Address}</td>
+                            <table className="table table-bordered">
+                                <thead >
+                                    <tr>
+                                        <th>ક્રમ</th>
+                                        <th>નામ</th>
+                                        <th>સભ્ય સાથે નું સગપણ</th>
+                                        <th>ઈમેલ</th>
+                                        <th>જન્મતારીખ</th>
+                                        <th>બ્લડગ્રૂપ</th>
+                                        <th>અભ્યાસ</th>
+                                        <th>જાતિ</th>
+                                        <th>પરણિત સ્થિતિ</th>
+                                        <th>વિદેશી રહેઠાણ</th>
                                     </tr>
-                                ))
-                            }
-                        </tbody>
-                    </table>
+                                </thead>
+                                <tbody border="1">
+                                    {
+                                        Array.isArray(tableData) && tableData.map((data, index) => (
+                                            <tr key={index}>
+                                                <td>{index + 1}</td>
+                                                <td>{data.MemberName} {data.FatherName}</td>
+                                                <td>{data.RelationWithMainMember}</td>
+                                                <td>{data.EmailID}</td>
+                                                <td>{data.BirthDate}</td>
+                                                <td>{data.BloodGrp}</td>
+                                                <td>{data.Education}</td>
+                                                <td>{data.Gender}</td>
+                                                <td>{data.MaritalStatus}</td>
+                                                <td>{data.Foreign_Resident_Address}</td>
+                                            </tr>
+                                        ))
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                    </div>
-                </div>
+                </div> */}
+
+                <div className='p-1'></div>
             </div>
         </>
     )
