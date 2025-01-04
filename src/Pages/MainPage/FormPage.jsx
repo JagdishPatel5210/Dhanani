@@ -172,7 +172,7 @@ function FormPage() {
                                                 <h2 className='text-center fw-semibold pt-4'>અમરાપુર(ધાનાણી) પટેલ સમાજ - સુરત</h2>
                                             </div>
                                         </div>
-                                        <div className="row">
+                                        <div className="row ps-2">
                                             <div className='d-flex flex-wrap align-items-center pt-3'>
                                                 <div className='col-2'>
                                                     <div className="form-input">
@@ -285,7 +285,7 @@ function FormPage() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className='d-flex flex-wrap align-items-center pt-3'>
+                                        <div className='d-flex ps-2 flex-wrap align-items-center pt-3'>
                                             <div className='col-1 spese'>
                                                 <label className='fw-bold'> મોસાળની વિગત:- </label>
                                             </div>
@@ -367,7 +367,7 @@ function FormPage() {
                                             </div>
                                         </div>
 
-                                        <div className='row ps-2 pt-3'>
+                                        <div className='row ps-1 pt-3'>
                                             <div className='col-12'>
                                                 <div className="form-input">
                                                     <input
