@@ -197,22 +197,24 @@ input {
 
 @media (max-width: 576px) {
 
+.col-1 {
+        flex: 0 0 auto;
+        width: 50%;
+}
+
 .col-2 {
     flex: 0 0 auto;
-    width: 28.666667%;
+    width: 32%;
+}
+
+.with{
+    width: 88%;
+    padding-top: 10px;
+    /* margin-left: 15%; */
 }
 
 .inputbox{
     flex: 0 0 auto;
-    width: 32.666667%;
-}
-
-.spese{
-    margin-right: 5%;
-}
-
-.box{
-     flex: 0 0 auto;
     width: 50%;
 }
 
