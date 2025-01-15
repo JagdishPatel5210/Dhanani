@@ -426,7 +426,7 @@ function FormPage() {
                                         
 
                                         <div className='d-flex flex-wrap align-items-center pt-2'>
-                                            <div className='col-2 inputbox'>
+                                            <div className='col-2 with'>
                                                 <div className="form-input">
                                                     <input
                                                         type="text"
@@ -438,7 +438,7 @@ function FormPage() {
                                                     <label for="subtitle">વ્યવસાય</label>
                                                 </div>
                                             </div>
-                                            <div className='col-2 inputbox'>
+                                            <div className='col-2 with'>
                                                 <div className="form-input">
                                                     <input
                                                         type="text"
@@ -465,7 +465,7 @@ function FormPage() {
                                         </div>
                                         
                                         <div className='d-flex flex-wrap align-items-center pt-2'>
-                                            <div className='col-2 inputbox'>
+                                            <div className='col-2 inputbox mt-2'>
                                                 <div className="form-input">
                                                     <input
                                                         type="tel"
@@ -480,7 +480,7 @@ function FormPage() {
                                                     <label for="subtitle">મો.ન.(૧)</label>
                                                 </div>
                                             </div>
-                                            <div className='col-2 inputbox'>
+                                            <div className='col-2 inputbox mt-2'>
                                                 <div className="form-input">
                                                     <input
                                                         type="tel"
