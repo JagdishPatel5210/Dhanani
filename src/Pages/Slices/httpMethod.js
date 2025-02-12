@@ -2,8 +2,8 @@ import axios from "axios"
 import { errorPopup } from "./common";
 
 
-export const BaseUrl = 'http://192.168.29.3:8585' 
-// export const BaseUrl = 'https://localhost:44328'  //Swagger Ma Check Karva Mate
+// export const BaseUrl = 'http://192.168.29.3:8585' 
+export const BaseUrl = 'https://localhost:44328'  //Swagger Ma Check Karva Mate
 // export const BaseUrl = 'http://43.254.31.133:9393'  //Maruti Online
 let token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJVc2VyIjoiVVBQNUViR040OGZGTFordzAwK3UyQT09IiwianRpIjoiNTBlYjdlMDItNDg1MC00ZDM3LThkZDUtY2JmYzM1NDk3OGQ1IiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoibXVrZXNoYmh1dmFAaG90bWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiUm9sZUdyb3VwIjoiQWRtaW4iLCJleHAiOjE3MTQyODA4NjIsImlzcyI6ImlEaW1UcmFkZSIsImF1ZCI6ImlEaW1UcmFkZSJ9.UQNNA1y_eTsJ3kNLAPpRxQIEXNktUcnSsTQlWuGv-WE'
 // let loginUserDetail = getCookie('loginUserDetail') ? JSON.parse(getCookie('loginUserDetail')) : null;
