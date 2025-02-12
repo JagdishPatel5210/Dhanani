@@ -11,8 +11,10 @@ import { FaDownload, FaFileImport } from 'react-icons/fa';
 import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import dayjs from 'dayjs';
+import { IoHome } from 'react-icons/io5'; 
 import { IoIosSave } from 'react-icons/io';
 import { startLoader, stopLoader } from '../Slices/loaderSlice.js';
+import { Link } from 'react-router-dom';
 
 function FormPage() {
 
@@ -151,6 +153,7 @@ function FormPage() {
                         <Accordion.Body>
                             <div className='row'>
                                 <div className='col-12 text-end'>
+                                <Link to='/MainPage'> <IoHome  className='address2 text-light mx-2' size={30} /></Link>
                                     <button type="submit" className='btn-success'>
                                         <FaFileImport size={17} className='me-2' />
                                         Import FIle
@@ -161,8 +164,10 @@ function FormPage() {
                                     </button>
                                 </div>
                             </div>
+
+
                             <div className='row'>
-                                <div className='col-12 col-lg-12 col-sm-12'>
+                                <div className='col-12'>
                                     <form onSubmit={handleSubmit(saveData)}>
                                         <div className='row'>
                                             <div className='col-12'>
@@ -184,8 +189,10 @@ function FormPage() {
                                                         <label for="subtitle">સભ્ય નંબર</label>
                                                     </div>
                                                 </div>
+
+
                                                 <div className='col-2'>
-                                                    <div className="form-input ">
+                                                    <div className="form-input">
                                                         <input
                                                             type="numeric"
                                                             name="FormNumber"
@@ -214,12 +221,12 @@ function FormPage() {
                                             </div>
                                         </div>
 
-                                        <div className='d-flex flex-wrap align-items-center pt-3'>
-                                            <div className='col-1 me-3'>
-                                                <label className='fw-bold'> સભ્યનુ નામ:- </label>
+                                        <div className='d-flex ps-2 flex-wrap align-items-center pt-3'>
+                                            <div className='col-1 spese'>
+                                                <label className='fw-bold'> સભ્યનુ નામ :- </label>
                                             </div>
-                                            <div className='col-2'>
-                                                <div className="form-input">
+                                            <div className='col-2 with'>
+                                            <div className="form-input">
                                                     <input
                                                         type="text"
                                                         name="Name"
@@ -231,8 +238,9 @@ function FormPage() {
                                                     <label for="subtitle">અટક</label>
                                                 </div>
                                             </div>
-                                            <div className='col-2'>
-                                                <div className="form-input">
+
+                                            <div className='col-2 with'>
+                                            <div className="form-input">
                                                     <input
                                                         type="text"
                                                         name="MemberName"
@@ -244,8 +252,8 @@ function FormPage() {
                                                     <label for="subtitle">નામ</label>
                                                 </div>
                                             </div>
-                                            <div className='col-2'>
-                                                <div className="form-input">
+                                            <div className='col-2 with'>
+                                            <div className="form-input">
                                                     <input
                                                         type="text"
                                                         name="lname"
@@ -256,8 +264,8 @@ function FormPage() {
                                                     <label for="subtitle">પિતા નુ નામ</label>
                                                 </div>
                                             </div>
-                                            <div className='col-2'>
-                                                <div className="form-input">
+                                            <div className='col-2 with'>
+                                            <div className="form-input">
                                                     <input
                                                         type="text"
                                                         name="Name"
@@ -268,12 +276,11 @@ function FormPage() {
                                                     <label for="subtitle">દાદા</label>
                                                 </div>
                                             </div>
-                                            <div className='col-2 box'>
+                                            <div className='col-2 with box'>
                                                 <div className="form-input">
                                                     <input
                                                         type="text"
                                                         name="relation"
-                                                        className='inputbox'
                                                         placeholder="Enter subtitle"
                                                         // value={formData.RelationWithMainMember}
                                                         onChange={handleChange}
@@ -282,11 +289,13 @@ function FormPage() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className='d-flex flex-wrap align-items-center pt-3'>
-                                            <div className='col-1 me-5'>
-                                                <label className='fw-bold'> મોસાળની વિગત:- </label>
+
+
+                                        <div className='d-flex ps-2 flex-wrap align-items-center pt-3'>
+                                            <div className='col-1 spese'>
+                                                <label className='fw-bold'> મોસાળની વિગત :- </label>
                                             </div>
-                                            <div className='col-2 box'>
+                                            <div className='col-2 with'>
                                                 <div className="form-input">
                                                     <input
                                                         type="text"
@@ -298,7 +307,7 @@ function FormPage() {
                                                     <label for="subtitle">અટક</label>
                                                 </div>
                                             </div>
-                                            <div className='col-2'>
+                                            <div className='col-2 with'>
                                                 <div className="form-input">
                                                     <input
                                                         type="text"
@@ -311,7 +320,7 @@ function FormPage() {
                                                     <label for="subtitle">નામ</label>
                                                 </div>
                                             </div>
-                                            <div className='col-2'>
+                                            <div className='col-2 with'>
                                                 <div className="form-input">
                                                     <input
                                                         type="text"
@@ -324,7 +333,7 @@ function FormPage() {
                                                     <label for="subtitle">પિતા નુ નામ</label>
                                                 </div>
                                             </div>
-                                            <div className='col-2'>
+                                            <div className='col-2 with'>
                                                 <div className="form-input">
                                                     <input
                                                         type="text"
@@ -337,8 +346,9 @@ function FormPage() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className='row align-items-center pt-3'>
-                                            <div className='col-2 input-DropDown box'>
+
+                                        <div className='row ps-2 align-items-center pt-3'>
+                                            <div className='col-4 input-DropDown'>
                                                 <Dropdown
                                                     value={formData.BloodGrp}
                                                     onChange={(e) => setFormData({ ...formData, BloodGrp: e.target.value })}
@@ -347,7 +357,7 @@ function FormPage() {
                                                     className="w-100"
                                                 />
                                             </div>
-                                            <div className='col-2  w-75 pt-3 d-flex box'>
+                                            <div className='col-8 d-flex'>
                                                 <label className='fw-bold pt-2'> જન્મતારીખ:-</label>
                                                 <div className="form-input ">
                                                     <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -364,8 +374,8 @@ function FormPage() {
                                             </div>
                                         </div>
 
-                                        <div className='row pt-3'>
-                                            <div className='col-12'>
+                                        <div className='row'>
+                                            <div className='col-12 pt-3'>
                                                 <div className="form-input">
                                                     <input
                                                         type="text"
@@ -377,27 +387,29 @@ function FormPage() {
                                                     <label for="subtitle">સરનામું </label>
                                                 </div>
                                             </div>
-                                        </div>
+                                            </div>
+
+                                        
                                         <div className='row align-items-center pt-3'>
-                                            <div className='col-2 input-DropDown inputbox'>
+                                            <div className='col-1 input-DropDown '>
                                                 <Dropdown
                                                     value={formData.Gender}
                                                     onChange={(e) => setFormData({ ...formData, Gender: e.target.value })}
                                                     options={genderOptions?.map((option) => ({ label: option.label, value: option.value }))}
                                                     placeholder="જાતિ"
-                                                    className="w-100"
+                                                     className="w-25"
                                                 />
                                             </div>
-                                            <div className='col-2 input-DropDown inputbox'>
+                                            <div className='col-1 input-DropDown'>
                                                 <Dropdown
                                                     value={formData.MaritalStatus}
                                                     onChange={(e) => setFormData({ ...formData, MaritalStatus: e.target.value })}
                                                     options={maritalStatusOptions?.map((option) => ({ label: option.label, value: option.value }))}
                                                     placeholder="પરિણીત સ્થિતિ"
-                                                    className="w-100"
+                                                    className="w-75"
                                                 />
                                             </div>
-                                            <div className='col-2 inputbox'>
+                                            <div className='col-2 with'>
                                                 <div className="form-input">
                                                     <input
                                                         type="text"
@@ -410,13 +422,11 @@ function FormPage() {
                                                     <label for="subtitle">અભ્યાસ</label>
                                                 </div>
                                             </div>
+                                            </div>
+                                        
 
-
-
-
-                                        </div>
-                                        <div className='d-flex flex-wrap align-items-center pt-3'>
-                                            <div className='col-2 '>
+                                        <div className='d-flex flex-wrap align-items-center pt-2'>
+                                            <div className='col-2 with'>
                                                 <div className="form-input">
                                                     <input
                                                         type="text"
@@ -428,7 +438,7 @@ function FormPage() {
                                                     <label for="subtitle">વ્યવસાય</label>
                                                 </div>
                                             </div>
-                                            <div className='col-2 box'>
+                                            <div className='col-2 with'>
                                                 <div className="form-input">
                                                     <input
                                                         type="text"
@@ -440,7 +450,7 @@ function FormPage() {
                                                     <label for="subtitle">વ્યવસાય નુ સરનામું</label>
                                                 </div>
                                             </div>
-                                            <div className='col-2 inputbox'>
+                                            <div className='col-2 with'>
                                                 <div className="form-input">
                                                     <input
                                                         type="text"
@@ -453,8 +463,9 @@ function FormPage() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className='d-flex flex-wrap align-items-center pt-3'>
-                                            <div className='col-2 inputbox'>
+                                        
+                                        <div className='d-flex flex-wrap align-items-center pt-2'>
+                                            <div className='col-2 inputbox mt-2'>
                                                 <div className="form-input">
                                                     <input
                                                         type="tel"
@@ -469,7 +480,7 @@ function FormPage() {
                                                     <label for="subtitle">મો.ન.(૧)</label>
                                                 </div>
                                             </div>
-                                            <div className='col-2 inputbox'>
+                                            <div className='col-2 inputbox mt-2'>
                                                 <div className="form-input">
                                                     <input
                                                         type="tel"
@@ -484,7 +495,7 @@ function FormPage() {
                                                     <label for="subtitle">મો.ન.(૨)</label>
                                                 </div>
                                             </div>
-                                            <div className='col-2 inputbox'>
+                                            <div className='col-2 with'>
                                                 <div className="form-input">
                                                     <input
                                                         type="email"

@@ -90,10 +90,6 @@ export default function Footer() {
                             <h5 className='text-white fs-5 pt-3 fw-bold mb-2'>તાજેતરના સમાચાર</h5>
                             <marquee behavior="" direction="up" scrollamount="3" hight="250">
                                 <ul>
-                                    <li className='text-white px-2 fs-6 bg-brown rounded-2'>
-                                        <p className='p-2 footer-news'>આપના પુત્ર અથવા પુત્રીનો સબંધ થાય ત્યારે વહેલામાં વહેલી તકે આપનુ ફોમઁ રદ કરાવો</p>
-                                    </li>
-
                                     <li className='text-white px-2 bg-brown fs-6 rounded-2' >
                                         <p className='p-2 footer-news'>કોઈ પણ પ્રકારની ભૂલ જણાય તો અમને આપની માહિતી ૯૭૭૩૧૨૪૫૯૮ (SILVER TECHNOLOGIES) પર WhatsApp કરી આપવી. (કોલ કરવો નહી.)</p>
                                     </li>
